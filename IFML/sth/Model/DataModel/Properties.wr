@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="35" gr:y="175" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1 User#att2 User#att3 User#att4" db:database="db2" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="0" gr:y="190" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1 User#att2 User#att3 User#att4" db:database="db2" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="username" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -9,11 +9,11 @@
     <Attribute id="User#att3" name="name" type="string" db:column="name"/>
     <Attribute id="User#att4" name="piggy_bank" type="float" db:column="piggy_bank"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="205" gr:y="20" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="280" gr:y="55" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
-    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
+    <Attribute name="groupname" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="425" gr:y="25" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="525" gr:y="45" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -50,23 +50,23 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity id="ent11" name="Skill" duration="persistent" attributeOrder="ent11#att30 ent11#att31" db:database="db2" db:table="skill" gr:x="185" gr:y="420">
+  <Entity id="ent11" name="Skill" duration="persistent" attributeOrder="ent11#att30 ent11#att31" db:database="db2" db:table="skill" gr:x="355" gr:y="400">
     <Attribute id="ent11#att30" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent11#att31" name="name" type="string" db:column="name"/>
   </Entity>
-  <Entity id="ent12" name="Item" duration="persistent" attributeOrder="ent12#att32 ent12#att35 ent12#att34 ent12#att33" db:database="db2" db:table="item" gr:x="455" gr:y="490">
+  <Entity id="ent12" name="Item" duration="persistent" attributeOrder="ent12#att32 ent12#att35 ent12#att34 ent12#att33" db:database="db2" db:table="item" gr:x="555" gr:y="510">
     <Attribute id="ent12#att32" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent12#att33" name="url" type="string" db:column="url"/>
     <Attribute id="ent12#att34" name="caption" type="string" db:column="caption"/>
     <Attribute id="ent12#att35" name="title" type="string" db:column="title"/>
   </Entity>
-  <Entity id="ent13" name="Annotation" duration="persistent" attributeOrder="ent13#att36 ent13#att38 ent13#att37 ent13#att39" db:database="db2" db:table="annotation" gr:x="105" gr:y="535">
+  <Entity id="ent13" name="Annotation" duration="persistent" attributeOrder="ent13#att36 ent13#att38 ent13#att37 ent13#att39" db:database="db2" db:table="annotation" gr:x="230" gr:y="515">
     <Attribute id="ent13#att36" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent13#att37" name="Confidence" type="integer" db:column="confidence"/>
     <Attribute id="ent13#att38" name="Label" type="string" db:column="label"/>
     <Attribute id="ent13#att39" name="marked" type="boolean" db:column="marked"/>
   </Entity>
-  <Entity id="ent14" name="Task" duration="persistent" attributeOrder="ent14#att40 ent14#att41 ent14#att42 ent14#att43 ent14#att45 ent14#att44 ent14#att46" db:database="db2" db:table="task" gr:x="375" gr:y="255">
+  <Entity id="ent14" name="Task" duration="persistent" attributeOrder="ent14#att40 ent14#att41 ent14#att42 ent14#att43 ent14#att45 ent14#att44 ent14#att46" db:database="db2" db:table="task" gr:x="590" gr:y="280">
     <Attribute id="ent14#att40" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent14#att41" name="title" key="false" type="string" db:column="title"/>
     <Attribute id="ent14#att42" name="description" key="false" type="string" db:column="description"/>
@@ -75,7 +75,7 @@
     <Attribute id="ent14#att45" name="maximum_exec_time" type="time" db:column="maximum_exec_time"/>
     <Attribute id="ent14#att46" name="grade" type="integer" db:column="grade"/>
   </Entity>
-  <Entity id="ent15" name="AnnotationCampaign" duration="persistent" attributeOrder="ent15#att47 ent15#att50 ent15#att49 ent15#att48" db:database="db2" db:table="annotationcampaign" gr:x="645" gr:y="90">
+  <Entity id="ent15" name="AnnotationCampaign" duration="persistent" attributeOrder="ent15#att47 ent15#att50 ent15#att49 ent15#att48" db:database="db2" db:table="annotationcampaign" gr:x="350" gr:y="180">
     <Attribute id="ent15#att47" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent15#att48" name="status" type="string" db:column="status"/>
     <Attribute id="ent15#att49" name="budget" type="float" db:column="budget"/>
@@ -145,5 +145,5 @@
       <db:JoinColumn attribute="ent15#att47" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="ifml" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/ifmlNew" username="root" password="root"/>
+  <db:Database id="db2" name="ifml" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/ifmlnew" username="root" password="root"/>
 </DataModel>
