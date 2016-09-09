@@ -1,0 +1,65 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="45" gr:y="30" id="sv1#page1" name="Home (Container&gt;Page)" linkOrder="sv1#page1#ln4">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page1#enu1" name="Login credentials (form)" linkOrder="sv1#page1#enu1#ln2">
+      <Field id="sv1#page1#enu1#fld1" name="username" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu1#fld2" name="password" type="string" modifiable="true"/>
+      <Link id="sv1#page1#enu1#ln2" name="login" to="sv1#lgu1" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+    <EntryUnit gr:x="180" gr:y="0" id="sv1#page1#enu2" name="Register (form)" linkOrder="sv1#page1#enu2#ln1" entity="User">
+      <Link id="sv1#page1#enu2#ln1" name="createUser" to="sv1#cru1" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="sv1#page1#enu2#fld3" name="username" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu2#fld4" name="password" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu2#fld5" name="email" type="string" modifiable="true"/>
+      <Field id="sv1#page1#enu2#fld6" name="birth_date" type="string" modifiable="true"/>
+      <SelectionField id="sv1#page1#enu2#sfld1" name="Group" type="string" role="User2Group"/>
+      <Field id="sv1#page1#enu2#fld7" name="name" type="string" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu1">
+          <layout:Field field="sv1#page1#enu1#fld1"/>
+          <layout:Field field="sv1#page1#enu1#fld2"/>
+          <layout:Link link="sv1#page1#enu1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu2">
+          <layout:Link link="sv1#page1#enu2#ln1"/>
+          <layout:Field field="sv1#page1#enu2#fld3"/>
+          <layout:Field field="sv1#page1#enu2#fld4"/>
+          <layout:Field field="sv1#page1#enu2#fld5"/>
+          <layout:Field field="sv1#page1#enu2#fld6"/>
+          <layout:Field field="sv1#page1#enu2#sfld1"/>
+          <layout:Field field="sv1#page1#enu2#fld7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#page1#ln4" name="Flow4" to="sv1#lou1" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

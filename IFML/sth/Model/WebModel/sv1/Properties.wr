@@ -1,0 +1,14 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Home" homePage="sv1#page1">
+  <OperationUnits>
+    <LoginUnit gr:x="360" gr:y="355" id="sv1#lgu1" name="Login"/>
+    <LogoutUnit gr:x="220" gr:y="300" id="sv1#lou1" name="Logout" siteView="sv1"/>
+    <CreateUnit gr:x="430" gr:y="95" id="sv1#cru1" name="CreateUser (db:Create)" entity="User" linkOrder="sv1#cru1#ln5">
+      <Link id="sv1#cru1#ln5" name="Flow5" to="sv1#lgu1" automaticCoupling="true" type="transport" validate="true"/>
+      <KOLink id="sv1#cru1#kln1" name="KOFlow1" to="sv1#page2" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit gr:x="300" gr:y="190" id="sv1#seu1" name="Group" entity="Group">
+      <Link id="sv1#seu1#ln3" name="Flow3" to="sv1#page1#enu2" automaticCoupling="true" type="transport" validate="true"/>
+      <SortAttribute attribute="groupName" order="ascending"/>
+    </SelectorUnit>
+  </OperationUnits>
+</SiteView>
