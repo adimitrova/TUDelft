@@ -145,5 +145,6 @@
       <db:JoinColumn attribute="ent15#att47" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db2" name="ifml" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/ifmlnew" username="root" password="root"/>
+  <db:Database id="db2" name="ifml" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/ifmlnew" username="root" password="root">
+  </db:Database>
 </DataModel>
