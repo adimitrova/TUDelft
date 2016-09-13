@@ -1,0 +1,65 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1430" gr:y="525" id="sv3#page12" name="Item Details">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page12#dau7" name="Item" entity="ent2" displayAttributes="ent2#att9 ent2#att10 ent2#att12">
+      <Selector id="sv3#page12#dau7#su34" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page12#dau7#su34#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page12#dau7#ln60" name="Flow60" to="sv3#page12#inu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page12#dau7#ln60#par113" name="oid_OfItem [oid]" source="data.ent2#att8" target="sv3#page12#inu4#su35#rcond19.ent5#att19"/>
+      </Link>
+    </DataUnit>
+    <IndexUnit gr:x="140" gr:y="30" id="sv3#page12#inu4" name="Annotations" entity="ent2" displayAttributes="ent2#att9 ent2#att10 ent2#att12" linkOrder="sv3#page12#inu4#ln71">
+      <Selector id="sv3#page12#inu4#su35" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page12#inu4#su35#rcond19" name="OfItem" predicate="in" implied="false" role="rel7#role14"/>
+      </Selector>
+      <Link id="sv3#page12#inu4#ln71" name="Grade annotation" to="sv3#miu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page12#inu4#ln71#par152" name="oid_AnnotationOID" source="data[].ent2#att8" target="sv3#miu4.mov1#opm4#icu4#icp5"/>
+        <LinkParameter id="sv3#page12#inu4#ln71#par153" name="1_GoodOrBad" sourceValue="1" target="sv3#miu4.mov1#opm4#icu4#icp4"/>
+        <LinkParameter id="sv3#page12#inu4#ln71#par154" name="UserCtxParam.oid_PASSING_UserOID" sourceLinkParameter="sv3#gtu3#ln72#par151" target="sv3#miu4.mov1#opm4#icu4#icp6"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page12#dau7">
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page12#inu4">
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Link link="sv3#page12#inu4#ln71"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

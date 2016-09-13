@@ -1,0 +1,14 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Requester" protected="true" landmarks="sv3#miu3" homePage="sv3#page5">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv3#miu3" landmark="true" gr:x="320" gr:y="15" action="true" moduleId="mov1#opm2"/>
+    <CreateUnit gr:x="555" gr:y="310" id="sv3#cru1" name="Create Campaign" entity="ent7" linkOrder="sv3#cru1#ln10">
+      <Link id="sv3#cru1#ln10" name="Flow10" to="sv3#page8#dau5" automaticCoupling="true" type="transport" validate="true"/>
+      <OKLink id="sv3#cru1#oln2" name="OKFlow2" to="sv3#page8" automaticCoupling="true"/>
+      <KOLink id="sv3#cru1#kln4" name="KOFlow4" to="sv3#page10" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="500" gr:y="435" id="sv3#cru3" name="CreateSkills" entity="ent10">
+      <KOLink id="sv3#cru3#kln5" name="KOFlow5" to="sv3#page10" automaticCoupling="true"/>
+      <OKLink id="sv3#cru3#oln3" name="OKFlow3" to="sv3#page5" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</SiteView>

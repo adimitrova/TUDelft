@@ -1,0 +1,149 @@
+[13 Sep 2016 21:22:54] Building database metadata model
+[13 Sep 2016 21:22:54] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@1c9b4e7, includeTables=true, username=root, outputLogPath=D:\WebRatio\workspace\ver3\.Temp~\DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=D:\WebRatio\workspace\ver3\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=D:\WebRatio\workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:mysql://localhost:3306/ifmlver3, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=3487}
+[13 Sep 2016 21:22:54] URL: jdbc:mysql://localhost:3306/ifmlver3
+[13 Sep 2016 21:22:54] Product name: MySQL
+[13 Sep 2016 21:22:54] Product version: 5.7.14-log
+[13 Sep 2016 21:22:54] Driver name: MySQL Connector Java
+[13 Sep 2016 21:22:54] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[13 Sep 2016 21:22:54] Driver major version: 5
+[13 Sep 2016 21:22:54] Driver minor version: 1
+[13 Sep 2016 21:22:54] Identifier quote string: 1
+[13 Sep 2016 21:22:54] Retrieving schemas
+[13 Sep 2016 21:22:54] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[13 Sep 2016 21:22:54]   Found 'annotation' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'annotationcampaign' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'group' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'group_module' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'item' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'item_annotation' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'module' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'task' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'task_item' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'task_skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'user' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'user_group' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'user_skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found 'user_task' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving columns for 'annotation' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: confidence [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: label [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: marked [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'annotation' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'annotationcampaign' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: status [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: budget [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'annotationcampaign' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'group' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'group' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'group_module' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'group_module' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: group_oid
+[13 Sep 2016 21:22:54]   Found primary key column: module_oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'item' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: url [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: caption [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: title [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'item' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'item_annotation' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: item_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: annotation_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'item_annotation' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: item_oid
+[13 Sep 2016 21:22:54]   Found primary key column: annotation_oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'module' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'module' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'task' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: title [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: description [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: reward [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: expiration_date [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: maximum_exec_time [type = TIME][SQL/XOPEN type = 92][size = 8][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: grade [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: annotationcampaign_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'task' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'task_item' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: task_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: item_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'task_item' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: task_oid
+[13 Sep 2016 21:22:54]   Found primary key column: item_oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'task_skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: task_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: skill_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'task_skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: task_oid
+[13 Sep 2016 21:22:54]   Found primary key column: skill_oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'user' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: birth_date [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: score [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: piggy_bank [type = DOUBLE][SQL/XOPEN type = 8][size = 22][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'user' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'user_group' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'user_group' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: user_oid
+[13 Sep 2016 21:22:54]   Found primary key column: group_oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'user_skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: skill_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'user_skill' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: user_oid
+[13 Sep 2016 21:22:54]   Found primary key column: skill_oid
+[13 Sep 2016 21:22:54] Retrieving columns for 'user_task' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54]   Found column: task_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[13 Sep 2016 21:22:54] Retrieving primary keys for 'user_task' [type = TABLE]
+[13 Sep 2016 21:22:54]   Found primary key column: user_oid
+[13 Sep 2016 21:22:54]   Found primary key column: task_oid
+[13 Sep 2016 21:22:54] Database metadata retrieved (139 ms)
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'annotation' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'annotationcampaign' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'group' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'item' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'item_annotation' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'module' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'skill' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'task' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'task_item' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'task_skill' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'user' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'user_skill' [type = TABLE]
+[13 Sep 2016 21:22:54] Retrieving auto-increment columns for 'user_task' [type = TABLE]
+[13 Sep 2016 21:22:54] Database connection closed

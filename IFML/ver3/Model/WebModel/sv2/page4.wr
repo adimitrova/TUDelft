@@ -1,0 +1,116 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="45" gr:y="45" id="sv2#page4" name="Worker [Main]" linkOrder="sv2#page4#ln6">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="10" id="sv2#page4#gtu1" name="GetCurrUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page4#gtu1#ln14" name="Flow14" to="sv2#page4#dau1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page4#gtu1#ln17" name="Flow17" to="sv2#page4#pwu1" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu1#ln17#par12" name="UserCtxParam.oid_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv2#page4#gtu1#ln1" name="Flow1" to="sv2#page4#seu2" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu1#ln1#par2" name="UserCtxParam.oid_RoleCondition1 [oid]" source="sv2#page4#gtu1.UserCtxParam" target="sv2#page4#seu2#su2#rcond1.userOID"/>
+        <LinkParameter id="sv2#page4#gtu1#ln1#par3" name="UserCtxParam.oid_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="160" gr:y="0" id="sv2#page4#dau1" name="Worker Details" entity="User" displayAttributes="userName email User#att9 User#att10 User#att11 User#att12">
+      <Selector id="sv2#page4#dau1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page4#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <SelectorUnit gr:x="0" gr:y="160" id="sv2#page4#seu2" name="WorkerSkills" entity="ent10">
+      <Link id="sv2#page4#seu2#ln16" name="Flow16" to="sv2#page4#pwu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Selector id="sv2#page4#seu2#su2" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page4#seu2#su2#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel10#role15"/>
+      </Selector>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="150" gr:y="125" id="sv2#page4#pwu1" name="Your Skills" sortable="true" checkable="false" useCountQuery="false" entity="ent10" displayAttributes="ent10#att33">
+      <SortAttribute attribute="ent10#att33" order="ascending"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="255" gr:y="165" id="sv2#page4#enu9" name="Add Skills" entity="ent10" fieldOrder="sv2#page4#enu9#sfld7 sv2#page4#enu9#sfld10 sv2#page4#enu9#sfld11 sv2#page4#enu9#sfld9 sv2#page4#enu9#sfld8">
+      <SelectionField id="sv2#page4#enu9#sfld7" name="Skill1" type="string"/>
+      <SelectionField id="sv2#page4#enu9#sfld8" name="Skill5" type="string"/>
+      <SelectionField id="sv2#page4#enu9#sfld9" name="Skill4" type="string"/>
+      <SelectionField id="sv2#page4#enu9#sfld10" name="Skill2" type="string"/>
+      <SelectionField id="sv2#page4#enu9#sfld11" name="Skill3" type="string"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#dau1">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att9"/>
+          <layout:Attribute attribute="User#att10"/>
+          <layout:Attribute attribute="User#att11"/>
+          <layout:Attribute attribute="User#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#pwu1">
+          <layout:Attribute attribute="ent10#att33"/>
+          <layout:Link link="sv2#page4#pwu1ent10#att33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#enu9">
+          <layout:Field field="sv2#page4#enu9#sfld7"/>
+          <layout:Field field="sv2#page4#enu9#sfld10"/>
+          <layout:Field field="sv2#page4#enu9#sfld11"/>
+          <layout:Field field="sv2#page4#enu9#sfld9"/>
+          <layout:Field field="sv2#page4#enu9#sfld8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page4#ln6" name="Logout" to="sv2#miu2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

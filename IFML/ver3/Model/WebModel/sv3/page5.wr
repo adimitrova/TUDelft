@@ -1,0 +1,184 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="35" gr:y="100" id="sv3#page5" name="Requester [Main]" linkOrder="sv3#page5#ln7">
+  <ContentUnits>
+    <DataUnit id="sv3#page5#dau4" name="Account Details (R)" gr:x="140" gr:y="0" entity="User" displayAttributes="userName email User#att9 User#att10 User#att11 User#att12">
+      <Selector id="sv3#page5#dau4#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page5#dau4#su4#kcond4" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit id="sv3#page5#gtu3" name="GetCurrUser" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="sv3#page5#gtu3#ln2" name="Flow14" to="sv3#page5#dau4" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page5#gtu3#ln12" name="Flow5" to="sv3#page5#enu7" type="transport" validate="true">
+        <LinkParameter id="sv3#page5#gtu3#ln12#par11" name="UserCtxParam.oid_PASSING" source="sv3#page5#gtu3.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv3#page5#gtu3#ln19" name="Flow19" to="sv3#page5#enu8" type="transport" validate="true">
+        <LinkParameter id="sv3#page5#gtu3#ln19#par13" name="UserCtxParam.oid_PASSING" source="sv3#page5#gtu3.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <EntryUnit id="sv3#page5#enu7" name="Create Annotation" linkOrder="sv3#page5#enu7#ln11" gr:x="215" gr:y="155">
+      <Field id="sv3#page5#enu7#fld17" name="Name" type="string" modifiable="true"/>
+      <Field id="sv3#page5#enu7#fld18" name="Budget" type="string" modifiable="true"/>
+      <Field id="sv3#page5#enu7#fld19" name="Status" type="string" modifiable="true"/>
+      <Link id="sv3#page5#enu7#ln11" name="Create campaign" to="sv3#cru1" type="normal" validate="true">
+        <LinkParameter id="sv3#page5#enu7#ln11#par7" name="Budget_budget" source="sv3#page5#enu7#fld18" target="sv3#cru1.ent7#att22"/>
+        <LinkParameter id="sv3#page5#enu7#ln11#par8" name="Name_name" source="sv3#page5#enu7#fld17" target="sv3#cru1.ent7#att23"/>
+        <LinkParameter id="sv3#page5#enu7#ln11#par9" name="Status_status" source="sv3#page5#enu7#fld19" target="sv3#cru1.ent7#att21"/>
+        <LinkParameter id="sv3#page5#enu7#ln11#par10" name="UserCtxParam.oid_PASSING_User.oid(AnnotationCampaignToUser)" sourceLinkParameter="sv3#page5#gtu3#ln12#par11" target="sv3#cru1.rel16#role20.userOID"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit id="sv3#page5#inu2" name="All Campaigns" gr:x="0" gr:y="225" entity="ent7" displayAttributes="ent7#att23 ent7#att22 ent7#att21"/>
+    <SelectorUnit gr:x="0" gr:y="115" id="sv3#page5#seu1" name="SelectCampaigns" entity="ent7">
+      <Link id="sv3#page5#seu1#ln13" name="Flow13" to="sv3#page5#inu2" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <EntryUnit gr:x="215" gr:y="240" id="sv3#page5#enu8" name="Add Skills" linkOrder="sv3#page5#enu8#ln18" entity="ent10">
+      <Field id="sv3#page5#enu8#fld21" name="Skill" type="string" modifiable="true"/>
+      <Link id="sv3#page5#enu8#ln18" name="Add Skill" to="sv3#cru3" type="normal" validate="true">
+        <LinkParameter id="sv3#page5#enu8#ln18#par14" name="Key [oid]_oid" source="key.ent10#att32" target="sv3#cru3.ent10#att32"/>
+        <LinkParameter id="sv3#page5#enu8#ln18#par15" name="Skill Object_Skill Object" source="entityBean" target="sv3#cru3.entityBeans"/>
+        <LinkParameter id="sv3#page5#enu8#ln18#par18" name="UserCtxParam.oid_PASSING_User.oid(SkillToUser)" sourceLinkParameter="sv3#page5#gtu3#ln19#par13" target="sv3#cru3.rel10#role16.userOID"/>
+        <LinkParameter id="sv3#page5#enu8#ln18#par1" name="Skill_name" source="sv3#page5#enu8#fld21" target="sv3#cru3.ent10#att33"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#dau4">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att9"/>
+          <layout:Attribute attribute="User#att10"/>
+          <layout:Attribute attribute="User#att11"/>
+          <layout:Attribute attribute="User#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#enu7">
+          <layout:Field field="sv3#page5#enu7#fld17"/>
+          <layout:Field field="sv3#page5#enu7#fld18"/>
+          <layout:Field field="sv3#page5#enu7#fld19"/>
+          <layout:Link link="sv3#page5#enu7#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#inu2">
+          <layout:Attribute attribute="ent7#att23"/>
+          <layout:Attribute attribute="ent7#att22"/>
+          <layout:Attribute attribute="ent7#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#enu8">
+          <layout:Link link="sv3#page5#enu8#ln18"/>
+          <layout:Field field="sv3#page5#enu8#fld21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#page5#ln7" name="Logout" to="sv3#miu3" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

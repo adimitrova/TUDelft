@@ -1,0 +1,55 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="150" gr:y="180" id="mov1#opm3" name="Find Items for the campaign of this task">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm3#icu3" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm3#icu3#icp3" name="TaskOID"/>
+      <OKLink id="mov1#opm3#icu3#oln23" name="OKFlow23" to="mov1#opm3#seu21">
+        <LinkParameter id="mov1#opm3#icu3#oln23#par115" name="TaskOID_CampaignForTask [oid]" source="mov1#opm3#icu3#icp3" target="mov1#opm3#seu21#su38#rcond22.ent1#att1"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1415" gr:y="55" id="mov1#opm3#okcu2" name="OK Port2">
+      <OutputCollectorParameter id="mov1#opm3#okcu2#ocp1" name="ItemOID"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="1415" gr:y="220" id="mov1#opm3#kocu2" name="KO Port2"/>
+    <SelectorUnit id="mov1#opm3#seu19" name="ItemsForTasksOfThisCampaign" gr:x="1075" gr:y="45" entity="ent2">
+      <Selector id="mov1#opm3#seu19#su36" defaultPolicy="fill" booleanOperator="or">
+        <RelationshipRoleCondition id="mov1#opm3#seu19#su36#rcond20" name="ItemsForTasks" predicate="in" implied="true" role="rel1#role1"/>
+        <RelationshipRoleCondition id="mov1#opm3#seu19#su36#rcond23" name="NotAssociatedWithTasks" predicate="notIn" implied="true" role="rel1#role1"/>
+      </Selector>
+      <OKLink id="mov1#opm3#seu19#oln26" name="OKFlow26" to="mov1#opm3#okcu2">
+        <LinkParameter id="mov1#opm3#seu19#oln26#par121" name="oid_ItemOID" source="ent2#att8Array" target="mov1#opm3#okcu2#ocp1"/>
+      </OKLink>
+      <KOLink id="mov1#opm3#seu19#kln16" name="KOFlow16" to="mov1#opm3#kocu2" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#opm3#seu20" name="FindAllTasksForThisCampaign" gr:x="595" gr:y="55" entity="ent1">
+      <Selector id="mov1#opm3#seu20#su37" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm3#seu20#su37#rcond21" name="TasksForCampaign" predicate="in" implied="false" role="rel9#role17"/>
+      </Selector>
+      <OKLink id="mov1#opm3#seu20#oln25" name="OKFlow25" to="mov1#opm3#pcu1">
+        <LinkParameter id="mov1#opm3#seu20#oln25#par116" name="oid_CampaignTasks" source="ent1#att1Array" target="mov1#opm3#pcu1#pcp1"/>
+      </OKLink>
+      <KOLink id="mov1#opm3#seu20#kln15" name="KOFlow15" to="mov1#opm3#kocu2" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#opm3#seu21" name="FindCampaignForThisTask" gr:x="300" gr:y="55" entity="ent6">
+      <Selector id="mov1#opm3#seu21#su38" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm3#seu21#su38#rcond22" name="CampaignForTask" predicate="in" implied="false" role="rel9#role18"/>
+      </Selector>
+      <OKLink id="mov1#opm3#seu21#oln24" name="OKFlow24" to="mov1#opm3#seu20" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#seu21#kln14" name="KOFlow14" to="mov1#opm3#kocu2" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#opm3#seu22" name="AllTasks" gr:x="910" gr:y="220" entity="ent1">
+      <Selector id="mov1#opm3#seu22#su39" defaultPolicy="fill" booleanOperator="and"/>
+      <OKLink id="mov1#opm3#seu22#oln27" name="OKFlow27" to="mov1#opm3#pcu1">
+        <LinkParameter id="mov1#opm3#seu22#oln27#par117" name="oid_AllTasks" source="ent1#att1Array" target="mov1#opm3#pcu1#pcp2"/>
+      </OKLink>
+      <KOLink id="mov1#opm3#seu22#kln17" name="KOFlow17" to="mov1#opm3#kocu2" automaticCoupling="true"/>
+    </SelectorUnit>
+    <ParameterCollectorUnit gr:x="865" gr:y="60" id="mov1#opm3#pcu1" name="Parameter Collector1">
+      <OKLink id="mov1#opm3#pcu1#oln28" name="OKFlow28" to="mov1#opm3#seu19">
+        <LinkParameter id="mov1#opm3#pcu1#oln28#par118" name="CampaignTasks_ItemsForTasks [oid]" source="mov1#opm3#pcu1#pcp1" target="mov1#opm3#seu19#su36#rcond20.ent1#att1"/>
+        <LinkParameter id="mov1#opm3#pcu1#oln28#par127" name="AllTasks_NotAssociatedWithTasks [oid]" source="mov1#opm3#pcu1#pcp2" target="mov1#opm3#seu19#su36#rcond23.ent1#att1"/>
+      </OKLink>
+      <CollectorParameter id="mov1#opm3#pcu1#pcp1" name="CampaignTasks"/>
+      <CollectorParameter id="mov1#opm3#pcu1#pcp2" name="AllTasks"/>
+    </ParameterCollectorUnit>
+  </OperationUnits>
+</OperationModule>

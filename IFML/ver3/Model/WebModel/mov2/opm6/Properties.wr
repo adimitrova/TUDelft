@@ -1,0 +1,62 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="35" gr:y="20" id="mov2#opm6" name="CreateUser">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm6#icu6" gr:x="40" gr:y="35">
+      <OKLink id="mov2#opm6#icu6#oln11" name="OKFlow11" to="mov2#opm6#cru2" automaticCoupling="false">
+        <LinkParameter id="mov2#opm6#icu6#oln11#par40" name="Annotation.oid(UserToAnnotation)" source="mov2#opm6#icu6#icp4" target="mov2#opm6#cru2.rel6#role11.ent9#att28"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par44" name="AnnotationCampaign.oid(UserToAnnotationCampaign)" source="mov2#opm6#icu6#icp5" target="mov2#opm6#cru2.rel16#role19.ent7#att20"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par45" name="Group.oid(defaultGroup)" source="mov2#opm6#icu6#icp6" target="mov2#opm6#cru2.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par46" name="Group.oid(groups)" source="mov2#opm6#icu6#icp7" target="mov2#opm6#cru2.User2Group.groupOID"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par47" name="Skill.oid(UserToSkill)" source="mov2#opm6#icu6#icp8" target="mov2#opm6#cru2.rel10#role15.ent10#att32"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par48" name="Task.oid(UserToTask)" source="mov2#opm6#icu6#icp9" target="mov2#opm6#cru2.rel8#role13.ent3#att13"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par49" name="User Object" source="mov2#opm6#icu6#icp10" target="mov2#opm6#cru2.entityBeans"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par50" name="birth_date" source="mov2#opm6#icu6#icp11" target="mov2#opm6#cru2.User#att9"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par51" name="email" source="mov2#opm6#icu6#icp12" target="mov2#opm6#cru2.email"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par52" name="name" source="mov2#opm6#icu6#icp13" target="mov2#opm6#cru2.User#att10"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par53" name="oid" source="mov2#opm6#icu6#icp14" target="mov2#opm6#cru2.userOID"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par54" name="password" source="mov2#opm6#icu6#icp15" target="mov2#opm6#cru2.password"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par55" name="piggy_bank" source="mov2#opm6#icu6#icp16" target="mov2#opm6#cru2.User#att12"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par56" name="score" source="mov2#opm6#icu6#icp17" target="mov2#opm6#cru2.User#att11"/>
+        <LinkParameter id="mov2#opm6#icu6#oln11#par57" name="userName" source="mov2#opm6#icu6#icp18" target="mov2#opm6#cru2.userName"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp4" name="Annotation.oid(UserToAnnotation)"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp5" name="AnnotationCampaign.oid(UserToAnnotationCampaign)"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp6" name="Group.oid(defaultGroup)"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp7" name="Group.oid(groups)"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp8" name="Skill.oid(UserToSkill)"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp9" name="Task.oid(UserToTask)"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp10" name="User Object"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp11" name="birth_date"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp12" name="email"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp13" name="name"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp14" name="oid"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp15" name="password"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp16" name="piggy_bank"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp17" name="score"/>
+      <InputCollectorParameter id="mov2#opm6#icu6#icp18" name="userName"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="505" gr:y="145" id="mov2#opm6#cru2" name="CreateUser" entity="User">
+      <OKLink id="mov2#opm6#cru2#oln12" name="OKFlow12" to="mov2#opm6#okcu1" automaticCoupling="false">
+        <LinkParameter id="mov2#opm6#cru2#oln12#par58" name="oid_oid" source="userOIDArray" target="mov2#opm6#okcu1#ocp1"/>
+        <LinkParameter id="mov2#opm6#cru2#oln12#par69" name="birth_date" source="User#att9Array" target="mov2#opm6#okcu1#ocp2"/>
+        <LinkParameter id="mov2#opm6#cru2#oln12#par70" name="email" source="emailArray" target="mov2#opm6#okcu1#ocp3"/>
+        <LinkParameter id="mov2#opm6#cru2#oln12#par71" name="name" source="User#att10Array" target="mov2#opm6#okcu1#ocp4"/>
+        <LinkParameter id="mov2#opm6#cru2#oln12#par72" name="password" source="passwordArray" target="mov2#opm6#okcu1#ocp5"/>
+        <LinkParameter id="mov2#opm6#cru2#oln12#par73" name="piggy_bank" source="User#att12Array" target="mov2#opm6#okcu1#ocp6"/>
+        <LinkParameter id="mov2#opm6#cru2#oln12#par74" name="score" source="User#att11Array" target="mov2#opm6#okcu1#ocp7"/>
+        <LinkParameter id="mov2#opm6#cru2#oln12#par75" name="userName" source="userNameArray" target="mov2#opm6#okcu1#ocp8"/>
+      </OKLink>
+      <KOLink id="mov2#opm6#cru2#kln10" name="KOFlow10" to="mov2#opm6#kocu4" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="655" gr:y="25" id="mov2#opm6#okcu1" name="OK Port1">
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp1" name="oid"/>
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp2" name="birth_date"/>
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp3" name="email"/>
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp4" name="name"/>
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp5" name="password"/>
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp6" name="piggy_bank"/>
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp7" name="score"/>
+      <OutputCollectorParameter id="mov2#opm6#okcu1#ocp8" name="userName"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="655" gr:y="225" id="mov2#opm6#kocu4" name="KO Port4"/>
+  </OperationUnits>
+</OperationModule>

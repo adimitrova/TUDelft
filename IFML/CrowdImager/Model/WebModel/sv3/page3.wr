@@ -1,0 +1,96 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="60" gr:y="75" id="sv3#page3" name="Requester" protected="false">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page3#dau2" name="RequesterDetails" entity="User" displayAttributes="userName email User#att27 User#att28">
+      <Selector id="sv3#page3#dau2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page3#dau2#su2#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit gr:x="130" gr:y="120" id="sv3#page3#gtu2" name="GetCurrentUser" contextParameters="UserCtxParam">
+      <Link id="sv3#page3#gtu2#ln10" name="Flow10" to="sv3#page3#dau2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv3#page3#gtu2#ln18" name="Flow18" to="sv3#page3#enu3" type="transport" validate="true">
+        <LinkParameter id="sv3#page3#gtu2#ln18#par40" name="UserCtxParam.oid_PASSING" source="sv3#page3#gtu2.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <EntryUnit gr:x="15" gr:y="240" id="sv3#page3#enu3" name="New Annotation Campaign" linkOrder="sv3#page3#enu3#ln15">
+      <Field id="sv3#page3#enu3#fld9" name="Campaign Name" type="string" modifiable="true"/>
+      <Field id="sv3#page3#enu3#fld10" name="Budget" type="float" modifiable="true"/>
+      <Field id="sv3#page3#enu3#fld11" name="Status" type="string" modifiable="true"/>
+      <Link id="sv3#page3#enu3#ln15" name="Create new campaign" to="sv3#cru4" type="normal" validate="true">
+        <LinkParameter id="sv3#page3#enu3#ln15#par37" name="Budget_budget" source="sv3#page3#enu3#fld10" target="sv3#cru4.ent6#att22"/>
+        <LinkParameter id="sv3#page3#enu3#ln15#par38" name="Campaign Name_name" source="sv3#page3#enu3#fld9" target="sv3#cru4.ent6#att11"/>
+        <LinkParameter id="sv3#page3#enu3#ln15#par39" name="Status_status" source="sv3#page3#enu3#fld11" target="sv3#cru4.ent6#att23"/>
+        <LinkParameter id="sv3#page3#enu3#ln15#par41" name="UserCtxParam.oid_PASSING_User.oid(AnnotationCampaignToUser)" sourceLinkParameter="sv3#page3#gtu2#ln18#par40" target="sv3#cru4.rel15#role30.userOID"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit gr:x="150" gr:y="335" id="sv3#page3#inu1" name="Campaign List" entity="ent6" displayAttributes="ent6#att11 ent6#att22 ent6#att23" linkOrder="sv3#page3#inu1#ln21">
+      <SortAttribute attribute="ent6#att23" order="descending"/>
+      <SortAttribute attribute="ent6#att11" order="ascending"/>
+      <Link id="sv3#page3#inu1#ln21" name="Campaign details" to="sv3#page7#dau3" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page3#dau2">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att27"/>
+          <layout:Attribute attribute="User#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page3#enu3">
+          <layout:Link link="sv3#page3#enu3#ln15"/>
+          <layout:Field field="sv3#page3#enu3#fld9"/>
+          <layout:Field field="sv3#page3#enu3#fld10"/>
+          <layout:Field field="sv3#page3#enu3#fld11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page3#inu1">
+          <layout:Attribute attribute="ent6#att11"/>
+          <layout:Attribute attribute="ent6#att22"/>
+          <layout:Attribute attribute="ent6#att23"/>
+          <layout:Link link="sv3#page3#inu1#ln21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

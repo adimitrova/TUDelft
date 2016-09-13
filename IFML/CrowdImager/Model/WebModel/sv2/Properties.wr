@@ -1,0 +1,23 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Worker Home" protected="true" homePage="sv2#page2" layout:pageLayout="WebRatio_For_Crowd/Basic" layout:frameLayout="WebRatio_For_Crowd/Basic">
+  <OperationUnits>
+    <LoopUnit gr:x="765" gr:y="610" id="sv2#lpu1" name="Loop1">
+      <OKLink id="sv2#lpu1#oln9" name="OKFlowEndLoop" to="sv2#page2" automaticCoupling="true" code="end"/>
+      <OKLink id="sv2#lpu1#oln12" name="UpdateSkill" to="sv2#mfu3" code="next">
+        <LinkParameter id="sv2#lpu1#oln12#par54" name="Next Element_KeyCondition6 [oid]" source="next" target="sv2#mfu3#su6#kcond6.ent4#att17"/>
+        <LinkParameter id="sv2#lpu1#oln12#par55" name="UserCtxParam.oid_PASSING_User.oid(SkillToUser)" sourceLinkParameter="sv2#page2#enu6#ln8#par17" target="sv2#mfu3.rel13#role26.userOID"/>
+      </OKLink>
+    </LoopUnit>
+    <CreateUnit gr:x="1050" gr:y="700" id="sv2#cru3" name="Create Annotation" entity="ent5"/>
+    <ModifyUnit gr:x="435" gr:y="570" id="sv2#mfu3" name="Update User Skills" entity="ent4">
+      <Selector id="sv2#mfu3#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu3#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu3#oln13" name="OKFlow13" to="sv2#lpu1" automaticCoupling="true" gr:bendpoints="132,29,-98,4"/>
+      <KOLink id="sv2#mfu3#kln9" name="KOFlow9" to="sv2#page10" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ModuleInstanceUnit gr:x="155" gr:y="565" id="sv2#miu1" moduleId="mov1#opm1" action="true">
+      <OKLink id="sv2#miu1#oln16" name="OKFlow16" to="sv2#page2#pwu2" automaticCoupling="true" gr:bendpoints="-52,-93,28,117"/>
+      <KOLink id="sv2#miu1#kln11" name="KOFlow11" to="sv2#page10" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>
