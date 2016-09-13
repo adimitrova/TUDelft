@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="48" version="2.0">
+<workbenchAdvisor/>
+<window height="728" maximized="true" width="1024" x="130" y="0">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="205"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.webratio.deploy.ui.TomcatActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="com.webratio.ide.deploy.ui.actionSet" itemType="typeToolBarContribution" x="175" y="22"/>
+<coolItem id="com.webratio.ide.styles.TemplateCreationActionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="com.webratio.ide.ui.compare.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.webratio.ide.store.ui.toolbar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.webratio.ide.ui.editors.WebProjectEditor" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1473460080553" focus="true" label="Workspace - Web IFML">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="2"/>
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" partName="CrowdImager" path="C:/Users/Ani/Github/TUDelft/IFML/CrowdImager/Model.wr" title="CrowdImager" tooltip="CrowdImager/Model.wr" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CrowdImager/Model.wr"/>
+</editor>
+<editor activePart="true" focus="true" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" partName="ver3" path="C:/Users/Ani/Github/TUDelft/IFML/ver3/Model.wr" title="ver3" tooltip="ver3/Model.wr" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ver3/Model.wr"/>
+</editor>
+<editor id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" partName="sth" path="C:/Users/Ani/Github/TUDelft/IFML/sth/Model.wr" title="sth" tooltip="sth/Model.wr" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/sth/Model.wr"/>
+</editor>
+</editors>
+<views>
+<view id="com.webratio.ide.ui.grid.views.GridView" partName="Layout">
+<viewState/>
+</view>
+<view id="com.webratio.ide.ui.views.GenerationErrorsView" partName="Generation Errors">
+<viewState/>
+</view>
+<view id="com.webratio.ide.ui.explorer.views.WRExplorerView" partName="WebRatio Explorer">
+<viewState configured="false" sortWorkingSets="false">
+<localWorkingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.OthersWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1473450570382_0" label="Other Projects" name="Other Projects">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CrowdImager" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/secVer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sth" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sth2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ver3" type="4"/>
+</workingSet>
+</localWorkingSetManager>
+<activeWorkingSet workingSetName="Other Projects"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="com.webratio.ide.ui.search.SearchResultPage7" org.eclipse.search.lastActivation="1"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1473460080553">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="com.webratio.eclipse.cloud.ui.views.CloudServicesView" partName="Cloud Accounts"/>
+<view id="com.webratio.bpm.ui.views.BPMDocumentationView" partName="Documentation"/>
+<view id="com.webratio.ide.ui.views.WRAerialView" partName="Overview">
+<viewState/>
+</view>
+<view id="com.webratio.bpm.ui.explorer.views.BPMExplorerView" partName="BPMN Explorer"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="com.webratio.ide.ui.editors.WebProjectEditor" activePerspective="com.webratio.ide.ui.WRPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.webratio.bpm.ui.BPMPerspectiveFactory" id="com.webratio.bpm.ui.BPMPerspective" label="BPMN"/>
+<alwaysOnActionSet id="com.webratio.bpm.ui.actionSet2"/>
+<alwaysOnActionSet id="com.webratio.bpm.ui.doc.user.actionSet"/>
+<alwaysOnActionSet id="com.webratio.mf.ui.actionSet"/>
+<alwaysOnActionSet id="com.webratio.commons.startup.actionSet"/>
+<alwaysOnActionSet id="com.webratio.ide.deploy.ui.actionSet"/>
+<alwaysOnActionSet id="com.webratio.deploy.ui.TomcatActionSet"/>
+<alwaysOnActionSet id="com.webratio.ide.ui.actionSet"/>
+<alwaysOnActionSet id="com.webratio.ide.ui.doc.user.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.webratio.bpm.ui.actionSet"/>
+<alwaysOnActionSet id="com.webratio.bpm.ui.transform.actionSet"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="com.webratio.bpm.ui.views.BPMDocumentationView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.BusinessModelingProjectWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewBPMDiagramWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewBOWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewRolesWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewSignalWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.transform.wizards.NewBAMProjectWizard"/>
+<perspective_action id="com.webratio.bpm.ui.BPMPerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.webratio.bpm.ui.explorer.views.BPMExplorerView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="com.webratio.ide.ui.views.WRAerialView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="com.webratio.bpm.ui.views.BPMDocumentationView"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.webratio.bpm.ui.explorer.views.BPMExplorerView" label="BPMN Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24" ratioLeft="240" ratioRight="760" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.849835" ratioLeft="515" ratioRight="91" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="com.webratio.bpm.ui.views.BPMDocumentationView" label="Documentation"/>
+</folder>
+</info>
+<info folder="true" part="leftBottom2" ratio="0.41914192" ratioLeft="254" ratioRight="352" relationship="4" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+</folder>
+</info>
+<info folder="true" part="leftBottom3" ratio="0.64772725" ratioLeft="228" ratioRight="124" relationship="4" relative="leftBottom2">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.webratio.ide.ui.views.WRAerialView" label="Overview"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.webratio.ide.ui.WRPerspectiveFactory" id="com.webratio.ide.ui.WRPerspective" label="Web IFML"/>
+<alwaysOnActionSet id="com.webratio.bpm.ui.actionSet2"/>
+<alwaysOnActionSet id="com.webratio.bpm.ui.doc.user.actionSet"/>
+<alwaysOnActionSet id="com.webratio.mf.ui.actionSet"/>
+<alwaysOnActionSet id="com.webratio.commons.startup.actionSet"/>
+<alwaysOnActionSet id="com.webratio.ide.deploy.ui.actionSet"/>
+<alwaysOnActionSet id="com.webratio.deploy.ui.TomcatActionSet"/>
+<alwaysOnActionSet id="com.webratio.ide.ui.actionSet"/>
+<alwaysOnActionSet id="com.webratio.ide.ui.doc.user.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="com.webratio.ide.styles.TemplateCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<new_wizard_action id="com.webratio.ide.ui.wizards.WebProjectWizard"/>
+<new_wizard_action id="com.webratio.ide.styles.ui.wizards.StyleProjectWizard"/>
+<new_wizard_action id="com.webratio.ide.styles.ui.wizards.LayoutTemplateWizard"/>
+<new_wizard_action id="com.webratio.ide.styles.ui.wizards.StylePageWizard"/>
+<new_wizard_action id="com.webratio.ide.units.ui.wizards.UnitsProjectWizard"/>
+<new_wizard_action id="com.webratio.ide.units.ui.wizards.UnitWizard"/>
+<new_wizard_action id="com.webratio.ide.components.ui.wizards.NewValidationRuleWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.BusinessModelingProjectWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewBPMDiagramWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewBOWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewRolesWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.wizards.NewSignalWizard"/>
+<new_wizard_action id="com.webratio.bpm.ui.transform.wizards.NewBAMProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.webratio.ide.ui.WRPerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.webratio.ide.ui.explorer.views.WRExplorerView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="com.webratio.eclipse.cloud.ui.views.CloudServicesView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="com.webratio.ide.ui.views.WRAerialView"/>
+<view id="com.webratio.ide.ui.grid.views.GridView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="com.webratio.ide.ui.views.GenerationErrorsView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="com.webratio.ide.ui.explorer.views.WRExplorerView" label="WebRatio Explorer"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="com.webratio.eclipse.cloud.ui.views.CloudServicesView" label="Cloud Accounts"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@7407d7" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24206643" ratioLeft="328" ratioRight="1027" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.8933764" ratioLeft="553" ratioRight="66" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.webratio.ide.ui.views.GenerationErrorsView" appearance="2" expanded="2">
+<page content="com.webratio.ide.ui.grid.views.GridView" label="Layout"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="com.webratio.ide.ui.views.GenerationErrorsView" label="Generation Errors"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="leftBottom" ratio="0.5990099" ratioLeft="363" ratioRight="243" relationship="4" relative="left">
+<folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="com.webratio.ide.ui.views.WRAerialView" label="Overview"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" path="/ver3/Model.wr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" path="/CrowdImager/Model.wr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" path="/sth/Model.wr"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" path="/sth/Model.wr"/>
+</editors>
+<item historyLabel="ver3 &gt; Home &gt; Group" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#seu3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; Flow9" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#seu3#ln9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; Create User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#enu6#ln3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; Flow9" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#seu3#ln9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; Create User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#enu6#ln3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; [Worker] Register" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#enu6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; [Requester] Register" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#enu7&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; [Worker] Register" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#enu6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="2">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; GetGroups" index="2">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4#seu3#ln6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="2">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; GetGroups" index="2">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4#seu3#ln6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="CrowdImager &gt; HomePage" index="1">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="CrowdImager &gt; HomePage &gt; Flow14" index="1">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#seu3#ln14&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; GetGroups" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4#seu3#ln6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; Create User" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4#enu2#ln7&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; OKFlow5" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#cru1#oln5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; OKFlow5" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#cru1#oln5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; Create User" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4#enu2#ln7&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; OKFlow5" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#cru1#oln5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; Create User" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4#enu2#ln7&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Domain Model" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; Error Create User" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#cru1#kln1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; Error Create User" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#cru1#kln1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; createUser (db:Create)" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#cru1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; Flow9" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#seu3#ln9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; createUser (db:Create)" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#cru1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home &gt; GetGroups" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4#seu3#ln6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="CrowdImager &gt; HomePage" index="1">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; Flow9" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#seu3#ln9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home &gt; Create User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1#enu6#ln3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="sth &gt; Home" index="3">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item active="true" historyLabel="ver3 &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+<trimItem IMemento.internal.id="leftBottom"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" tooltip="sth/Model.wr">
+<persistable path="/sth/Model.wr"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" tooltip="ver3/Model.wr">
+<persistable path="/ver3/Model.wr"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" tooltip="secVer/Model.wr">
+<persistable path="/secVer/Model.wr"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" tooltip="CrowdImager/Model.wr">
+<persistable path="/CrowdImager/Model.wr"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="seu3.descr" tooltip="C:\WebRatio\WebRatio Platform 7.2.14\Tomcat\webapps\sth\WEB-INF\descr\seu3.descr">
+<persistable uri="file:/C:/WebRatio/WebRatio%20Platform%207.2.14/Tomcat/webapps/sth/WEB-INF/descr/seu3.descr"/>
+</file>
+</mruList>
+</workbench>

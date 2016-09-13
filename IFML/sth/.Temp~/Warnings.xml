@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<Warnings> 
-  <Warning xpath="/WebProject/WebModel" rootXPath="/WebProject" key="UNDEFINED_HOME_SITE_VIEW" label="Project"> 
-    <Message>The home site view is undefined</Message> 
-  </Warning> 
-</Warnings>

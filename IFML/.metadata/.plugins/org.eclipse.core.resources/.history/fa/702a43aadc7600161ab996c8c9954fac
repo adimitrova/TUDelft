@@ -1,0 +1,20 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Home" homePage="sv1#page1" landmarks="sv1#page1">
+  <OperationUnits>
+    <LoginUnit gr:x="360" gr:y="355" id="sv1#lgu1" name="Login"/>
+    <LogoutUnit gr:x="220" gr:y="300" id="sv1#lou1" name="Logout" siteView="sv1"/>
+    <CreateUnit gr:x="430" gr:y="95" id="sv1#cru1" name="createUser (db:Create)" entity="User">
+      <Link id="sv1#cru1#ln5" name="Flow5" to="sv1#lgu1" type="transport" validate="true">
+        <LinkParameter id="sv1#cru1#ln5#par13" name="username_Username" source="userNameArray" target="sv1#lgu1.username"/>
+        <LinkParameter id="sv1#cru1#ln5#par14" name="password_Password" source="passwordArray" target="sv1#lgu1.password"/>
+      </Link>
+      <KOLink id="sv1#cru1#kln1" name="issue with create user" to="sv1#page2" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit id="sv1#seu3" name="Groups" gr:x="335" gr:y="195" entity="Group">
+      <SortAttribute attribute="groupName" order="ascending"/>
+      <Link id="sv1#seu3#ln6" name="Flow14" to="sv1#page1#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#seu3#ln6#par17" name="groupName_Group [label]" source="groupNameArray" target="sv1#page1#enu2#sfld5_label"/>
+        <LinkParameter id="sv1#seu3#ln6#par18" name="oid_Group [output]" source="groupOIDArray" target="sv1#page1#enu2#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+  </OperationUnits>
+</SiteView>

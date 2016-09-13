@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DialogBounds_ExceptionDialog">
+		<item value="532" key="DIALOG_WIDTH"/>
+		<item value="286" key="DIALOG_Y_ORIGIN"/>
+		<item value="130" key="DIALOG_HEIGHT"/>
+		<item value="425" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="com.webratio.ide.ui.properties.items.EntityPropertyItem$2.DialogSettings">
+	</section>
+</section>

@@ -1,0 +1,14 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Home" homePage="sv1#area1#page3" landmarks="sv1#area1">
+  <OperationUnits>
+    <CreateUnit gr:x="375" gr:y="430" id="sv1#cru1" name="createUser (db:Create)" entity="User">
+      <Link id="sv1#cru1#ln5" name="SuccessfullyCreatedUser" to="sv1#miu1" type="transport" validate="true"/>
+      <KOLink id="sv1#cru1#kln1" name="Error Create User" to="sv1#page2" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModuleInstanceUnit gr:x="470" gr:y="30" id="sv1#miu1" action="true" name="Login" moduleId="mov1#opm2">
+      <KOLink id="sv1#miu1#kln2" name="Error Logging in" to="sv1#area1#page3#mssu1">
+        <LinkParameter id="sv1#miu1#kln2#par7" name="Show message_Shown Messages" sourceValue="Error" target="sv1#area1#page3#mssu1.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="115" gr:y="430" id="sv1#miu2" action="true" moduleId="mov1#opm3"/>
+  </OperationUnits>
+</SiteView>
