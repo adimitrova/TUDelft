@@ -1,0 +1,98 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1095" gr:y="660" id="sv2#page11" name="Items" linkOrder="sv2#page11#ln70 sv2#page11#ln71">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#page11#dau7" name="Item Details" entity="ent8" displayAttributes="ent8#att27 ent8#att26 ent8#att25">
+      <Selector id="sv2#page11#dau7#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page11#dau7#su26#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page11#dau7#ln75" name="Flow75" to="sv2#page11#enu11" type="transport" validate="true"/>
+    </DataUnit>
+    <EntryUnit id="sv2#page11#enu11" name="Annotate item" gr:x="15" gr:y="205" entity="ent9" linkOrder="sv2#page11#enu11#ln85">
+      <Field id="sv2#page11#enu11#fld30" name="Annotation" type="string" modifiable="true"/>
+      <Link id="sv2#page11#enu11#ln85" name="Create annotation" to="sv2#cru10" type="normal" validate="true">
+        <LinkParameter id="sv2#page11#enu11#ln85#par213" name="Annotation Object_Annotation Object" source="entityBean" target="sv2#cru10.entityBeans"/>
+        <LinkParameter id="sv2#page11#enu11#ln85#par214" name="Confidence_Confidence" source="sv2#page11#enu11#fld31" target="sv2#cru10.ent9#att29"/>
+        <LinkParameter id="sv2#page11#enu11#ln85#par215" name="Annotation_Label" source="sv2#page11#enu11#fld30" target="sv2#cru10.ent9#att30"/>
+        <LinkParameter id="sv2#page11#enu11#ln85#par216" name="false_marked" sourceValue="false" target="sv2#cru10.ent9#att31"/>
+        <LinkParameter id="sv2#page11#enu11#ln85#par311" name="UserCtxParam.oid_PASSING_User.oid(AnnotationToUser)" sourceLinkParameter="sv2#page11#gtu7#ln119#par310" target="sv2#cru10.rel6#role12.userOID"/>
+      </Link>
+      <Field id="sv2#page11#enu11#fld31" name="Confidence (int)" type="string" modifiable="true"/>
+    </EntryUnit>
+    <GetUnit gr:x="165" gr:y="10" id="sv2#page11#gtu7" name="GetCurrUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page11#gtu7#ln119" name="Flow119" to="sv2#page11#enu11" type="transport" validate="true">
+        <LinkParameter id="sv2#page11#gtu7#ln119#par310" name="UserCtxParam.oid_PASSING" source="sv2#page11#gtu7.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page11#dau7">
+          <layout:Attribute attribute="ent8#att27"/>
+          <layout:Attribute attribute="ent8#att26"/>
+          <layout:Attribute attribute="ent8#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page11#enu11">
+          <layout:Link link="sv2#page11#enu11#ln85"/>
+          <layout:Field field="sv2#page11#enu11#fld30"/>
+          <layout:Field field="sv2#page11#enu11#fld31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page11#ln70" name="Back | " to="sv2#page7" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv2#page11#ln71" name="Logout" to="sv2#miu2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

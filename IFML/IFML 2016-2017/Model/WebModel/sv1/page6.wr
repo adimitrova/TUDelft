@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="170" gr:y="-5" id="sv1#page6" name="SIGN UP" landmark="true">
+  <ContentUnits>
+    <SelectorUnit id="sv1#page6#seu8" name="GetPaymentMethods" gr:x="90" gr:y="0" entity="ent1">
+      <Link id="sv1#page6#seu8#ln17" name="Flow4" to="sv1#page6#enu5" type="transport" validate="true">
+        <LinkParameter id="sv1#page6#seu8#ln17#par95" name="type_Payment Method [label]" source="ent1#att41Array" target="sv1#page6#enu5#sfld6_label"/>
+        <LinkParameter id="sv1#page6#seu8#ln17#par96" name="oid_payment_Payment Method [output]" source="ent1#att4Array" target="sv1#page6#enu5#sfld6_output"/>
+        <LinkParameter id="sv1#page6#seu8#ln17#par97" name="oid_payment_PASSING" source="ent1#att4Array" passing="true"/>
+        <LinkParameter id="sv1#page6#seu8#ln17#par98" name="type_PASSING" source="ent1#att41Array" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv1#page6#enu5" name="Register" linkOrder="sv1#page6#enu5#ln18" gr:x="40" gr:y="135" entity="User">
+      <Field id="sv1#page6#enu5#fld16" name="Username" type="string" modifiable="true"/>
+      <Field id="sv1#page6#enu5#fld17" name="Password" type="password" modifiable="true"/>
+      <Field id="sv1#page6#enu5#fld18" name="Name" type="string" modifiable="true"/>
+      <Field id="sv1#page6#enu5#fld19" name="Birthday" type="date" modifiable="true"/>
+      <Link id="sv1#page6#enu5#ln18" name="Register" to="sv1#miu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page6#enu5#ln18#par99" name="oid_group_PASSING_Group.oid_group(defaultGroup)" source="sv1#page6#enu5#sfld5" target="sv1#miu1.mov1#opm1#icu1#icp3"/>
+        <LinkParameter id="sv1#page6#enu5#ln18#par100" name="Birthday_birthday" source="sv1#page6#enu5#fld19" target="sv1#miu1.mov1#opm1#icu1#icp7"/>
+        <LinkParameter id="sv1#page6#enu5#ln18#par101" name="Email_email" source="sv1#page6#enu5#fld20" target="sv1#miu1.mov1#opm1#icu1#icp8"/>
+        <LinkParameter id="sv1#page6#enu5#ln18#par102" name="Name_name" source="sv1#page6#enu5#fld18" target="sv1#miu1.mov1#opm1#icu1#icp9"/>
+        <LinkParameter id="sv1#page6#enu5#ln18#par103" name="Key [oid_user]_oid_user" source="key.userOID" target="sv1#miu1.mov1#opm1#icu1#icp10"/>
+        <LinkParameter id="sv1#page6#enu5#ln18#par104" name="Password_password" source="sv1#page6#enu5#fld17" target="sv1#miu1.mov1#opm1#icu1#icp11"/>
+        <LinkParameter id="sv1#page6#enu5#ln18#par105" name="Payment Method_payment" source="sv1#page6#enu5#sfld6" target="sv1#miu1.mov1#opm1#icu1#icp12"/>
+        <LinkParameter id="sv1#page6#enu5#ln18#par107" name="Username_userName" source="sv1#page6#enu5#fld16" target="sv1#miu1.mov1#opm1#icu1#icp13"/>
+      </Link>
+      <Field id="sv1#page6#enu5#fld20" name="Email" type="string" modifiable="true"/>
+      <SelectionField id="sv1#page6#enu5#sfld5" name="User type" type="string"/>
+      <SelectionField id="sv1#page6#enu5#sfld6" name="Payment Method" type="string"/>
+    </EntryUnit>
+    <SelectorUnit id="sv1#page6#seu9" name="GetGroups" gr:x="0" gr:y="0" entity="Group">
+      <Link id="sv1#page6#seu9#ln19" name="Flow8" to="sv1#page6#enu5" type="transport" validate="true">
+        <LinkParameter id="sv1#page6#seu9#ln19#par110" name="groupName_User type [label]" source="groupNameArray" target="sv1#page6#enu5#sfld5_label"/>
+        <LinkParameter id="sv1#page6#seu9#ln19#par111" name="oid_group_User type [output]" source="groupOIDArray" target="sv1#page6#enu5#sfld5_output"/>
+        <LinkParameter id="sv1#page6#seu9#ln19#par112" name="groupName_PASSING" source="groupNameArray" passing="true"/>
+        <LinkParameter id="sv1#page6#seu9#ln19#par113" name="oid_group_PASSING" source="groupOIDArray" passing="true"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page6#enu5">
+          <layout:Link link="sv1#page6#enu5#ln18"/>
+          <layout:Field field="sv1#page6#enu5#fld16"/>
+          <layout:Field field="sv1#page6#enu5#fld17"/>
+          <layout:Field field="sv1#page6#enu5#fld18"/>
+          <layout:Field field="sv1#page6#enu5#fld19"/>
+          <layout:Field field="sv1#page6#enu5#fld20"/>
+          <layout:Field field="sv1#page6#enu5#sfld5"/>
+          <layout:Field field="sv1#page6#enu5#sfld6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

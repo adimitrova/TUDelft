@@ -1,0 +1,69 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page15" name="Item Details" gr:x="1525" gr:y="60" linkOrder="sv3#page15#ln54 sv3#page15#ln57">
+  <ContentUnits>
+    <DataUnit id="sv3#page15#dau9" name="Item" gr:x="0" gr:y="0" entity="ent8" displayAttributes="ent8#att27 ent8#att26 ent8#att25 ent8#att24">
+      <Selector id="sv3#page15#dau9#su43" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page15#dau9#su43#kcond22" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page15#dau9#ln39" name="Flow60" to="sv3#page15#inu7" type="transport" validate="true">
+        <LinkParameter id="sv3#page15#dau9#ln39#par221" name="oid_KeyCondition23 [oid]" target="sv3#page15#inu7#su44#kcond23.ent9#att28" source="data.ent8#att24"/>
+      </Link>
+    </DataUnit>
+    <IndexUnit id="sv3#page15#inu7" name="Annotations" linkOrder="sv3#page15#inu7#ln40" gr:x="170" gr:y="30" entity="ent9" displayAttributes="ent9#att30 ent9#att29 ent9#att31 ent9#att28">
+      <Selector id="sv3#page15#inu7#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page15#inu7#su44#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page15#inu7#ln40" name="Grade annotation" to="sv3#miu5" type="normal" validate="true">
+        <LinkParameter id="sv3#page15#inu7#ln40#par217" name="oid_AnnotationOID" source="data[].ent9#att28" target="sv3#miu5.mov3#opm3#icu9#icp19"/>
+        <LinkParameter id="sv3#page15#inu7#ln40#par218" name="1_GoodOrBad" sourceValue="1" target="sv3#miu5.mov3#opm3#icu9#icp3"/>
+        <LinkParameter id="sv3#page15#inu7#ln40#par219" name="UserCtxParam.oid_PASSING_UserOID" sourceLinkParameter="sv3#gtu4#ln37#par207" target="sv3#miu5.mov3#opm3#icu9#icp21"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page15#dau9">
+          <layout:Attribute attribute="ent8#att27"/>
+          <layout:Attribute attribute="ent8#att26"/>
+          <layout:Attribute attribute="ent8#att25"/>
+          <layout:Attribute attribute="ent8#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page15#inu7">
+          <layout:Link link="sv3#page15#inu7#ln40"/>
+          <layout:Attribute attribute="ent9#att30"/>
+          <layout:Attribute attribute="ent9#att29"/>
+          <layout:Attribute attribute="ent9#att31"/>
+          <layout:Attribute attribute="ent9#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#page15#ln54" name="Logout | " to="sv3#miu3" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv3#page15#ln57" name="Go Back" to="sv3#page3#dau3" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

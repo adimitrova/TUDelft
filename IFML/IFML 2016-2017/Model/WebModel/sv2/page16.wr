@@ -1,0 +1,61 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page16" name="Question details:" gr:x="1255" gr:y="750">
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page16#enu4">
+          <layout:Field field="sv2#page16#enu4#fld4"/>
+          <layout:Link link="sv2#page16#enu4#ln48"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page16#dau11">
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <ContentUnits>
+    <EntryUnit id="sv2#page16#enu4" name="Answer question:" gr:x="10" gr:y="150" linkOrder="sv2#page16#enu4#ln48">
+      <Field id="sv2#page16#enu4#fld4" name="Answer" type="string" modifiable="true"/>
+      <Link id="sv2#page16#enu4#ln48" name="Answer" to="sv2#mfu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page16#enu4#ln48#par88" name="Answer_Answer" source="sv2#page16#enu4#fld4" target="sv2#mfu2.ent3#att17"/>
+        <LinkParameter id="sv2#page16#enu4#ln48#par89" name="Answered_Status" sourceValue="Answered" target="sv2#mfu2.ent3#att18"/>
+        <LinkParameter id="sv2#page16#enu4#ln48#par93" name="oid_questions_PASSING_KeyCondition14 [oid_questions]" sourceLinkParameter="sv2#page16#dau11#ln51#par92" target="sv2#mfu2#su25#kcond14.ent3#att15"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#page16#dau11" name="Question Details" entity="ent3" displayAttributes="ent3#att16 ent3#att17 ent3#att18">
+      <Selector id="sv2#page16#dau11#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page16#dau11#su26#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page16#dau11#ln51" name="Flow51" to="sv2#page16#enu4" type="transport" validate="true">
+        <LinkParameter id="sv2#page16#dau11#ln51#par92" name="oid_questions_PASSING" source="data.ent3#att15" passing="true"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+</Page>

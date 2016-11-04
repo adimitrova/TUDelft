@@ -1,0 +1,29 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="255" gr:y="195" id="mov3#opm8" name="Skills">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm8#icu8" gr:x="20" gr:y="95">
+      <InputCollectorParameter id="mov3#opm8#icu8#icp20" name="SkillName"/>
+      <Link id="mov3#opm8#icu8#ln79" name="Flow79" to="mov3#opm8#lpu3" type="transport" validate="true">
+        <LinkParameter id="mov3#opm8#icu8#ln79#par185" name="SkillName_Input Array" source="mov3#opm8#icu8#icp20" target="mov3#opm8#lpu3.array"/>
+        <LinkParameter id="mov3#opm8#icu8#ln79#par204" name="CurrUser_PASSING" source="mov3#opm8#icu8#icp27" passing="true"/>
+      </Link>
+      <InputCollectorParameter id="mov3#opm8#icu8#icp27" name="CurrUser"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="680" gr:y="45" id="mov3#opm8#okcu5" name="OK Port5"/>
+    <KOCollectorUnit gr:x="680" gr:y="150" id="mov3#opm8#kocu6" name="KO Port6"/>
+    <ModifyUnit id="mov3#opm8#mfu4" name="Update User Skills (user_skill)" gr:x="450" gr:y="75" entity="ent10">
+      <Selector id="mov3#opm8#mfu4#su33" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm8#mfu4#su33#kcond20" name="CurrentUserSkills" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="mov3#opm8#mfu4#su33#rcond20" name="CurrSkill" predicate="in" implied="false" role="rel10#role15"/>
+      </Selector>
+      <OKLink id="mov3#opm8#mfu4#oln25" name="OKFlow13" to="mov3#opm8#lpu3" gr:bendpoints="132,29,-98,4" automaticCoupling="true"/>
+      <KOLink id="mov3#opm8#mfu4#kln21" name="KOFlow21" to="mov3#opm8#kocu6" automaticCoupling="true"/>
+      <Link id="mov3#opm8#mfu4#ln78" name="Flow78" to="mov3#opm8#okcu5" automaticCoupling="true" type="transport" validate="true"/>
+    </ModifyUnit>
+    <LoopUnit id="mov3#opm8#lpu3" name="Skills loop" gr:x="285" gr:y="100">
+      <OKLink id="mov3#opm8#lpu3#oln26" name="UpdateSkill" to="mov3#opm8#mfu4" code="next">
+        <LinkParameter id="mov3#opm8#lpu3#oln26#par184" name="UserCtxParam.oid_PASSING_User.oid(SkillToUser)" sourceLinkParameter="mov3#opm8#icu8#ln79#par204" target="mov3#opm8#mfu4.rel10#role16.userOID"/>
+        <LinkParameter id="mov3#opm8#lpu3#oln26#par205" name="Next Element_CurrSkill [oid]" source="next" target="mov3#opm8#mfu4#su33#rcond20.userOID"/>
+      </OKLink>
+    </LoopUnit>
+  </OperationUnits>
+</OperationModule>

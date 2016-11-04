@@ -1,0 +1,212 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="50" gr:y="735" id="sv2#page7" name="Task Details" linkOrder="sv2#page7#ln43 sv2#page7#ln65">
+  <ContentUnits>
+    <DataUnit gr:x="25" gr:y="20" id="sv2#page7#dau6" name="Task details" entity="ent3" displayAttributes="ent3#att14 ent3#att15 ent3#att16 ent3#att18 ent3#att17 ent3#att19">
+      <Selector id="sv2#page7#dau6#su19" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page7#dau6#su19#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page7#dau6#ln60" name="Flow48" to="sv2#page7#seu13" type="transport" validate="true">
+        <LinkParameter id="sv2#page7#dau6#ln60#par133" name="oid_CurrTask [oid]" source="data.ent3#att13" target="sv2#page7#seu13#su23#kcond15.ent8#att24"/>
+        <LinkParameter id="sv2#page7#dau6#ln60#par134" name="oid_PASSING_CurrTask [oid]" sourceLinkParameter="sv2#page4#inu1#ln36#par130" target="sv2#page7#seu13#su23#rcond15.ent3#att13"/>
+        <LinkParameter id="sv2#page7#dau6#ln60#par135" name="oid_PASSING" sourceLinkParameter="sv2#page4#inu1#ln36#par130" passing="true"/>
+      </Link>
+      <Link id="sv2#page7#dau6#ln97" name="Flow97" to="sv2#page7#seu27" type="transport" validate="true">
+        <LinkParameter id="sv2#page7#dau6#ln97#par267" name="oid_PASSING" sourceLinkParameter="sv2#page4#inu1#ln36#par130" passing="true"/>
+      </Link>
+      <Link id="sv2#page7#dau6#ln111" name="Flow111" to="sv2#page7#seu30" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <GetUnit id="sv2#page7#gtu5" name="GetCurrUser" gr:x="190" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="sv2#page7#gtu5#ln38" name="Flow14" to="sv2#page7#dau6" type="transport" validate="true" gr:bendpoints="-70,-132,45,153">
+        <LinkParameter id="sv2#page7#gtu5#ln38#par37" name="UserCtxParam.oid_PASSING" source="sv2#page7#gtu5.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv2#page7#gtu5#ln109" name="Flow109" to="sv2#page7#seu30" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <PowerIndexUnit id="sv2#page7#pwu4" name="Items for this task" gr:x="230" gr:y="390" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att27">
+      <Selector id="sv2#page7#pwu4#su22" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page7#pwu4#su22#rcond14" name="CurrTaskOnly" predicate="in" implied="false" role="rel5#role9"/>
+      </Selector>
+    </PowerIndexUnit>
+    <SelectorUnit id="sv2#page7#seu13" name="GetItemsForThisTask" gr:x="0" gr:y="260" entity="ent8">
+      <Link id="sv2#page7#seu13#ln58" name="Flow45" to="sv2#page7#pwu4" type="transport" validate="true">
+        <LinkParameter id="sv2#page7#seu13#ln58#par123" name="oid_current oid" source="ent8#att24Array" target="sv2#page7#pwu4.current.ent8#att24"/>
+        <LinkParameter id="sv2#page7#seu13#ln58#par138" name="oid_PASSING_CurrTaskOnly [oid]" sourceLinkParameter="sv2#page7#dau6#ln60#par135" target="sv2#page7#pwu4#su22#rcond14.ent3#att13"/>
+      </Link>
+      <Selector id="sv2#page7#seu13#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page7#seu13#su23#kcond15" name="CurrTask" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv2#page7#seu13#su23#rcond15" name="CurrTask" predicate="in" implied="false" role="rel5#role9"/>
+      </Selector>
+      <SortAttribute attribute="ent8#att27" order="ascending"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="190" gr:y="185" id="sv2#page7#seu27" name="GetItemsForTask" entity="ent8">
+      <Link id="sv2#page7#seu27#ln104" name="Flow104" to="sv2#page7#inu11" type="transport" validate="true">
+        <LinkParameter id="sv2#page7#seu27#ln104#par285" name="oid_PASSING_itemsForCurrTask [oid]" sourceLinkParameter="sv2#page7#dau6#ln97#par267" target="sv2#page7#inu11#su54#rcond38.ent3#att13"/>
+      </Link>
+    </SelectorUnit>
+    <IndexUnit gr:x="370" gr:y="260" id="sv2#page7#inu11" name="items found" entity="ent8" displayAttributes="ent8#att27 ent8#att24">
+      <Selector id="sv2#page7#inu11#su54" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page7#inu11#su54#rcond38" name="itemsForCurrTask" predicate="in" implied="false" role="rel5#role9"/>
+      </Selector>
+    </IndexUnit>
+    <SelectorUnit id="sv2#page7#seu30" name="OneNotAnnotatedItemByYou" gr:x="410" gr:y="30" maxResults="1" entity="ent8">
+      <Selector id="sv2#page7#seu30#su56" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page7#seu30#su56#rcond40" name="TaskToItems" predicate="in" implied="false" role="rel5#role9"/>
+        <RelationshipRoleCondition id="sv2#page7#seu30#su56#rcond41" name="ByUser" predicate="notIn" implied="false" role="rel6#role11.rel3#role6"/>
+      </Selector>
+      <Link id="sv2#page7#seu30#ln105" name="Flow40" to="sv2#page7#pwu2" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="670" gr:y="40" id="sv2#page7#pwu2" name="You still have to annotate: " sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att24 ent8#att27" linkOrder="sv2#page7#pwu2#ln115">
+      <Selector id="sv2#page7#pwu2#su59" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page7#pwu2#su59#kcond30" name="CurrItemID" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page7#pwu2#ln115" name="Item details" to="sv2#page11#dau7" type="normal" validate="true">
+        <LinkParameter id="sv2#page7#pwu2#ln115#par300" name="oid_PASSING" source="data[].ent8#att24" passing="true"/>
+        <LinkParameter id="sv2#page7#pwu2#ln115#par301" name="oid_KeyCondition17 [oid]" source="data[].ent8#att24" target="sv2#page11#dau7#su26#kcond17.ent8#att24"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page7#dau6">
+          <layout:Attribute attribute="ent3#att14"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page7#pwu4">
+          <layout:Attribute attribute="ent8#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page7#inu11">
+          <layout:Attribute attribute="ent8#att27"/>
+          <layout:Attribute attribute="ent8#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid containerType="cell">
+          <layout:Row>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page7#pwu2">
+          <layout:Attribute attribute="ent8#att24"/>
+          <layout:Attribute attribute="ent8#att27"/>
+          <layout:Link link="sv2#page7#pwu2#ln115"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page7#ln43" name="Back | " to="sv2#page4" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv2#page7#ln65" name="Logout" to="sv2#miu2" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

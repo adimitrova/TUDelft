@@ -1,0 +1,198 @@
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="35" gr:y="70" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att1 User#att3 User#att43 User#att24 User#att44 User#att45" db:database="db2" db:table="user">
+    <Attribute name="oid_user" id="userOID" type="integer" key="true" db:column="oid_user"/>
+    <Attribute name="UserName" id="userName" type="string" db:column="username"/>
+    <Attribute name="password" id="password" type="password" db:column="password"/>
+    <Attribute name="Email" id="email" type="string" db:column="email"/>
+    <Attribute id="User#att1" name="Birthday" type="string" db:column="birthday"/>
+    <Attribute id="User#att3" name="Name" type="string" db:column="name"/>
+    <Attribute id="User#att24" name="WisdomScore" type="integer" db:column="wisdomscore"/>
+    <Attribute id="User#att43" name="payment" type="integer" db:column="payment"/>
+    <Attribute id="User#att44" name="Reputation" type="float" derivationQuery="calculated::avg(Self.rel4#role7(as Var1).ent2#att26)" db:table="user_reputation_view2" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="userOID" name="oid_user"/>
+    </Attribute>
+    <Attribute id="User#att45" name="PaymentMethod" type="string" derivationQuery="simpleImported::Self.rel1#role1.ent1#att41"/>
+    <Comment xml:space="preserve">wisdom: average quality of campaigns in which user contributed
+
+reputation: average of campaigns user created</Comment>
+  </Entity>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="255" gr:y="10" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
+    <Attribute name="oid_group" id="groupOID" type="integer" key="true" db:column="oid_group"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
+  </Entity>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="500" gr:y="40" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
+    <Attribute name="oid_module" id="moduleOID" type="integer" key="true" db:column="oid_module"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
+  </Entity>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db2" db:table="user_group">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid_group"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db2" db:table="user">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid_group"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db2" db:table="group">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid_group"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid_module"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db2" db:table="group_module">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid_group"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid_module"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="30" gr:y="370" id="ent1" name="Payment" duration="persistent" attributeOrder="ent1#att4 ent1#att41 ent1#att6" db:database="db2" db:table="payment">
+    <Attribute id="ent1#att4" key="true" name="oid_payment" type="integer" db:column="oid_payment"/>
+    <Attribute id="ent1#att6" name="currency" type="string" db:column="currency"/>
+    <Attribute id="ent1#att41" name="type" type="string" db:column="type"/>
+  </Entity>
+  <Relationship id="rel1" name="User_Payment" sourceEntity="User" targetEntity="ent1" db:database="db2" db:table="user">
+    <RelationshipRole1 id="rel1#role1" name="UserToPayment" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="PaymentToUser" maxCard="N">
+      <db:JoinColumn attribute="ent1#att4" name="payment_oid_payment"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="570" gr:y="360" id="ent2" name="Campaigns" duration="persistent" attributeOrder="ent2#att9 ent2#att10 ent2#att11 ent2#att12 ent2#att14 ent2#att48 ent2#att30 ent2#att13 ent2#att26 ent2#att27" db:database="db2" db:table="campaigns">
+    <Attribute id="ent2#att9" key="true" name="oid_camp" type="integer" db:column="oid_camp"/>
+    <Attribute id="ent2#att10" name="Title" type="string" db:column="title"/>
+    <Attribute id="ent2#att11" name="Description" type="string" db:column="description"/>
+    <Attribute id="ent2#att12" name="Amount" type="float" db:column="amount"/>
+    <Attribute id="ent2#att13" name="Status" type="string" db:column="status"/>
+    <Attribute id="ent2#att14" name="Limit" type="float" derivationQuery="simpleCalculated::Self.ent2#att12 * 0.35 + Self.ent2#att12"/>
+    <Attribute id="ent2#att26" name="Quality" type="float" derivationQuery="calculated::avg(Self.rel10#role19(as Var1).ent5#att5)" db:table="campaigns_quality_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent2#att9" name="oid_camp"/>
+    </Attribute>
+    <Attribute id="ent2#att27" name="Popularity" type="integer" derivationQuery="calculated::count(Self.rel10#role19(as Var1))" db:table="campaigns_popularity_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent2#att9" name="oid_camp"/>
+    </Attribute>
+    <Attribute id="ent2#att30" name="Expiration" type="timestamp" db:column="expiration"/>
+    <Attribute id="ent2#att48" name="Raised" type="float" db:column="raised"/>
+    <Comment xml:space="preserve">Quality: average of feedback
+
+Popularity: Number of contributions</Comment>
+  </Entity>
+  <Entity gr:x="290" gr:y="390" id="ent3" name="Questions" duration="persistent" attributeOrder="ent3#att15 ent3#att16 ent3#att17 ent3#att18" db:database="db2" db:table="questions">
+    <Attribute id="ent3#att15" key="true" name="oid_questions" type="integer" db:column="oid_questions"/>
+    <Attribute id="ent3#att16" name="Question" type="string" db:column="question"/>
+    <Attribute id="ent3#att17" name="Answer" type="string" db:column="answer"/>
+    <Attribute id="ent3#att18" name="Status" type="string" db:column="status"/>
+  </Entity>
+  <Entity gr:x="825" gr:y="355" id="ent4" name="KeywordsTAGS" duration="persistent" attributeOrder="ent4#att19 ent4#att20" db:database="db2" db:table="keywordstags">
+    <Attribute id="ent4#att19" key="true" name="oid_keywords" type="integer" db:column="oid_keywords"/>
+    <Attribute id="ent4#att20" name="Keyword" type="string" db:column="keyword"/>
+  </Entity>
+  <Relationship id="rel2" name="Campaigns_Keywords" sourceEntity="ent2" targetEntity="ent4" db:database="db2" db:table="campaigns_keywords">
+    <RelationshipRole1 id="rel2#role3" name="CampaignsToKeywords" maxCard="N">
+      <db:JoinColumn attribute="ent2#att9" name="campaigns_oid_camp"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="KeywordsToCampaigns" maxCard="N">
+      <db:JoinColumn attribute="ent4#att19" name="keywordstags_oid_keywords"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3" name="Campaigns_Questions" sourceEntity="ent2" targetEntity="ent3" db:database="db2" db:table="questions">
+    <RelationshipRole1 id="rel3#role5" name="CampaignsToQuestions" maxCard="N">
+      <db:JoinColumn attribute="ent2#att9" name="campaigns_oid_camp"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="QuestionsToCampaigns" maxCard="1">
+      <db:JoinColumn attribute="ent3#att15" name="oid_questions"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel4" name="User_Campaigns" sourceEntity="User" targetEntity="ent2" db:database="db2" db:table="campaigns">
+    <RelationshipRole1 id="rel4#role7" name="UserToCampaigns" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="CampaignsToUser" maxCard="1">
+      <db:JoinColumn attribute="ent2#att9" name="oid_camp"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="495" gr:y="200" id="ent5" name="Contributions_bySupporters" duration="persistent" attributeOrder="ent5#att21 ent5#att22 ent5#att2 ent5#att5" db:database="db2" db:table="contributions_bysupporters">
+    <Attribute id="ent5#att21" key="true" name="oid_userContr" type="integer" db:column="oid_usercontr"/>
+    <Attribute id="ent5#att22" name="Amount" type="float" db:column="amount"/>
+    <Attribute id="ent5#att2" name="ContributerName" type="string" derivationQuery="simpleImported::Self.rel7#role14.User#att3"/>
+    <Attribute id="ent5#att5" name="Feedback" type="integer" db:column="feedback"/>
+  </Entity>
+  <Relationship id="rel5" name="Perks_Contributions" sourceEntity="ent6" targetEntity="ent5" db:database="db2" db:table="contributions_bysupporters">
+    <RelationshipRole1 id="rel5#role9" name="CampaignsToContributions" maxCard="N">
+      <db:JoinColumn attribute="ent6#att8" name="contributionsperks_oid_contr"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="ContributionsToCampaigns" maxCard="1">
+      <db:JoinColumn attribute="ent5#att21" name="oid_usercontr"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="785" gr:y="80" id="ent6" name="ContributionsPerks" duration="persistent" attributeOrder="ent6#att8 ent6#att36 ent6#att37 ent6#att38 ent6#att39" db:database="db2" db:table="contributionsperks">
+    <Attribute id="ent6#att8" key="true" name="oid_contr" type="integer" db:column="oid_contr"/>
+    <Attribute id="ent6#att36" name="TitlePerk" type="string" db:column="titleperk"/>
+    <Attribute id="ent6#att37" name="Description" type="string" db:column="description"/>
+    <Attribute id="ent6#att38" name="Min_amount" type="integer" db:column="min_amount"/>
+    <Attribute id="ent6#att39" name="ExpirationPerk" type="date" db:column="expirationperk"/>
+  </Entity>
+  <Relationship id="rel6" name="Campaigns_ContrPerks" sourceEntity="ent2" targetEntity="ent6" db:database="db2" db:table="campaigns_contrperks">
+    <RelationshipRole1 id="rel6#role11" name="CampaignsToPerks" maxCard="N">
+      <db:JoinColumn attribute="ent2#att9" name="campaigns_oid_camp"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="PerksToCampaigns" maxCard="N">
+      <db:JoinColumn attribute="ent6#att8" name="contributionsperks_oid_contr"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel10" name="Campaigns_ContributionsbySupporters" sourceEntity="ent2" targetEntity="ent5" db:database="db2" db:table="contributions_bysupporters">
+    <RelationshipRole1 id="rel10#role19" name="CampaignsToContributions_byUsers" maxCard="N">
+      <db:JoinColumn attribute="ent2#att9" name="campaigns_oid_camp"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="Contributions_byUsersToCampaigns" maxCard="1">
+      <db:JoinColumn attribute="ent5#att21" name="oid_usercontr"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db2" name="ifml1617" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/ifml16173" username="root" password="root">
+    <Comment xml:space="preserve">MySQL Workbench db</Comment>
+  </db:Database>
+  <Relationship id="rel12" name="ContributionsperksUser" sourceEntity="ent6" targetEntity="User" gr:bendpoints="-486,37,254,-3" db:database="db2" db:table="contributionsperkstouser_view">
+    <RelationshipRole1 id="rel12#role23" name="ContributionsperksToUser" maxCard="N" derivationQuery="imported::Self.rel5#role9(as Var1).rel7#role14(as Var2)">
+      <db:JoinColumn attribute="ent6#att8" name="s_oid_contr"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="UserToContributionsperks" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="T_user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel7" name="User_Contributions_bySupporters" sourceEntity="User" targetEntity="ent5" db:database="db2" db:table="contributions_bysupporters">
+    <RelationshipRole1 id="rel7#role13" name="UserToContributions_bySupporters" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="Contributions_bySupportersToUser" maxCard="1">
+      <db:JoinColumn attribute="ent5#att21" name="oid_usercontr"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel8" name="User_Questions" sourceEntity="User" targetEntity="ent3" db:database="db2" db:table="user_questions">
+    <RelationshipRole1 id="rel8#role15" name="UserToQuestions" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="QuestionsToUser" maxCard="N">
+      <db:JoinColumn attribute="ent3#att15" name="questions_oid_questions"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel9" name="Campaigns_Contributor" sourceEntity="ent2" targetEntity="User" gr:bendpoints="-159,-79,146,106" db:database="db2" db:table="campaigns_contributor_view">
+    <RelationshipRole1 id="rel9#role17" name="Campaigns_Contributor" maxCard="N" derivationQuery="imported::Self.rel10#role19(as Var1).rel7#role14(as Var2)">
+      <db:JoinColumn attribute="ent2#att9" name="s_oid_camp"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="Contributor_Campaigns" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="T_user_oid_user"/>
+    </RelationshipRole2>
+  </Relationship>
+</DataModel>

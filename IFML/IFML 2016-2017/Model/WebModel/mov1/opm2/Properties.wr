@@ -1,0 +1,79 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="70" gr:y="100" id="mov1#opm2" name="Update Amounts">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm2#icu2" gr:x="-40" gr:y="55">
+      <InputCollectorParameter id="mov1#opm2#icu2#icp16" name="AmountContributed"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp17" name="CurrUser"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp18" name="CurrCampaign"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp19" name="CurrPerk"/>
+      <OKLink id="mov1#opm2#icu2#oln11" name="OKFlow11" to="mov1#opm2#seu15">
+        <LinkParameter id="mov1#opm2#icu2#oln11#par200" name="AmountContributed_PASSING" source="mov1#opm2#icu2#icp16" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln11#par201" name="CurrCampaign_PASSING" source="mov1#opm2#icu2#icp18" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln11#par202" name="CurrPerk_PASSING" source="mov1#opm2#icu2#icp19" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln11#par203" name="CurrUser_PASSING" source="mov1#opm2#icu2#icp17" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln11#par229" name="CurrPerk_CurrCamp [oid_contr]" source="mov1#opm2#icu2#icp19" target="mov1#opm2#seu15#su15#rcond6.ent6#att8"/>
+        <LinkParameter id="mov1#opm2#icu2#oln11#par13" name="Feedback_PASSING" source="mov1#opm2#icu2#icp20" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp20" name="Feedback"/>
+    </InputCollectorUnit>
+    <MathUnit id="mov1#opm2#mathu2" name="Raised+Amount" gr:x="220" gr:y="320" resultType="float" defaultExpression="ContributedAmount+Raised">
+      <MathVariable id="mov1#opm2#mathu2#mathv1" name="Raised"/>
+      <MathVariable id="mov1#opm2#mathu2#mathv2" name="ContributedAmount"/>
+      <OKLink id="mov1#opm2#mathu2#oln17" name="OKFlow17" to="mov1#opm2#mfu3">
+        <LinkParameter id="mov1#opm2#mathu2#oln17#par223" name="Result_Raised" source="result" target="mov1#opm2#mfu3.ent2#att48"/>
+        <LinkParameter id="mov1#opm2#mathu2#oln17#par2" name="CurrCampaign_PASSING_KeyCondition9 [oid_camp]" sourceLinkParameter="mov1#opm2#seu15#oln16#par1" target="mov1#opm2#mfu3#su14#kcond11.ent2#att9"/>
+        <LinkParameter id="mov1#opm2#mathu2#oln17#par56" name="AmountContributed_PASSING" sourceLinkParameter="mov1#opm2#seu15#oln16#par53" passing="true"/>
+        <LinkParameter id="mov1#opm2#mathu2#oln17#par58" name="CurrCampaign_PASSING" sourceLinkParameter="mov1#opm2#seu15#oln16#par1" passing="true"/>
+        <LinkParameter id="mov1#opm2#mathu2#oln17#par59" name="CurrPerk_PASSING" sourceLinkParameter="mov1#opm2#seu15#oln16#par54" passing="true"/>
+        <LinkParameter id="mov1#opm2#mathu2#oln17#par60" name="CurrUser_PASSING" sourceLinkParameter="mov1#opm2#seu15#oln16#par55" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#opm2#mathu2#kln14" name="KOFlow14" to="mov1#opm2#kocu3">
+        <LinkParameter id="mov1#opm2#mathu2#kln14#par224" name="Calculations don't work_Error message" sourceValue="Calculations don't work" target="mov1#opm2#kocu3#ocp11"/>
+      </KOLink>
+    </MathUnit>
+    <ModifyUnit id="mov1#opm2#mfu3" name="UpdateCamp" gr:x="455" gr:y="410" entity="ent2">
+      <Selector id="mov1#opm2#mfu3#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm2#mfu3#su14#kcond11" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm2#mfu3#oln13" name="OKFlow13" to="mov1#opm2#cru1">
+        <LinkParameter id="mov1#opm2#mfu3#oln13#par61" name="AmountContributed_PASSING_Amount" sourceLinkParameter="mov1#opm2#mathu2#oln17#par56" target="mov1#opm2#cru1.ent5#att22"/>
+        <LinkParameter id="mov1#opm2#mfu3#oln13#par62" name="CurrCampaign_PASSING_Campaigns.oid_camp(Contributions_byUsersToCampaigns)" target="mov1#opm2#cru1.rel10#role20.ent2#att9" source="ent2#att9Array"/>
+        <LinkParameter id="mov1#opm2#mfu3#oln13#par63" name="CurrPerk_PASSING_ContributionsPerks.oid_contr(ContributionsToCampaigns)" sourceLinkParameter="mov1#opm2#mathu2#oln17#par59" target="mov1#opm2#cru1.rel5#role10.ent6#att8"/>
+        <LinkParameter id="mov1#opm2#mfu3#oln13#par142" name="CurrUser_PASSING_User.oid_user(Contributions_bySupportersToUser)" sourceLinkParameter="mov1#opm2#mathu2#oln17#par60" target="mov1#opm2#cru1.rel7#role14.userOID"/>
+      </OKLink>
+      <KOLink id="mov1#opm2#mfu3#kln12" name="KOFlow12" to="mov1#opm2#kocu3">
+        <LinkParameter id="mov1#opm2#mfu3#kln12#par219" name="Error updating Raised amount_Error message" sourceValue="Error updating Raised amount" target="mov1#opm2#kocu3#ocp11"/>
+      </KOLink>
+    </ModifyUnit>
+    <SelectorUnit id="mov1#opm2#seu15" name="GetRaised" gr:x="265" gr:y="135" entity="ent2" linkOrder="mov1#opm2#seu15#ln37">
+      <Selector id="mov1#opm2#seu15#su15" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm2#seu15#su15#rcond6" name="CurrCamp" predicate="in" implied="false" role="rel6#role12"/>
+      </Selector>
+      <OKLink id="mov1#opm2#seu15#oln16" name="OKFlow16" to="mov1#opm2#mathu2">
+        <LinkParameter id="mov1#opm2#seu15#oln16#par255" name="AmountContributed_PASSING_ContributedAmount" sourceLinkParameter="mov1#opm2#icu2#oln11#par200" target="mov1#opm2#mathu2#mathv2"/>
+        <LinkParameter id="mov1#opm2#seu15#oln16#par256" name="Raised_Raised" source="ent2#att48Array" target="mov1#opm2#mathu2#mathv1"/>
+        <LinkParameter id="mov1#opm2#seu15#oln16#par257" name="ContributedAmount+Raised_Expression" sourceValue="ContributedAmount+Raised" target="mov1#opm2#mathu2.expr"/>
+        <LinkParameter id="mov1#opm2#seu15#oln16#par1" name="CurrCampaign_PASSING" sourceLinkParameter="mov1#opm2#icu2#oln11#par201" passing="true"/>
+        <LinkParameter id="mov1#opm2#seu15#oln16#par53" name="AmountContributed_PASSING" sourceLinkParameter="mov1#opm2#icu2#oln11#par200" passing="true"/>
+        <LinkParameter id="mov1#opm2#seu15#oln16#par54" name="CurrPerk_PASSING" sourceLinkParameter="mov1#opm2#icu2#oln11#par202" passing="true"/>
+        <LinkParameter id="mov1#opm2#seu15#oln16#par55" name="CurrUser_PASSING" sourceLinkParameter="mov1#opm2#icu2#oln11#par203" passing="true"/>
+        <LinkParameter id="mov1#opm2#seu15#oln16#par19" name="Feedback_PASSING" sourceLinkParameter="mov1#opm2#icu2#oln11#par13" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#opm2#seu15#kln15" name="KOFlow15" to="mov1#opm2#kocu3">
+        <LinkParameter id="mov1#opm2#seu15#kln15#par225" name="Cannot get RAISED amount from Curr Campaign_Error message" sourceValue="Cannot get RAISED amount from Curr Campaign" target="mov1#opm2#kocu3#ocp11"/>
+      </KOLink>
+      <Link id="mov1#opm2#seu15#ln37" name="Flow37" to="mov1#opm2#cru1" type="transport" validate="true">
+        <LinkParameter id="mov1#opm2#seu15#ln37#par21" name="Feedback_PASSING_Feedback" sourceLinkParameter="mov1#opm2#icu2#oln11#par13" target="mov1#opm2#cru1.ent5#att5"/>
+      </Link>
+    </SelectorUnit>
+    <OKCollectorUnit gr:x="840" gr:y="90" id="mov1#opm2#okcu2" name="OK Port2"/>
+    <KOCollectorUnit gr:x="840" gr:y="275" id="mov1#opm2#kocu3" name="KO Port3">
+      <OutputCollectorParameter id="mov1#opm2#kocu3#ocp11" name="Error message"/>
+    </KOCollectorUnit>
+    <CreateUnit id="mov1#opm2#cru1" name="AddContribution" gr:x="495" gr:y="75" entity="ent5">
+      <OKLink id="mov1#opm2#cru1#oln1" name="OKFlow12" to="mov1#opm2#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov1#opm2#cru1#kln1" name="KOFlow13" to="mov1#opm2#kocu3">
+        <LinkParameter id="mov1#opm2#cru1#kln1#par22" name="Error creating Supp Contr_Error message" target="mov1#opm2#kocu3#ocp11" sourceValue="Error creating Supp Contr"/>
+      </KOLink>
+    </CreateUnit>
+  </OperationUnits>
+</OperationModule>

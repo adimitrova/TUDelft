@@ -1,0 +1,52 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="85" gr:y="30" id="mov1#opm1" name="Create User">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm1#icu1#oln3" name="OKFlow3" to="mov1#opm1#cru2">
+        <LinkParameter id="mov1#opm1#icu1#oln3#par27" name="Group.oid_group(defaultGroup)" source="mov1#opm1#icu1#icp3" target="mov1#opm1#cru2.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm1#icu1#oln3#par31" name="birthday" source="mov1#opm1#icu1#icp7" target="mov1#opm1#cru2.User#att1"/>
+        <LinkParameter id="mov1#opm1#icu1#oln3#par32" name="email" source="mov1#opm1#icu1#icp8" target="mov1#opm1#cru2.email"/>
+        <LinkParameter id="mov1#opm1#icu1#oln3#par33" name="name" source="mov1#opm1#icu1#icp9" target="mov1#opm1#cru2.User#att3"/>
+        <LinkParameter id="mov1#opm1#icu1#oln3#par35" name="password" source="mov1#opm1#icu1#icp11" target="mov1#opm1#cru2.password"/>
+        <LinkParameter id="mov1#opm1#icu1#oln3#par37" name="userName" source="mov1#opm1#icu1#icp13" target="mov1#opm1#cru2.userName"/>
+        <LinkParameter id="mov1#opm1#icu1#oln3#par6" name="payment_payment" source="mov1#opm1#icu1#icp12" target="mov1#opm1#cru2.User#att43"/>
+        <LinkParameter id="mov1#opm1#icu1#oln3#par8" name="Group_PASSING" source="mov1#opm1#icu1#icp3" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp3" name="Group"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp7" name="birthday"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp8" name="email"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp9" name="name"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp10" name="oid_user"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp11" name="password"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp12" name="payment"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp13" name="userName"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="505" gr:y="160" id="mov1#opm1#cru2" name="Create User" entity="User">
+      <OKLink id="mov1#opm1#cru2#oln2" name="OKFlow2" to="mov1#opm1#okcu1">
+        <LinkParameter id="mov1#opm1#cru2#oln2#par39" name="birthday_bday" source="User#att1Array" target="mov1#opm1#okcu1#ocp8"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par40" name="email_email" source="emailArray" target="mov1#opm1#okcu1#ocp1"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par41" name="name_name" source="User#att3Array" target="mov1#opm1#okcu1#ocp2"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par42" name="password_password" source="passwordArray" target="mov1#opm1#okcu1#ocp5"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par43" name="payment_payment" source="User#att43Array" target="mov1#opm1#okcu1#ocp7"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par44" name="oid_user_userid" source="userOIDArray" target="mov1#opm1#okcu1#ocp4"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par45" name="userName_username" source="userNameArray" target="mov1#opm1#okcu1#ocp3"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par46" name="wisdomScore_wisdomscore" target="mov1#opm1#okcu1#ocp6" sourceValue="0"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par15" name="Group_PASSING_Group" sourceLinkParameter="mov1#opm1#icu1#oln3#par8" target="mov1#opm1#okcu1#ocp10"/>
+        <LinkParameter id="mov1#opm1#cru2#oln2#par20" name="0_reputation" sourceValue="0" target="mov1#opm1#okcu1#ocp9"/>
+      </OKLink>
+      <KOLink id="mov1#opm1#cru2#kln2" name="KOFlow2" to="mov1#opm1#kocu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="700" gr:y="35" id="mov1#opm1#okcu1" name="OK Port1">
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp1" name="email"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp2" name="name"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp3" name="username"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp4" name="userid"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp5" name="password"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp6" name="wisdomscore"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp7" name="payment"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp8" name="bday"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp9" name="reputation"/>
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp10" name="Group"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="700" gr:y="240" id="mov1#opm1#kocu1" name="KO Port1"/>
+  </OperationUnits>
+</OperationModule>

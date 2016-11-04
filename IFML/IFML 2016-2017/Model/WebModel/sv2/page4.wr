@@ -1,0 +1,139 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-85" gr:y="25" id="sv2#page4" name="Campaigner home">
+  <ContentUnits>
+    <GetUnit gr:x="205" gr:y="5" id="sv2#page4#gtu1" name="CurrUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page4#gtu1#ln12" name="Flow12" to="sv2#page4#dau4" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page4#gtu1#ln25" name="Flow25" to="sv2#page4#enu7" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu1#ln25#par125" name="UserCtxParam.oid_user_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
+      </Link>
+      <Link id="sv2#page4#gtu1#ln28" name="Flow28" to="sv2#page4#seu10" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#gtu1#ln28#par129" name="UserCtxParam.oid_user_PASSING" source="sv2#page4#gtu1.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="370" gr:y="0" id="sv2#page4#dau4" name="Your details" entity="User" displayAttributes="User#att3 User#att44 email User#att1 userName User#att45">
+      <Selector id="sv2#page4#dau4#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page4#dau4#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <IndexUnit gr:x="75" gr:y="130" id="sv2#page4#inu1" name="My Campaigns" entity="ent2" displayAttributes="ent2#att10 ent2#att11 ent2#att30 ent2#att13" linkOrder="sv2#page4#inu1#ln24 sv2#page4#inu1#ln29">
+      <Link id="sv2#page4#inu1#ln24" name="Details" to="sv2#page10#dau5" type="normal" validate="true">
+        <LinkParameter id="sv2#page4#inu1#ln24#par135" name="oid_camp_KeyCondition5 [oid_camp]" source="data[].ent2#att9" target="sv2#page10#dau5#su5#kcond5.ent2#att9"/>
+        <LinkParameter id="sv2#page4#inu1#ln24#par136" name="oid_camp_PASSING" source="data[].ent2#att9" passing="true"/>
+      </Link>
+      <Selector id="sv2#page4#inu1#su7" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page4#inu1#su7#rcond2" name="CurrUser" predicate="in" implied="false" role="rel4#role7"/>
+      </Selector>
+      <Link id="sv2#page4#inu1#ln29" name="CLOSE" to="sv2#mfu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page4#inu1#ln29#par132" name="oid_camp_KeyCondition7 [oid_camp]" source="data[].ent2#att9" target="sv2#mfu1#su8#kcond7.ent2#att9"/>
+        <LinkParameter id="sv2#page4#inu1#ln29#par133" name="Closed_status" sourceValue="Closed" target="sv2#mfu1.ent2#att13"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit gr:x="360" gr:y="185" id="sv2#page4#enu7" name="Create Campaign" entity="ent2" linkOrder="sv2#page4#enu7#ln22">
+      <Field id="sv2#page4#enu7#fld23" name="Title" type="string" modifiable="true"/>
+      <Field id="sv2#page4#enu7#fld24" name="Description" type="string" modifiable="true"/>
+      <Field id="sv2#page4#enu7#fld25" name="Expires" type="timestamp" modifiable="true"/>
+      <Field id="sv2#page4#enu7#fld26" name="Amount" type="string" modifiable="true"/>
+      <Link id="sv2#page4#enu7#ln22" name="Create campaign" to="sv2#cru3" type="normal" validate="true">
+        <LinkParameter id="sv2#page4#enu7#ln22#par116" name="Amount_amount" source="sv2#page4#enu7#fld26" target="sv2#cru3.ent2#att12"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par117" name="Campaigns Object_Campaigns Object" source="entityBean" target="sv2#cru3.entityBeans"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par118" name="Description_description" source="sv2#page4#enu7#fld24" target="sv2#cru3.ent2#att11"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par119" name="Expires_expiration" source="sv2#page4#enu7#fld25" target="sv2#cru3.ent2#att30"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par122" name="0_quality" sourceValue="0" target="sv2#cru3.ent2#att26"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par123" name="1_status" sourceValue="Open" target="sv2#cru3.ent2#att13"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par124" name="Title_title" source="sv2#page4#enu7#fld23" target="sv2#cru3.ent2#att10"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par126" name="UserCtxParam.oid_user_PASSING_User.oid_user(CampaignsToUser)" sourceLinkParameter="sv2#page4#gtu1#ln25#par125" target="sv2#cru3.rel4#role8.userOID"/>
+        <LinkParameter id="sv2#page4#enu7#ln22#par161" name="0_Raised" sourceValue="0" target="sv2#cru3.ent2#att48"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="5" id="sv2#page4#seu10" name="GetCurrUserCampaigns" entity="ent2">
+      <Link id="sv2#page4#seu10#ln26" name="Flow26" to="sv2#page4#inu1" type="transport" validate="true">
+        <LinkParameter id="sv2#page4#seu10#ln26#par130" name="oid_camp_current oid_camp" source="ent2#att9Array" target="sv2#page4#inu1.current.ent2#att9"/>
+        <LinkParameter id="sv2#page4#seu10#ln26#par79" name="UserCtxParam.oid_user_PASSING_CurrUser [oid_user]" sourceLinkParameter="sv2#page4#gtu1#ln28#par129" target="sv2#page4#inu1#su7#rcond2.userOID"/>
+      </Link>
+      <Selector id="sv2#page4#seu10#su6" defaultPolicy="fill" booleanOperator="and"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#dau4">
+          <layout:Attribute attribute="User#att3"/>
+          <layout:Attribute attribute="User#att44"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="User#att45"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#inu1">
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att11"/>
+          <layout:Attribute attribute="ent2#att30"/>
+          <layout:Attribute attribute="ent2#att13"/>
+          <layout:Link link="sv2#page4#inu1#ln24"/>
+          <layout:Link link="sv2#page4#inu1#ln29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#enu7">
+          <layout:Field field="sv2#page4#enu7#fld23"/>
+          <layout:Field field="sv2#page4#enu7#fld24"/>
+          <layout:Field field="sv2#page4#enu7#fld25"/>
+          <layout:Field field="sv2#page4#enu7#fld26"/>
+          <layout:Link link="sv2#page4#enu7#ln22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

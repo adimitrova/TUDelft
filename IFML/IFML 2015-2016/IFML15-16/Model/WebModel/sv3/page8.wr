@@ -1,0 +1,147 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="800" gr:y="-65" id="sv3#page8" name="Annotation Campains">
+  <ContentUnits>
+    <DataUnit gr:x="15" gr:y="0" id="sv3#page8#dau5" name="Campaign Details" entity="ent7" displayAttributes="ent7#att23 ent7#att22 ent7#att21">
+      <Selector id="sv3#page8#dau5#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page8#dau5#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page8#dau5#ln29" name="Flow29" to="sv3#page8#enu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#dau5#ln29#par83" name="oid_PASSING" source="data.ent7#att20" passing="true"/>
+      </Link>
+      <Link id="sv3#page8#dau5#ln51" name="Flow51" to="sv3#page8#seu20" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#dau5#ln51#par152" name="oid_PASSING" sourceLinkParameter="sv3#page5#inu2#ln8#par150" passing="true"/>
+      </Link>
+    </DataUnit>
+    <IndexUnit gr:x="300" gr:y="125" id="sv3#page8#inu3" name="Campaign tasks" entity="ent3" displayAttributes="ent3#att14 ent3#att15 ent3#att16 ent3#att18 ent3#att17 ent3#att19" linkOrder="sv3#page8#inu3#ln31">
+      <Link id="sv3#page8#inu3#ln31" name="See task details" to="sv3#page3#dau3" type="normal" validate="true">
+        <LinkParameter id="sv3#page8#inu3#ln31#par105" name="oid_KeyCondition2 [oid]" source="data[].ent3#att13" target="sv3#page3#dau3#su12#kcond2.ent3#att13"/>
+        <LinkParameter id="sv3#page8#inu3#ln31#par106" name="oid_PASSING" source="data[].ent3#att13" passing="true"/>
+      </Link>
+      <Selector id="sv3#page8#inu3#su29" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page8#inu3#su29#rcond19" name="SelectFromTasks-AnnotationCamp" predicate="in" implied="false" role="rel4#role7"/>
+      </Selector>
+    </IndexUnit>
+    <EntryUnit gr:x="0" gr:y="185" id="sv3#page8#enu2" name="Create task" entity="ent3" linkOrder="sv3#page8#enu2#ln28">
+      <Link id="sv3#page8#enu2#ln28" name="Create task" to="sv3#cru7" type="normal" validate="true">
+        <LinkParameter id="sv3#page8#enu2#ln28#par85" name="Description_description" source="sv3#page8#enu2#fld6" target="sv3#cru7.ent3#att15"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par86" name="Expiration date_expiration_date" source="sv3#page8#enu2#fld4" target="sv3#cru7.ent3#att17"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par87" name="Grade_grade" source="sv3#page8#enu2#fld2" target="sv3#cru7.ent3#att19"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par88" name="Max execution time_maximum_exec_time" source="sv3#page8#enu2#fld5" target="sv3#cru7.ent3#att18"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par95" name="Reward_reward" source="sv3#page8#enu2#fld3" target="sv3#cru7.ent3#att16"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par96" name="Required Skills_Skill.oid(TaskToSkill)" source="sv3#page8#enu2#msfld1" target="sv3#cru7.rel11#role17.ent10#att32"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par98" name="Title_title" source="sv3#page8#enu2#fld1" target="sv3#cru7.ent3#att14"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par100" name="oid_PASSING_AnnotationCampaign.oid(TaskToAnnotationCampaign)" sourceLinkParameter="sv3#page8#dau5#ln29#par83" target="sv3#cru7.rel4#role8.ent7#att20"/>
+        <LinkParameter id="sv3#page8#enu2#ln28#par101" name="oid_PASSING" sourceLinkParameter="sv3#page8#dau5#ln29#par83" passing="true"/>
+      </Link>
+      <Field id="sv3#page8#enu2#fld1" name="Title" type="string" modifiable="true" attribute="ent3#att14"/>
+      <Field id="sv3#page8#enu2#fld2" name="Grade" type="integer" modifiable="true" attribute="ent3#att19"/>
+      <Field id="sv3#page8#enu2#fld3" name="Reward" type="float" modifiable="true" attribute="ent3#att16"/>
+      <Field id="sv3#page8#enu2#fld4" name="Expiration date" type="timestamp" modifiable="true" attribute="ent3#att17"/>
+      <Field id="sv3#page8#enu2#fld5" name="Max execution time" type="time" modifiable="true" attribute="ent3#att18"/>
+      <Field id="sv3#page8#enu2#fld6" name="Description" type="string" modifiable="true" attribute="ent3#att15"/>
+      <MultiSelectionField id="sv3#page8#enu2#msfld1" name="Required Skills" type="string"/>
+    </EntryUnit>
+    <GetUnit id="sv3#page8#gtu2" name="GetCurrUser" gr:x="180" gr:y="100" contextParameters="UserCtxParam">
+      <Link id="sv3#page8#gtu2#ln21" name="Flow14" to="sv3#page8#enu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#gtu2#ln21#par82" name="UserCtxParam.oid_Key Condition [oid]" source="sv3#page8#gtu2.UserCtxParam" target="sv3#page8#enu2.ent3#att13"/>
+        <LinkParameter id="sv3#page8#gtu2#ln21#par84" name="UserCtxParam.oid_PASSING" source="sv3#page8#gtu2.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="125" gr:y="235" id="sv3#page8#seu7" name="Skills" entity="ent10">
+      <Link id="sv3#page8#seu7#ln25" name="Flow25" to="sv3#page8#enu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#seu7#ln25#par103" name="name_Required Skills [label]" source="ent10#att33Array" target="sv3#page8#enu2#msfld1_label"/>
+        <LinkParameter id="sv3#page8#seu7#ln25#par104" name="oid_Required Skills [output]" source="ent10#att32Array" target="sv3#page8#enu2#msfld1_output"/>
+      </Link>
+      <Selector id="sv3#page8#seu7#su8" defaultPolicy="fill" booleanOperator="and"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="185" gr:y="0" id="sv3#page8#seu20" name="SelectTasksForThisCampaign" entity="ent3">
+      <Link id="sv3#page8#seu20#ln52" name="Flow52" to="sv3#page8#inu3" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#seu20#ln52#par153" name="oid_PASSING_SelectFromTasks-AnnotationCamp [oid]" sourceLinkParameter="sv3#page8#dau5#ln51#par152" target="sv3#page8#inu3#su29#rcond19.ent7#att20"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#dau5">
+          <layout:Attribute attribute="ent7#att23"/>
+          <layout:Attribute attribute="ent7#att22"/>
+          <layout:Attribute attribute="ent7#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#inu3">
+          <layout:Attribute attribute="ent3#att14"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att18"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att19"/>
+          <layout:Link link="sv3#page8#inu3#ln31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#enu2">
+          <layout:Link link="sv3#page8#enu2#ln28"/>
+          <layout:Field field="sv3#page8#enu2#fld1"/>
+          <layout:Field field="sv3#page8#enu2#fld2"/>
+          <layout:Field field="sv3#page8#enu2#fld3"/>
+          <layout:Field field="sv3#page8#enu2#fld4"/>
+          <layout:Field field="sv3#page8#enu2#fld5"/>
+          <layout:Field field="sv3#page8#enu2#fld6"/>
+          <layout:Field field="sv3#page8#enu2#msfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

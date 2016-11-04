@@ -1,0 +1,155 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="120" gr:y="100" id="mov3#opm3" name="Grade annotation">
+  <OperationUnits>
+    <MathUnit id="mov3#opm3#mathu1" name="NewBudget" gr:x="860" gr:y="480" resultType="boolean" defaultExpression="Budget - Reward">
+      <MathVariable id="mov3#opm3#mathu1#mathv1" name="Budget"/>
+      <MathVariable id="mov3#opm3#mathu1#mathv2" name="Reward"/>
+      <OKLink id="mov3#opm3#mathu1#oln7" name="OKFlow36" to="mov3#opm3#mfu6">
+        <LinkParameter id="mov3#opm3#mathu1#oln7#par6" name="UserOID_PASSING" sourceLinkParameter="mov3#opm3#seu4#oln9#par29" passing="true"/>
+        <LinkParameter id="mov3#opm3#mathu1#oln7#par20" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#seu4#oln9#par35" passing="true"/>
+        <LinkParameter id="mov3#opm3#mathu1#oln7#par194" name="Result_budget" source="result" target="mov3#opm3#mfu6.ent7#att22"/>
+        <LinkParameter id="mov3#opm3#mathu1#oln7#par195" name="UserOID_PASSING_KeyCondition24 [oid]" sourceLinkParameter="mov3#opm3#seu4#oln9#par29" target="mov3#opm3#mfu6#su34#kcond11.ent7#att20"/>
+        <LinkParameter id="mov3#opm3#mathu1#oln7#par197" name="reward_PASSING" sourceLinkParameter="mov3#opm3#seu4#oln9#par196" passing="true"/>
+      </OKLink>
+      <KOLink id="mov3#opm3#mathu1#kln8" name="KOFlow7" to="mov3#opm3#kocu3">
+        <LinkParameter id="mov3#opm3#mathu1#kln8#par21" name="Error calculating the new budget_KOMessage" target="mov3#opm3#kocu3#ocp11" sourceValue="Error calculating the new budget"/>
+      </KOLink>
+    </MathUnit>
+    <ModifyUnit id="mov3#opm3#mfu6" name="UpdateBudgetOfCampaign" gr:x="975" gr:y="365" entity="ent7">
+      <Selector id="mov3#opm3#mfu6#su34" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm3#mfu6#su34#kcond11" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov3#opm3#mfu6#kln11" name="KOFlow18" to="mov3#opm3#kocu3">
+        <LinkParameter id="mov3#opm3#mfu6#kln11#par22" name="Error on updating budget_KOMessage" target="mov3#opm3#kocu3#ocp11" sourceValue="Error on updating budget"/>
+      </KOLink>
+      <OKLink id="mov3#opm3#mfu6#oln8" name="OKFlow45" to="mov3#opm3#seu5">
+        <LinkParameter id="mov3#opm3#mfu6#oln8#par25" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#mathu1#oln7#par20" passing="true"/>
+        <LinkParameter id="mov3#opm3#mfu6#oln8#par198" name="AnnotationOID_PASSING_UserOfAnnotation [oid]" sourceLinkParameter="mov3#opm3#mathu1#oln7#par20" target="mov3#opm3#seu5#su38#rcond8.ent9#att28"/>
+        <LinkParameter id="mov3#opm3#mfu6#oln8#par200" name="reward_PASSING" sourceLinkParameter="mov3#opm3#mathu1#oln7#par197" passing="true"/>
+      </OKLink>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov3#opm3#kocu3" name="KO Port3" gr:x="1720" gr:y="350">
+      <OutputCollectorParameter id="mov3#opm3#kocu3#ocp11" name="KOMessage"/>
+    </KOCollectorUnit>
+    <SelectorUnit id="mov3#opm3#seu4" name="TaskOfItem" gr:x="685" gr:y="410" entity="ent3">
+      <Selector id="mov3#opm3#seu4#su36" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov3#opm3#seu4#su36#rcond6" name="RoleCondition26" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <OKLink id="mov3#opm3#seu4#oln9" name="OKFlow35" to="mov3#opm3#mathu1">
+        <LinkParameter id="mov3#opm3#seu4#oln9#par29" name="UserOID_PASSING" sourceLinkParameter="mov3#opm3#seu18#oln27#par142" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu4#oln9#par30" name="Budget - Reward_Expression" target="mov3#opm3#mathu1.expr" sourceValue="Budget - Reward"/>
+        <LinkParameter id="mov3#opm3#seu4#oln9#par35" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#seu18#oln27#par167" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu4#oln9#par187" name="reward_Reward" source="ent3#att16Array" target="mov3#opm3#mathu1#mathv2"/>
+        <LinkParameter id="mov3#opm3#seu4#oln9#par193" name="budget_PASSING_Budget" sourceLinkParameter="mov3#opm3#seu18#oln27#par191" target="mov3#opm3#mathu1#mathv1"/>
+        <LinkParameter id="mov3#opm3#seu4#oln9#par196" name="reward_PASSING" source="ent3#att16Array" passing="true"/>
+      </OKLink>
+      <KOLink id="mov3#opm3#seu4#kln12" name="KOFlow19" to="mov3#opm3#kocu3" automaticCoupling="true"/>
+    </SelectorUnit>
+    <ModifyUnit id="mov3#opm3#mfu7" name="MarkAnnotationAsGraded" gr:x="690" gr:y="635" entity="ent9">
+      <Selector id="mov3#opm3#mfu7#su37" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm3#mfu7#su37#kcond13" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#opm3#mfu7#oln13" name="OKFlow11" to="mov3#opm3#okcu3" automaticCoupling="true"/>
+      <KOLink id="mov3#opm3#mfu7#kln16" name="KOFlow23" to="mov3#opm3#kocu3">
+        <LinkParameter id="mov3#opm3#mfu7#kln16#par36" name="Error marking the annotation as graded (false path)_KOMessage" target="mov3#opm3#kocu3#ocp11" sourceValue="Error marking the annotation as graded (false path)"/>
+      </KOLink>
+    </ModifyUnit>
+    <SelectorUnit id="mov3#opm3#seu5" name="UserWhoAnnotated" gr:x="1020" gr:y="235" entity="User">
+      <Selector id="mov3#opm3#seu5#su38" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov3#opm3#seu5#su38#rcond8" name="UserOfAnnotation" predicate="in" implied="false" role="rel6#role12"/>
+      </Selector>
+      <OKLink id="mov3#opm3#seu5#oln17" name="OKFlow46" to="mov3#opm3#mathu2">
+        <LinkParameter id="mov3#opm3#seu5#oln17#par81" name="OldPiggyBank + Reward_Expression" target="mov3#opm3#mathu2.expr" sourceValue="OldPiggyBank + Reward"/>
+        <LinkParameter id="mov3#opm3#seu5#oln17#par89" name="piggy_bank_OldPiggyBank" source="User#att12Array" target="mov3#opm3#mathu2#mathv3"/>
+        <LinkParameter id="mov3#opm3#seu5#oln17#par99" name="oid_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu5#oln17#par102" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#mfu6#oln8#par25" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu5#oln17#par201" name="reward_PASSING_Reward" sourceLinkParameter="mov3#opm3#mfu6#oln8#par200" target="mov3#opm3#mathu2#mathv4"/>
+      </OKLink>
+      <KOLink id="mov3#opm3#seu5#kln22" name="KOFlow27" to="mov3#opm3#kocu3">
+        <LinkParameter id="mov3#opm3#seu5#kln22#par107" name="Error on getting annotation user_KOMessage" target="mov3#opm3#kocu3#ocp11" sourceValue="Error on getting annotation user"/>
+      </KOLink>
+    </SelectorUnit>
+    <ModifyUnit id="mov3#opm3#mfu8" name="UpdateUserPiggybank" gr:x="1265" gr:y="110" entity="User">
+      <Selector id="mov3#opm3#mfu8#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm3#mfu8#su39#kcond19" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#opm3#mfu8#oln18" name="OKFlow44" to="mov3#opm3#mfu9">
+        <LinkParameter id="mov3#opm3#mfu8#oln18#par203" name="AnnotationOID_PASSING_KeyCondition2 [oid]" sourceLinkParameter="mov3#opm3#mathu2#oln33#par180" target="mov3#opm3#mfu9#su42#kcond21.ent9#att28"/>
+        <LinkParameter id="mov3#opm3#mfu8#oln18#par206" name="true_marked" sourceValue="true" target="mov3#opm3#mfu9.ent9#att31"/>
+      </OKLink>
+      <KOLink id="mov3#opm3#mfu8#kln23" name="KOFlow25" to="mov3#opm3#kocu3">
+        <LinkParameter id="mov3#opm3#mfu8#kln23#par124" name="Error on update piggybank_KOMessage" target="mov3#opm3#kocu3#ocp11" sourceValue="Error on update piggybank"/>
+      </KOLink>
+    </ModifyUnit>
+    <SelectorUnit id="mov3#opm3#seu16" name="GetCampaignBudget" gr:x="640" gr:y="135" entity="ent7">
+      <Selector id="mov3#opm3#seu16#su40" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov3#opm3#seu16#su40#rcond12" name="AnnotationToCampaign" predicate="in" implied="false" role="rel4#role8"/>
+      </Selector>
+      <OKLink id="mov3#opm3#seu16#oln21" name="OKFlow33" to="mov3#opm3#seu18">
+        <LinkParameter id="mov3#opm3#seu16#oln21#par131" name="UserOID_PASSING" sourceLinkParameter="mov3#opm3#switch1#oln30#par173" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu16#oln21#par132" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#switch1#oln30#par172" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu16#oln21#par183" name="AnnotationOID_PASSING_RoleCondition25 [oid]" sourceLinkParameter="mov3#opm3#switch1#oln30#par172" target="mov3#opm3#seu18#su41#rcond21.ent9#att28"/>
+        <LinkParameter id="mov3#opm3#seu16#oln21#par189" name="budget_PASSING" source="ent7#att22Array" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu16#oln21#par190" name="oid_PASSING" source="ent7#att20Array" passing="true"/>
+      </OKLink>
+      <KOLink id="mov3#opm3#seu16#kln24" name="KOFlow21" to="mov3#opm3#kocu3" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="mov3#opm3#seu18" name="ItemOfAnnotation" gr:x="665" gr:y="265" entity="ent8">
+      <Selector id="mov3#opm3#seu18#su41" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov3#opm3#seu18#su41#rcond21" name="RoleCondition25" predicate="in" implied="false" role="rel3#role6"/>
+      </Selector>
+      <OKLink id="mov3#opm3#seu18#oln27" name="OKFlow34" to="mov3#opm3#seu4">
+        <LinkParameter id="mov3#opm3#seu18#oln27#par142" name="UserOID_PASSING" sourceLinkParameter="mov3#opm3#seu16#oln21#par131" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu18#oln27#par167" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#seu16#oln21#par132" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu18#oln27#par186" name="oid_RoleCondition26 [oid]" source="ent8#att24Array" target="mov3#opm3#seu4#su36#rcond6.ent8#att24"/>
+        <LinkParameter id="mov3#opm3#seu18#oln27#par191" name="budget_PASSING" sourceLinkParameter="mov3#opm3#seu16#oln21#par189" passing="true"/>
+        <LinkParameter id="mov3#opm3#seu18#oln27#par192" name="oid_PASSING" sourceLinkParameter="mov3#opm3#seu16#oln21#par190" passing="true"/>
+      </OKLink>
+      <KOLink id="mov3#opm3#seu18#kln25" name="KOFlow20" to="mov3#opm3#kocu3" automaticCoupling="true"/>
+    </SelectorUnit>
+    <ModifyUnit id="mov3#opm3#mfu9" name="MarkAnnotationAsGraded" gr:x="1480" gr:y="115" entity="ent9">
+      <Selector id="mov3#opm3#mfu9#su42" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm3#mfu9#su42#kcond21" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#opm3#mfu9#oln28" name="OKFlow6" to="mov3#opm3#okcu3" automaticCoupling="true"/>
+      <KOLink id="mov3#opm3#mfu9#kln26" name="KOFlow2" to="mov3#opm3#kocu3">
+        <LinkParameter id="mov3#opm3#mfu9#kln26#par168" name="Error marking the annotation as graded_KOMessage" target="mov3#opm3#kocu3#ocp11" sourceValue="Error marking the annotation as graded"/>
+      </KOLink>
+    </ModifyUnit>
+    <InputCollectorUnit id="mov3#opm3#icu9" gr:x="140" gr:y="165">
+      <InputCollectorParameter id="mov3#opm3#icu9#icp3" name="GradedGoodOrNot"/>
+      <InputCollectorParameter id="mov3#opm3#icu9#icp19" name="AnnotationID"/>
+      <OKLink id="mov3#opm3#icu9#oln29" name="OKFlow29" to="mov3#opm3#switch1">
+        <LinkParameter id="mov3#opm3#icu9#oln29#par169" name="GoodOrBad_Switch" source="mov3#opm3#icu9#icp3" target="mov3#opm3#switch1.switch"/>
+        <LinkParameter id="mov3#opm3#icu9#oln29#par170" name="AnnotationOID_PASSING" source="mov3#opm3#icu9#icp19" passing="true"/>
+        <LinkParameter id="mov3#opm3#icu9#oln29#par171" name="UserOID_PASSING" source="mov3#opm3#icu9#icp21" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#opm3#icu9#icp21" name="UserID"/>
+    </InputCollectorUnit>
+    <SwitchUnit id="mov3#opm3#switch1" name="Switch2" gr:x="475" gr:y="205">
+      <Case value="1"/>
+      <Case value="0"/>
+      <OKLink id="mov3#opm3#switch1#oln30" name="OKFlow31" to="mov3#opm3#seu16" code="1">
+        <LinkParameter id="mov3#opm3#switch1#oln30#par172" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#icu9#oln29#par170" passing="true"/>
+        <LinkParameter id="mov3#opm3#switch1#oln30#par173" name="UserOID_PASSING" sourceLinkParameter="mov3#opm3#icu9#oln29#par171" passing="true"/>
+        <LinkParameter id="mov3#opm3#switch1#oln30#par182" name="AnnotationOID_PASSING_AnnotationToCampaign [oid]" sourceLinkParameter="mov3#opm3#icu9#oln29#par170" target="mov3#opm3#seu16#su40#rcond12.ent3#att13"/>
+      </OKLink>
+      <OKLink id="mov3#opm3#switch1#oln31" name="OKFlow2" to="mov3#opm3#mfu7" code="0">
+        <LinkParameter id="mov3#opm3#switch1#oln31#par3" name="AnnotationOID_PASSING_KeyCondition2 [oid]" sourceLinkParameter="mov3#opm3#icu9#oln29#par170" target="mov3#opm3#mfu7#su37#kcond13.ent9#att28"/>
+        <LinkParameter id="mov3#opm3#switch1#oln31#par4" name="true_marked" sourceValue="true" target="mov3#opm3#mfu7.ent9#att31"/>
+      </OKLink>
+    </SwitchUnit>
+    <OKCollectorUnit id="mov3#opm3#okcu3" name="OK Port3" gr:x="1720" gr:y="125"/>
+    <MathUnit id="mov3#opm3#mathu2" name="NewPiggyBank" gr:x="1060" gr:y="115" resultType="float" defaultExpression="OldPiggyBank + Reward">
+      <MathVariable id="mov3#opm3#mathu2#mathv3" name="OldPiggyBank"/>
+      <MathVariable id="mov3#opm3#mathu2#mathv4" name="Reward"/>
+      <OKLink id="mov3#opm3#mathu2#oln33" name="OKFlow43" to="mov3#opm3#mfu8">
+        <LinkParameter id="mov3#opm3#mathu2#oln33#par179" name="oid_PASSING_KeyCondition27 [oid]" sourceLinkParameter="mov3#opm3#seu5#oln17#par99" target="mov3#opm3#mfu8#su39#kcond19.userOID"/>
+        <LinkParameter id="mov3#opm3#mathu2#oln33#par180" name="AnnotationOID_PASSING" sourceLinkParameter="mov3#opm3#seu5#oln17#par102" passing="true"/>
+        <LinkParameter id="mov3#opm3#mathu2#oln33#par202" name="Result_piggy_bank" source="result" target="mov3#opm3#mfu8.User#att12"/>
+      </OKLink>
+      <KOLink id="mov3#opm3#mathu2#kln28" name="KOFlow26" to="mov3#opm3#kocu3">
+        <LinkParameter id="mov3#opm3#mathu2#kln28#par181" name="Error in new PiggyBank calculation_KOMessage" target="mov3#opm3#kocu3#ocp11" sourceValue="Error in new PiggyBank calculation"/>
+      </KOLink>
+    </MathUnit>
+  </OperationUnits>
+</OperationModule>

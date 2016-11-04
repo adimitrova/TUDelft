@@ -1,0 +1,38 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="55" gr:y="160" id="mov3#opm7" name="Modify Skills">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm7#icu7" gr:x="30" gr:y="65">
+      <Link id="mov3#opm7#icu7#ln22" name="Flow22" to="mov3#opm7#seu6" type="transport" validate="true">
+        <LinkParameter id="mov3#opm7#icu7#ln22#par92" name="User.oid(SkillToUser)_PASSING" source="mov3#opm7#icu7#icp22" passing="true"/>
+      </Link>
+      <InputCollectorParameter id="mov3#opm7#icu7#icp22" name="User.oid(SkillToUser)"/>
+      <InputCollectorParameter id="mov3#opm7#icu7#icp23" name="name"/>
+      <InputCollectorParameter id="mov3#opm7#icu7#icp24" name="oid"/>
+    </InputCollectorUnit>
+    <CreateUnit id="mov3#opm7#cru6" name="AssignSkillToUser" gr:x="505" gr:y="40" entity="ent10">
+      <KOLink id="mov3#opm7#cru6#kln15" name="KOFlow15" to="mov3#opm7#kocu5" automaticCoupling="true"/>
+    </CreateUnit>
+    <DeleteUnit gr:x="295" gr:y="175" id="mov3#opm7#dlu2" name="Remove skill from SkillsTable" entity="ent10">
+      <Selector id="mov3#opm7#dlu2#su11" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov3#opm7#dlu2#su11#rcond4" name="UserCondition" predicate="in" implied="false" role="rel10#role15"/>
+        <KeyCondition id="mov3#opm7#dlu2#su11#kcond10" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#opm7#dlu2#oln16" name="OKFlow16" to="mov3#opm7#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov3#opm7#dlu2#kln14" name="KOFlow14" to="mov3#opm7#kocu5" automaticCoupling="true"/>
+      <Link id="mov3#opm7#dlu2#ln26" name="Flow23" to="mov3#opm7#cru6" type="transport" validate="true">
+        <LinkParameter id="mov3#opm7#dlu2#ln26#par90" name="name_PASSING" source="ent10#att33Array" passing="true"/>
+        <LinkParameter id="mov3#opm7#dlu2#ln26#par91" name="oid_PASSING" source="ent10#att32Array" passing="true"/>
+      </Link>
+    </DeleteUnit>
+    <OKCollectorUnit gr:x="695" gr:y="85" id="mov3#opm7#okcu4" name="OK Port4">
+      <OutputCollectorParameter id="mov3#opm7#okcu4#ocp10" name="Output Port Parameter10"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="695" gr:y="190" id="mov3#opm7#kocu5" name="KO Port5"/>
+    <SelectorUnit gr:x="320" gr:y="50" id="mov3#opm7#seu6" name="Select the skill" entity="ent10">
+      <Link id="mov3#opm7#seu6#ln27" name="Flow27" to="mov3#opm7#dlu2" type="transport" validate="true">
+        <LinkParameter id="mov3#opm7#seu6#ln27#par93" name="oid_KeyCondition16 [oid]" source="ent10#att32Array" target="mov3#opm7#dlu2#su11#kcond10.ent10#att32"/>
+        <LinkParameter id="mov3#opm7#seu6#ln27#par94" name="User.oid(SkillToUser)_PASSING_UserCondition [oid]" sourceLinkParameter="mov3#opm7#icu7#ln22#par92" target="mov3#opm7#dlu2#su11#rcond4.userOID"/>
+      </Link>
+      <KOLink id="mov3#opm7#seu6#kln17" name="KOFlow17" to="mov3#opm7#kocu5" automaticCoupling="true"/>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

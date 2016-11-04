@@ -1,0 +1,87 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page12" name="Perk Details" gr:x="190" gr:y="700">
+  <ContentUnits>
+    <DataUnit id="sv3#page12#dau8" name="Perk Details" gr:x="205" gr:y="0" entity="ent6" displayAttributes="ent6#att36 ent6#att37 ent6#att39 ent6#att38">
+      <Selector id="sv3#page12#dau8#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page12#dau8#su17#kcond9" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page12#dau8#ln9" name="Flow41" to="sv3#page12#enu1" type="transport" validate="true">
+        <LinkParameter id="sv3#page12#dau8#ln9#par66" name="oid_contr_PASSING" source="data.ent6#att8" passing="true"/>
+        <LinkParameter id="sv3#page12#dau8#ln9#par67" name="oid_contr_Key Condition [oid_userContr]" source="data.ent6#att8" target="sv3#page12#enu1.ent5#att21"/>
+        <LinkParameter id="sv3#page12#dau8#ln9#par77" name="oid_camp_PASSING" sourceLinkParameter="sv3#page7#pwu2#ln14#par65" passing="true"/>
+      </Link>
+    </DataUnit>
+    <EntryUnit id="sv3#page12#enu1" name="Grab this perk" linkOrder="sv3#page12#enu1#ln10" gr:x="0" gr:y="5" entity="ent5">
+      <Field id="sv3#page12#enu1#fld1" name="Amount" type="string" modifiable="true"/>
+      <Link id="sv3#page12#enu1#ln10" name="Pay" to="sv3#miu3" type="normal" validate="true">
+        <LinkParameter id="sv3#page12#enu1#ln10#par68" name="Amount_AmountContributed" source="sv3#page12#enu1#fld1" target="sv3#miu3.mov1#opm2#icu2#icp16"/>
+        <LinkParameter id="sv3#page12#enu1#ln10#par70" name="oid_contr_PASSING_CurrPerk" sourceLinkParameter="sv3#page12#dau8#ln9#par66" target="sv3#miu3.mov1#opm2#icu2#icp19"/>
+        <LinkParameter id="sv3#page12#enu1#ln10#par71" name="UserCtxParam.oid_user_PASSING_CurrUser" sourceLinkParameter="sv3#page12#gtu3#ln13#par74" target="sv3#miu3.mov1#opm2#icu2#icp17"/>
+        <LinkParameter id="sv3#page12#enu1#ln10#par73" name="Key [oid_userContr]_IDofThisContr" source="sv3#page12#enu1#fld6" target="sv3#miu3.mov1#opm2#icu2#icp20"/>
+        <LinkParameter id="sv3#page12#enu1#ln10#par78" name="oid_camp_PASSING_CurrCampaign" sourceLinkParameter="sv3#page12#dau8#ln9#par77" target="sv3#miu3.mov1#opm2#icu2#icp18"/>
+      </Link>
+      <Field id="sv3#page12#enu1#fld6" name="Feedback (1-min to 5-max)" type="integer" modifiable="true" attribute="ent5#att5"/>
+    </EntryUnit>
+    <GetUnit id="sv3#page12#gtu3" name="CurrUser" gr:x="30" gr:y="135" contextParameters="UserCtxParam">
+      <Link id="sv3#page12#gtu3#ln13" name="Flow42" to="sv3#page12#enu1" type="transport" validate="true">
+        <LinkParameter id="sv3#page12#gtu3#ln13#par74" name="UserCtxParam.oid_user_PASSING" source="sv3#page12#gtu3.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page12#dau8">
+          <layout:Attribute attribute="ent6#att36"/>
+          <layout:Attribute attribute="ent6#att37"/>
+          <layout:Attribute attribute="ent6#att39"/>
+          <layout:Attribute attribute="ent6#att38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page12#enu1">
+          <layout:Field field="sv3#page12#enu1#fld1"/>
+          <layout:Link link="sv3#page12#enu1#ln10"/>
+          <layout:Field field="sv3#page12#enu1#fld6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

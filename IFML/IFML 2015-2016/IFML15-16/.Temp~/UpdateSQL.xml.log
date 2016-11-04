@@ -1,0 +1,64 @@
+[23 Sep 2016 09:52:20] DEBUG Executing SQL script
+[23 Sep 2016 09:52:20] INFO ================================================================================
+[23 Sep 2016 09:52:20] INFO onError= 'stop'
+[23 Sep 2016 09:52:20] INFO autoCommit= 'false'
+[23 Sep 2016 09:52:20] INFO username= 'postgres'
+[23 Sep 2016 09:52:20] INFO outputPath= 'D:\WebRatio\workspace\ver3\.Temp~\UpdateSQL.xml'
+[23 Sep 2016 09:52:20] INFO outputLogPath= 'D:\WebRatio\workspace\ver3\.Temp~\UpdateSQL.xml.log'
+[23 Sep 2016 09:52:20] INFO encoding= ''
+[23 Sep 2016 09:52:20] INFO driverClass= 'org.postgresql.Driver'
+[23 Sep 2016 09:52:20] INFO sqlScript= 'D:\WebRatio\workspace\ver3\.Temp~\UpdateSQL.sql'
+[23 Sep 2016 09:52:20] INFO eventSocketPort= '7933'
+[23 Sep 2016 09:52:20] INFO statementSeparator= ';'
+[23 Sep 2016 09:52:20] INFO derby.system.home= 'D:\WebRatio\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[23 Sep 2016 09:52:20] INFO password= 'root'
+[23 Sep 2016 09:52:20] INFO url= 'jdbc:postgresql://localhost:5432/ifmlver3'
+[23 Sep 2016 09:52:20] INFO ================================================================================
+[23 Sep 2016 09:52:20] INFO Connecting to the Database...
+[23 Sep 2016 09:52:20] INFO Database connection estabilished
+[23 Sep 2016 09:52:20] INFO transaction isolation: 2
+[23 Sep 2016 09:52:20] DEBUG ================================================================================
+[23 Sep 2016 09:52:20] DEBUG Executing SQL script file: D:\WebRatio\workspace\ver3\.Temp~\UpdateSQL.sql
+[23 Sep 2016 09:52:20] DEBUG Executing statement:  create table "public"."group" ( "oid"  int4  not null, "groupname"  varchar(255), primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."module" ( "oid"  int4  not null, "moduleid"  varchar(255), "modulename"  varchar(255), primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."user" ( "oid"  int4  not null, "username"  varchar(255), "password"  varchar(255), "email"  varchar(255), "birth_date"  timestamp, "name"  varchar(255), "score"  float8, "piggy_bank"  float8, primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."skill" ( "oid"  int4  not null, "name"  varchar(255), primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."task" ( "oid"  int4  not null, "title"  varchar(255), "description"  varchar(255), "reward"  float8, "expiration_date"  timestamp, "maximum_exec_time"  time, "grade"  int4, primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."annotationcampaign" ( "oid"  int4  not null, "status"  varchar(255), "budget"  float8, "name"  varchar(255), primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."item" ( "oid"  int4  not null, "url"  varchar(255), "caption"  varchar(255), "title"  varchar(255), primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."annotation" ( "oid"  int4  not null, "confidence"  int4, "label"  varchar(255), "marked"  bool, primary key ("oid") )
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    alter table "public"."group"  add column  "module_oid"  int4
+[23 Sep 2016 09:52:20] DEBUG Executing statement:  alter table "public"."group"   add constraint fk_group_module foreign key ("module_oid") references "public"."module" ("oid")
+[23 Sep 2016 09:52:20] DEBUG Executing statement:    create table "public"."group_module" ( "group_oid"  int4 not null, "module_oid"  int4 not null, primary key ("group_oid", "module_oid") )
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_group foreign key ("group_oid") references "public"."group" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."group_module"   add constraint fk_group_module_module foreign key ("module_oid") references "public"."module" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    alter table "public"."user"  add column  "group_oid"  int4
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."user"   add constraint fk_user_group foreign key ("group_oid") references "public"."group" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    create table "public"."user_group" ( "user_oid"  int4 not null, "group_oid"  int4 not null, primary key ("user_oid", "group_oid") )
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_user foreign key ("user_oid") references "public"."user" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."user_group"   add constraint fk_user_group_group foreign key ("group_oid") references "public"."group" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    create table "public"."user_skill" ( "user_oid"  int4 not null, "skill_oid"  int4 not null, primary key ("user_oid", "skill_oid") )
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."user_skill"   add constraint fk_user_skill_user foreign key ("user_oid") references "public"."user" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."user_skill"   add constraint fk_user_skill_skill foreign key ("skill_oid") references "public"."skill" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    create table "public"."task_skill" ( "task_oid"  int4 not null, "skill_oid"  int4 not null, primary key ("task_oid", "skill_oid") )
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."task_skill"   add constraint fk_task_skill_task foreign key ("task_oid") references "public"."task" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."task_skill"   add constraint fk_task_skill_skill foreign key ("skill_oid") references "public"."skill" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    alter table "public"."annotationcampaign"  add column  "user_oid"  int4
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."annotationcampaign"   add constraint fk_annotationcampaign_user foreign key ("user_oid") references "public"."user" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    create table "public"."item_annotation" ( "item_oid"  int4 not null, "annotation_oid"  int4 not null, primary key ("item_oid", "annotation_oid") )
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."item_annotation"   add constraint fk_item_annotation_item foreign key ("item_oid") references "public"."item" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."item_annotation"   add constraint fk_item_annotation_annotation foreign key ("annotation_oid") references "public"."annotation" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    alter table "public"."task"  add column  "annotationcampaign_oid"  int4
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."task"   add constraint fk_task_annotationcampaign foreign key ("annotationcampaign_oid") references "public"."annotationcampaign" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    create table "public"."task_item" ( "task_oid"  int4 not null, "item_oid"  int4 not null, primary key ("task_oid", "item_oid") )
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."task_item"   add constraint fk_task_item_task foreign key ("task_oid") references "public"."task" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."task_item"   add constraint fk_task_item_item foreign key ("item_oid") references "public"."item" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    alter table "public"."annotation"  add column  "user_oid"  int4
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."annotation"   add constraint fk_annotation_user foreign key ("user_oid") references "public"."user" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:    create table "public"."user_task" ( "user_oid"  int4 not null, "task_oid"  int4 not null, primary key ("user_oid", "task_oid") )
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."user_task"   add constraint fk_user_task_user foreign key ("user_oid") references "public"."user" ("oid")
+[23 Sep 2016 09:52:21] DEBUG Executing statement:  alter table "public"."user_task"   add constraint fk_user_task_task foreign key ("task_oid") references "public"."task" ("oid")
+[23 Sep 2016 09:52:21] DEBUG ================================================================================
+[23 Sep 2016 09:52:21] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[23 Sep 2016 09:52:21] INFO Database connection closed
+[23 Sep 2016 09:52:21] DEBUG Total time: 1085 milliseconds

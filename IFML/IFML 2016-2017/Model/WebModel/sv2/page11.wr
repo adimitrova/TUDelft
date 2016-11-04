@@ -1,0 +1,85 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="465" gr:y="745" id="sv2#page11" name="Perk Details">
+  <ContentUnits>
+    <DataUnit gr:x="265" gr:y="0" id="sv2#page11#dau6" name="Perk Details" entity="ent6" displayAttributes="ent6#att36 ent6#att37 ent6#att39 ent6#att38">
+      <Selector id="sv2#page11#dau6#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page11#dau6#su11#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page11#dau6#ln41" name="Flow41" to="sv2#page11#enu10" type="transport" validate="true">
+        <LinkParameter id="sv2#page11#dau6#ln41#par159" name="oid_contr_PASSING" source="data.ent6#att8" passing="true"/>
+        <LinkParameter id="sv2#page11#dau6#ln41#par221" name="oid_contr_Key Condition [oid_userContr]" source="data.ent6#att8" target="sv2#page11#enu10.ent5#att21"/>
+      </Link>
+    </DataUnit>
+    <EntryUnit gr:x="0" gr:y="10" id="sv2#page11#enu10" name="Grab this perk" entity="ent5" linkOrder="sv2#page11#enu10#ln40">
+      <Field id="sv2#page11#enu10#fld33" name="Amount" type="string" modifiable="true"/>
+      <Link id="sv2#page11#enu10#ln40" name="Pay" to="sv2#miu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page11#enu10#ln40#par207" name="Amount_AmountContributed" source="sv2#page11#enu10#fld33" target="sv2#miu2.mov1#opm2#icu2#icp16"/>
+        <LinkParameter id="sv2#page11#enu10#ln40#par209" name="oid_contr_PASSING_CurrPerk" sourceLinkParameter="sv2#page11#dau6#ln41#par159" target="sv2#miu2.mov1#opm2#icu2#icp19"/>
+        <LinkParameter id="sv2#page11#enu10#ln40#par210" name="UserCtxParam.oid_user_PASSING_CurrUser" sourceLinkParameter="sv2#page11#gtu4#ln42#par160" target="sv2#miu2.mov1#opm2#icu2#icp17"/>
+        <LinkParameter id="sv2#page11#enu10#ln40#par235" name="Key [oid_userContr]_IDofThisContr" source="sv2#page11#enu10#fld5" target="sv2#miu2.mov1#opm2#icu2#icp20"/>
+      </Link>
+      <Field id="sv2#page11#enu10#fld5" name="Feedback (1-min to 5-max)" type="integer" modifiable="true" attribute="ent5#att5"/>
+    </EntryUnit>
+    <GetUnit gr:x="55" gr:y="135" id="sv2#page11#gtu4" name="CurrUser" contextParameters="UserCtxParam">
+      <Link id="sv2#page11#gtu4#ln42" name="Flow42" to="sv2#page11#enu10" type="transport" validate="true">
+        <LinkParameter id="sv2#page11#gtu4#ln42#par160" name="UserCtxParam.oid_user_PASSING" source="sv2#page11#gtu4.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page11#dau6">
+          <layout:Attribute attribute="ent6#att36"/>
+          <layout:Attribute attribute="ent6#att37"/>
+          <layout:Attribute attribute="ent6#att39"/>
+          <layout:Attribute attribute="ent6#att38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page11#enu10">
+          <layout:Link link="sv2#page11#enu10#ln40"/>
+          <layout:Field field="sv2#page11#enu10#fld33"/>
+          <layout:Field field="sv2#page11#enu10#fld5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

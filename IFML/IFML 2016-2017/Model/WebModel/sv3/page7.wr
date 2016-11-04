@@ -1,0 +1,250 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="565" gr:y="20" id="sv3#page7" name="Campaign details">
+  <ContentUnits>
+    <IndexUnit id="sv3#page7#inu4" name="Keywords for this campaign" gr:x="475" gr:y="20" entity="ent4" displayAttributes="ent4#att20">
+      <Selector id="sv3#page7#inu4#su12" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page7#inu4#su12#rcond1" name="CurrCamp" role="rel2#role3" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+    <DataUnit id="sv3#page7#dau7" name="Campaign Details" gr:x="220" gr:y="0" entity="ent2" displayAttributes="ent2#att10 ent2#att11 ent2#att13 ent2#att12 ent2#att48 ent2#att14 ent2#att30 ent2#att26 ent2#att27">
+      <Selector id="sv3#page7#dau7#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page7#dau7#su13#kcond6" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page7#dau7#ln16" name="Flow16" to="sv3#page7#enu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#dau7#ln16#par80" name="oid_camp_PASSING" source="data.ent2#att9" passing="true"/>
+      </Link>
+      <Link id="sv3#page7#dau7#ln23" name="Flow34" to="sv3#page7#inu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#dau7#ln23#par9" name="oid_camp_PASSING_CurrCamp [oid_camp]" sourceLinkParameter="sv3#page5#inu3#ln1#par4" target="sv3#page7#inu4#su12#rcond1.ent2#att9"/>
+      </Link>
+      <Link id="sv3#page7#dau7#ln2" name="Flow2" to="sv3#page7#inu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#dau7#ln2#par5" name="oid_camp_ContribCurrTask [oid_camp]" source="data.ent2#att9" target="sv3#page7#inu6#su21#rcond14.ent2#att9"/>
+      </Link>
+      <Link id="sv3#page7#dau7#ln3" name="Flow36" to="sv3#page7#pwu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#dau7#ln3#par11" name="oid_camp_PASSING_CurrCamp [oid_camp]" sourceLinkParameter="sv3#page5#inu3#ln1#par4" target="sv3#page7#pwu2#su16#rcond5.ent2#att9"/>
+        <LinkParameter id="sv3#page7#dau7#ln3#par51" name="oid_camp_PASSING" source="data.ent2#att9" passing="true"/>
+      </Link>
+      <Link id="sv3#page7#dau7#ln5" name="Flow5" to="sv3#page7#pwu3" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <PowerIndexUnit id="sv3#page7#pwu2" name="Perks" gr:x="60" gr:y="330" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att36 ent6#att39 ent6#att38" linkOrder="sv3#page7#pwu2#ln14">
+      <Selector id="sv3#page7#pwu2#su16" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page7#pwu2#su16#rcond5" name="CurrCamp" predicate="in" implied="false" role="rel6#role11"/>
+      </Selector>
+      <Link id="sv3#page7#pwu2#ln14" name="See perk" to="sv3#page12#dau8" type="normal" validate="true">
+        <LinkParameter id="sv3#page7#pwu2#ln14#par76" name="oid_contr_KeyCondition8 [oid_contr]" source="data[].ent6#att8" target="sv3#page12#dau8#su17#kcond9.ent6#att8"/>
+        <LinkParameter id="sv3#page7#pwu2#ln14#par65" name="oid_camp_PASSING" sourceLinkParameter="sv3#page7#dau7#ln3#par51" passing="true"/>
+      </Link>
+      <DefaultSortAttribute attribute="ent6#att38" order="ascending"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="35" gr:y="155" id="sv3#page7#enu2" name="Ask a question" entity="ent3" linkOrder="sv3#page7#enu2#ln15">
+      <Field id="sv3#page7#enu2#fld2" name="Question" type="string" modifiable="true"/>
+      <Link id="sv3#page7#enu2#ln15" name="Ask" to="sv3#cru6" type="normal" validate="true">
+        <LinkParameter id="sv3#page7#enu2#ln15#par81" name="&lt;&lt;Awaiting answer&gt;&gt;_Answer" sourceValue="&lt;&lt;Awaiting answer&gt;&gt;" target="sv3#cru6.ent3#att17"/>
+        <LinkParameter id="sv3#page7#enu2#ln15#par82" name="oid_camp_PASSING_Campaigns.oid_camp(QuestionsToCampaigns)" sourceLinkParameter="sv3#page7#dau7#ln16#par80" target="sv3#cru6.rel3#role6.ent2#att9"/>
+        <LinkParameter id="sv3#page7#enu2#ln15#par83" name="Question_Question" source="sv3#page7#enu2#fld2" target="sv3#cru6.ent3#att16"/>
+        <LinkParameter id="sv3#page7#enu2#ln15#par84" name="Questions Object_Questions Object" source="entityBean" target="sv3#cru6.entityBeans"/>
+        <LinkParameter id="sv3#page7#enu2#ln15#par85" name="Open_Status" sourceValue="Open" target="sv3#cru6.ent3#att18"/>
+        <LinkParameter id="sv3#page7#enu2#ln15#par48" name="UserCtxParam.oid_user_PASSING_User.oid_user(QuestionsToUser)" sourceLinkParameter="sv3#page7#gtu5#ln44#par23" target="sv3#cru6.rel8#role16.userOID"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit gr:x="425" gr:y="175" id="sv3#page7#inu6" name="Campaign supporters" entity="ent5" displayAttributes="ent5#att2 ent5#att22">
+      <Selector id="sv3#page7#inu6#su21" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page7#inu6#su21#rcond14" name="ContribCurrTask" predicate="in" implied="false" role="rel10#role19"/>
+      </Selector>
+    </IndexUnit>
+    <PowerIndexUnit gr:x="265" gr:y="300" id="sv3#page7#pwu3" name="List of asked questions" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att16 ent3#att18" linkOrder="sv3#page7#pwu3#ln8">
+      <Selector id="sv3#page7#pwu3#su2" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page7#pwu3#su2#rcond7" name="Curr Camp" role="rel3#role5" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page7#pwu3#ln8" name="Check answer" to="sv3#page14#dau2" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="false" ajaxWindowUseTitle="true" ajaxWindowTitle="Qustion details" ajaxWindowShowEffect="Effect.Grow" ajaxWindowDraggable="true" ajaxWindowHideEffect="Effect.BlindUp" ajaxWindowClosable="true" ajaxWindowResizable="true" ajaxWindowWidth="1000">
+        <LinkParameter id="sv3#page7#pwu3#ln8#par17" name="oid_questions_PASSING" source="data[].ent3#att15" passing="true"/>
+        <LinkParameter id="sv3#page7#pwu3#ln8#par18" name="oid_questions_KeyCondition10 [oid_questions]" source="data[].ent3#att15" target="sv3#page14#dau2#su20#kcond10.ent3#att15"/>
+      </Link>
+      <DefaultSortAttribute attribute="ent3#att18" order="descending"/>
+    </PowerIndexUnit>
+    <GetUnit gr:x="0" gr:y="5" id="sv3#page7#gtu5" name="CurrUser" contextParameters="UserCtxParam">
+      <Link id="sv3#page7#gtu5#ln44" name="Flow44" to="sv3#page7#enu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#gtu5#ln44#par23" name="UserCtxParam.oid_user_PASSING" source="sv3#page7#gtu5.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page7#dau7">
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att11"/>
+          <layout:Attribute attribute="ent2#att13"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att48"/>
+          <layout:Attribute attribute="ent2#att14"/>
+          <layout:Attribute attribute="ent2#att30"/>
+          <layout:Attribute attribute="ent2#att26"/>
+          <layout:Attribute attribute="ent2#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page7#inu4">
+          <layout:Attribute attribute="ent4#att20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#pwu2">
+          <layout:Attribute attribute="ent6#att36"/>
+          <layout:Attribute attribute="ent6#att39"/>
+          <layout:Attribute attribute="ent6#att38"/>
+          <layout:Link link="sv3#page7#pwu2#ln14"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#pwu3">
+          <layout:Link link="sv3#page7#pwu3#ln8"/>
+          <layout:Attribute attribute="ent3#att16"/>
+          <layout:Attribute attribute="ent3#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="7">
+        <layout:Unit unitId="sv3#page7#enu2">
+          <layout:Field field="sv3#page7#enu2#fld2"/>
+          <layout:Link link="sv3#page7#enu2#ln15"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv3#page7#inu6">
+          <layout:Attribute attribute="ent5#att2"/>
+          <layout:Attribute attribute="ent5#att22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,49 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Requester" protected="true" landmarks="sv3#miu3" homePage="sv3#page5">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv3#miu3" landmark="true" gr:x="1400" gr:y="460" action="true" moduleId="mov1#opm2"/>
+    <CreateUnit gr:x="410" gr:y="350" id="sv3#cru1" name="Create Campaign" entity="ent7" linkOrder="sv3#cru1#ln10">
+      <Link id="sv3#cru1#ln10" name="Flow10" to="sv3#page8#dau5" automaticCoupling="true" type="transport" validate="true"/>
+      <OKLink id="sv3#cru1#oln2" name="OKFlow2" to="sv3#page8" automaticCoupling="true"/>
+      <KOLink id="sv3#cru1#kln4" name="KOFlow4" to="sv3#page10" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="210" gr:y="380" id="sv3#cru3" name="CreateSkills" entity="ent10">
+      <KOLink id="sv3#cru3#kln5" name="KOFlow5" to="sv3#page10" automaticCoupling="true"/>
+      <OKLink id="sv3#cru3#oln3" name="OKFlow3" to="sv3#page5" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="565" gr:y="395" id="sv3#cru7" name="CreateTask" entity="ent3">
+      <OKLink id="sv3#cru7#oln5" name="OKFlow5" to="sv3#page3#dau3" automaticCoupling="true" gr:bendpoints="154,12,-156,17"/>
+      <KOLink id="sv3#cru7#kln6" name="KOFlow6" to="sv3#page10" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit id="sv3#mfu1" name="Update Assigned Users" gr:x="655" gr:y="590" entity="User" linkOrder="sv3#mfu1#ln50">
+      <Selector id="sv3#mfu1#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu1#su24#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#mfu1#oln15" name="OKFlow7" to="sv3#page3#dau3"/>
+      <KOLink id="sv3#mfu1#kln13" name="KOFlow3" to="sv3#page10" automaticCoupling="true"/>
+      <Link id="sv3#mfu1#ln50" name="Flow50" to="sv3#page3#dau3" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="228,-78,-187,92"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="715" gr:y="750" id="sv3#cru9" name="CreateItem" entity="ent8">
+      <OKLink id="sv3#cru9#oln19" name="OKFlow19" to="sv3#page3#dau3" automaticCoupling="true"/>
+      <KOLink id="sv3#cru9#kln18" name="KOFlow18" to="sv3#page10" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="525" gr:y="90" id="sv3#mfu3" name="ChangeCampStatus" entity="ent7">
+      <Selector id="sv3#mfu3#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu3#su30#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#mfu3#oln24" name="OKFlow24" to="sv3#page5" automaticCoupling="true"/>
+      <KOLink id="sv3#mfu3#kln20" name="KOFlow20" to="sv3#page10" automaticCoupling="true"/>
+    </ModifyUnit>
+    <GetUnit id="sv3#gtu4" name="GetCurrentUser" gr:x="1750" gr:y="-50" contextParameters="UserCtxParam">
+      <Link id="sv3#gtu4#ln37" name="Flow72" to="sv3#page15#inu7" type="transport" validate="true">
+        <LinkParameter id="sv3#gtu4#ln37#par207" name="UserCtxParam.oid_PASSING" source="sv3#gtu4.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+    <ModuleInstanceUnit id="sv3#miu5" gr:x="1670" gr:y="295" action="true" moduleId="mov3#opm3">
+      <OKLink id="sv3#miu5#oln34" name="OKFlow38" to="sv3#page15" automaticCoupling="true"/>
+      <KOLink id="sv3#miu5#kln29" name="KOFlow29" to="sv3#page10" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <SelectorUnit gr:x="1890" gr:y="110" id="sv3#seu21" name="GetAnnotationsForThisItem" entity="ent9" linkOrder="sv3#seu21#ln67">
+      <Link id="sv3#seu21#ln67" name="Flow67" to="sv3#page15#inu7" type="transport" validate="true" automaticCoupling="true"/>
+    </SelectorUnit>
+  </OperationUnits>
+</SiteView>

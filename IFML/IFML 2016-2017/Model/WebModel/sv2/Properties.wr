@@ -1,0 +1,37 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Campaigner" protected="true" homePage="sv2#page4" landmarks="sv2#lou2">
+  <OperationUnits>
+    <LogoutUnit id="sv2#lou2" name="Logout" landmark="true" gr:x="580" gr:y="5" siteView="sv1"/>
+    <CreateUnit gr:x="485" gr:y="130" id="sv2#cru3" name="Create Campaign" entity="ent2">
+      <OKLink id="sv2#cru3#oln5" name="OKFlow5" to="sv2#page4" automaticCoupling="true"/>
+      <KOLink id="sv2#cru3#kln4" name="KOFlow4" to="sv2#page9#mssu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="155" gr:y="395" id="sv2#mfu1" name="UpdateCampStatus" entity="ent2">
+      <Selector id="sv2#mfu1#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu1#su8#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu1#oln6" name="OKFlow6" to="sv2#page4" automaticCoupling="true"/>
+      <KOLink id="sv2#mfu1#kln5" name="KOFlow5" to="sv2#page9#mssu2" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="560" gr:y="255" id="sv2#cru4" name="AddKeyword" entity="ent4">
+      <OKLink id="sv2#cru4#oln7" name="OKFlow7" to="sv2#page10" automaticCoupling="true"/>
+      <KOLink id="sv2#cru4#kln6" name="KOFlow6" to="sv2#page9#mssu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit gr:x="640" gr:y="370" id="sv2#cru5" name="AddPerk" entity="ent6">
+      <OKLink id="sv2#cru5#oln8" name="OKFlow8" to="sv2#page10" automaticCoupling="true"/>
+      <KOLink id="sv2#cru5#kln7" name="KOFlow7" to="sv2#page9#mssu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModuleInstanceUnit gr:x="415" gr:y="610" id="sv2#miu2" action="true" moduleId="mov1#opm2">
+      <KOLink id="sv2#miu2#kln11" name="KOFlow8" to="sv2#page9#mssu2">
+        <LinkParameter id="sv2#miu2#kln11#par220" name="Error message_Shown Messages" source="mov1#opm2#kocu3#ocp11" target="sv2#page9#mssu2.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv2#miu2#oln18" name="OKFlow18" to="sv2#page10" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModifyUnit gr:x="1015" gr:y="785" id="sv2#mfu2" name="UpdQuestionWithAns" entity="ent3">
+      <Selector id="sv2#mfu2#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu2#su25#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu2#oln12" name="OKFlow12" to="sv2#page10" automaticCoupling="true"/>
+      <KOLink id="sv2#mfu2#kln10" name="KOFlow10" to="sv2#page9" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</SiteView>

@@ -1,0 +1,122 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page5" name="Supporter home" gr:x="120" gr:y="20">
+  <ContentUnits>
+    <DataUnit id="sv3#page5#dau3" name="Supporter Details" gr:x="195" gr:y="0" entity="User" displayAttributes="userName email User#att1 User#att3 User#att43 User#att24">
+      <Selector id="sv3#page5#dau3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page5#dau3#su3#kcond3" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <GetUnit id="sv3#page5#gtu2" name="CurrUser" gr:x="45" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="sv3#page5#gtu2#ln11" name="Flow10" to="sv3#page5#dau3" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page5#gtu2#ln7" name="Flow7" to="sv3#page5#seu3" type="transport" validate="true">
+        <LinkParameter id="sv3#page5#gtu2#ln7#par3" name="UserCtxParam.oid_user_PASSING" source="sv3#page5#gtu2.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv3#page5#gtu2#ln7#par10" name="UserCtxParam.oid_user_ContribByUser [oid_user]" source="sv3#page5#gtu2.UserCtxParam" target="sv3#page5#seu3#su24#rcond12.userOID"/>
+      </Link>
+    </GetUnit>
+    <IndexUnit gr:x="235" gr:y="135" id="sv3#page5#inu3" name="All Campaigns" entity="ent2" displayAttributes="ent2#att10 ent2#att12 ent2#att48 ent2#att13" linkOrder="sv3#page5#inu3#ln1">
+      <Link id="sv3#page5#inu3#ln1" name="See details" to="sv3#page7#dau7" type="normal" validate="true">
+        <LinkParameter id="sv3#page5#inu3#ln1#par4" name="oid_camp_PASSING" source="data[].ent2#att9" passing="true"/>
+        <LinkParameter id="sv3#page5#inu3#ln1#par12" name="oid_camp_KeyCondition5 [oid_camp]" source="data[].ent2#att9" target="sv3#page7#dau7#su13#kcond6.ent2#att9"/>
+      </Link>
+      <Selector id="sv3#page5#inu3#su22" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page5#inu3#su22#acond1" name="isOpen" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13" ignoreCase="true" value="open"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit gr:x="0" gr:y="280" id="sv3#page5#inu7" name="Campaigns I contributed to" entity="ent2" displayAttributes="ent2#att10 ent2#att13 ent2#att12" linkOrder="sv3#page5#inu7#ln33">
+      <Selector id="sv3#page5#inu7#su18" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page5#inu7#su18#rcond9" name="ContributionByUser" predicate="in" implied="false" role="rel10#role20"/>
+        <AttributesCondition id="sv3#page5#inu7#su18#acond3" name="isOpen" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att13" ignoreCase="true" value="open"/>
+      </Selector>
+      <Link id="sv3#page5#inu7#ln33" name="See details" to="sv3#page7#dau7" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <SelectorUnit gr:x="5" gr:y="135" id="sv3#page5#seu3" name="GetContributions" entity="ent5">
+      <Link id="sv3#page5#seu3#ln30" name="Flow30" to="sv3#page5#inu7" type="transport" validate="true">
+        <LinkParameter id="sv3#page5#seu3#ln30#par7" name="oid_userContr_CurrUserContr [oid_userContr]" source="ent5#att21Array" target="sv3#page5#inu7#su18#rcond9.ent5#att21"/>
+      </Link>
+      <Selector id="sv3#page5#seu3#su24" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page5#seu3#su24#rcond12" name="ContribByUser" predicate="in" implied="false" role="rel7#role13"/>
+      </Selector>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#dau3">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att1"/>
+          <layout:Attribute attribute="User#att3"/>
+          <layout:Attribute attribute="User#att43"/>
+          <layout:Attribute attribute="User#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#inu3">
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att48"/>
+          <layout:Attribute attribute="ent2#att13"/>
+          <layout:Link link="sv3#page5#inu3#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page5#inu7">
+          <layout:Attribute attribute="ent2#att10"/>
+          <layout:Attribute attribute="ent2#att13"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Link link="sv3#page5#inu7#ln33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

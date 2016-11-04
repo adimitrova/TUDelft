@@ -1,0 +1,13 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="65" gr:y="170" id="mov1#opm3" name="Supported Campaigns">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm3#icu3" name="Input Collector" gr:x="15" gr:y="110" linkOrder="mov1#opm3#icu3#ln6">
+      <Link id="mov1#opm3#icu3#ln6" name="Flow6" to="mov1#opm3#seu1" automaticCoupling="true" type="transport" validate="true"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="810" gr:y="50" id="mov1#opm3#okcu3" name="OK Port3"/>
+    <KOCollectorUnit gr:x="810" gr:y="200" id="mov1#opm3#kocu2" name="KO Port2"/>
+    <SelectorUnit gr:x="290" gr:y="65" id="mov1#opm3#seu1" name="GetAllCampaigns" entity="ent2">
+      <OKLink id="mov1#opm3#seu1#oln14" name="OKFlow14" to="mov1#opm3#seu2" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="230" gr:y="255" id="mov1#opm3#seu2" name="GetUsersWhoSupportedCampaign" entity="User"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,24 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Worker" protected="true" landmarks="sv2#miu2" homePage="sv2#page4" localized="false" linkVisibilityPolicy="inactive">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="430" gr:y="540" id="sv2#miu2" action="true" moduleId="mov1#opm2" landmark="true"/>
+    <LoopUnit id="sv2#lpu2" name="Skills loop" gr:x="620" gr:y="110">
+      <OKLink id="sv2#lpu2#oln20" name="OKFlowEndLoop" to="sv2#page4" code="end" automaticCoupling="true"/>
+      <OKLink id="sv2#lpu2#oln22" name="UpdateSkill" to="sv2#mfu2" code="next">
+        <LinkParameter id="sv2#lpu2#oln22#par146" name="Next Element_KeyCondition6 [oid]" source="next" target="sv2#mfu2#su25#kcond16.ent10#att32"/>
+        <LinkParameter id="sv2#lpu2#oln22#par154" name="UserCtxParam.oid_PASSING_User.oid(SkillToUser)" sourceLinkParameter="sv2#page4#enu9#ln61#par151" target="sv2#mfu2.rel10#role16.userOID"/>
+      </OKLink>
+    </LoopUnit>
+    <ModifyUnit id="sv2#mfu2" name="Update User Skills (user_skill)" gr:x="635" gr:y="235" entity="ent10">
+      <Selector id="sv2#mfu2#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu2#su25#kcond16" name="CurrentUserSkills" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu2#oln23" name="OKFlow13" to="sv2#lpu2" automaticCoupling="true" gr:bendpoints="132,29,-98,4"/>
+      <KOLink id="sv2#mfu2#kln19" name="KOFlow19" to="sv2#page2" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="890" gr:y="550" id="sv2#cru10" name="CreateAnnotation" entity="ent9" linkOrder="sv2#cru10#ln83">
+      <OKLink id="sv2#cru10#oln32" name="OKFlow32" to="sv2#page11#dau7" automaticCoupling="true"/>
+      <KOLink id="sv2#cru10#kln27" name="KOFlow27" to="sv2#page2" automaticCoupling="true"/>
+      <Link id="sv2#cru10#ln83" name="Flow83" to="sv2#page11#dau7" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="69,-130,-46,150"/>
+    </CreateUnit>
+  </OperationUnits>
+</SiteView>
