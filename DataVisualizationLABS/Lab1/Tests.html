@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../d3.v4.js"></script> <!-- Insert the D3 Library locally stored -->
+    <script type="text/javascript" src="tests.js"></script>    <!-- Insert my own JS file -->
+</head>
+<body>
+    <div align="center">
+        <svg width="400" height="400">
+            <circle class="big" cx="100" cy="100" r="30" fill="pink"></circle>
+            <circle class="big" cx="300" cy="100" r="30" fill="pink"></circle>
+            <circle class="big" cx="300" cy="300" r="30" fill="pink"></circle>
+            <circle class="big" cx="100" cy="300" r="30" fill="pink"></circle>
+            <circle id="small" cx="200" cy="200" r="30" fill="#F22A63"></circle>
+        </svg>
+    </div>
+
+    <div align="center">
+        <button type="button" onclick="changeColor();">
+            Change Colors
+        </button>
+        <button type="button" onclick="changeRadius();">
+            Change Radius
+        </button>
+    </div>
+</body>
+</html>
