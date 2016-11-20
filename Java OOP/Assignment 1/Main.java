@@ -2,22 +2,23 @@
 public class Main {
 
 	public static void main(String[] args) {
+		
 		// main method code	
-		
+		System.out.println("-------------- Point objects -----------------");
 		Point firstPoint = new Point(-34, 31);
-		System.out.println("First point: " + firstPoint.toString());
-		System.out.print("Translated point: "); 
-		firstPoint.translate(3, 5.4);
-		
-		System.out.println("------------");
-		
-		Point secondPoint = new Point(-334, 31);
+		System.out.println("First point: " + firstPoint.toString());	
+		Point secondPoint = new Point(-34, 31);
 		System.out.println("Second point: " + secondPoint.toString());
 		System.out.println("Distance between points = " + String.format("%.3f", firstPoint.distance(secondPoint)));
 		System.out.println("Equal points check: " + firstPoint.equals(secondPoint));
+		System.out.println("-------- Change point coordinates -------------");
+		System.out.print("Translated first point: ");
+		firstPoint.translate(3, 5.4);
+		System.out.println("Distance between points = " + String.format("%.3f", firstPoint.distance(secondPoint)));
+		System.out.println("Equal points check: " + firstPoint.equals(secondPoint));
 		
-		System.out.println("------------");		
 		
+		System.out.println("-------------- Circle objects -----------------");
 		// new Point(X,Y)
 		// new Circle(POINT,RADIUS)
 		Point pnt1 = new Point(2,3); // new Point obj
@@ -41,15 +42,20 @@ public class Main {
 
 
 /*		OUTPUT:
+			-------------- Point objects -----------------
 			First point: <Point(-34.0, 31.0)>
-			Translated point: <Point(-31.0, 36.4)>
-			------------
-			Second point: <Point(-334.0, 31.0)>
-			Distance between points = 303.048
-			x1 = -31.0; x2 = -334.0
+			Second point: <Point(-34.0, 31.0)>
+			Distance between points = 0.000
+			x1 = -34.0; x2 = -34.0
+			y1 = 31.0; y2 = 31.0
+			Equal points check: true
+			-------- Change point coordinates -------------
+			Translated first point: <Point(-31.0, 36.4)>
+			Distance between points = 6.177
+			x1 = -31.0; x2 = -34.0
 			y1 = 36.4; y2 = 31.0
 			Equal points check: false
-			------------
+			-------------- Circle objects -----------------
 			<Circle(<Point(2.0, 3.0)>, 7.0)>
 			Second point: <Circle(<Point(-1.0, 1.0)>, 5.2)>
 			Equal circles check: false

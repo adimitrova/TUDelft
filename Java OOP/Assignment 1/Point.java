@@ -44,20 +44,20 @@ public class Point {
 	}
 	
 	// compare 2 points
-	public boolean equals(Object other){
-		Point p2 = (Point) other ; //make "other" a POINT object to compare it with the first one
-		if (this.getX() == p2.getX() && this.getY() == p2.getY()){
-			System.out.println("x1 = " + this.getX() + "; x2 = " + p2.getX());
-			System.out.println("y1 = " + this.getY() + "; y2 = " + p2.getY());
-			return true;
+	public boolean equals(Object otherPoint){
+		if (otherPoint instanceof Point){
+			Point p2 = (Point) otherPoint ; //make "other" a POINT object to compare it with the first one
+			if (this.getX() == p2.getX() && this.getY() == p2.getY()){
+				System.out.println("x1 = " + this.getX() + "; x2 = " + p2.getX());
+				System.out.println("y1 = " + this.getY() + "; y2 = " + p2.getY());
+				return true;
+			}
+			else{
+				System.out.println("x1 = " + this.getX() + "; x2 = " + p2.getX());
+				System.out.println("y1 = " + this.getY() + "; y2 = " + p2.getY());
+			}
 		}
-		else {
-			System.out.println("x1 = " + this.getX() + "; x2 = " + p2.getX());
-			System.out.println("y1 = " + this.getY() + "; y2 = " + p2.getY());
-			return false;
-		}
+		return false;
 	}
 	
-	
-
 }
