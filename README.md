@@ -3,7 +3,7 @@
 
 This is a personal repository to upload my [TU Delft CS](http://www.tudelft.nl/en/study/master-of-science/master-programmes/computer-science/) Assignments.
 
-:books: **Courses:** 
+:green_book: **Courses:** :octocat:
 - IN4152 3D Computer Graphics and Animation
 - IN4086-14 Data Visualization
 - 36669-151601	IN4400 Programming and data science for the 99%
