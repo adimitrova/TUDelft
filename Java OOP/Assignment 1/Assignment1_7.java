@@ -40,7 +40,7 @@ public class Assignment1_7 {
 	}
 	
 	//Returns the squared value of x.
-	public static int squared(int x){
+	public static double squared(double x){
 		x = x*x;
 		return x;
 	}

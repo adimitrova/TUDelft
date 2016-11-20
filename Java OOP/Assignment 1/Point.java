@@ -3,7 +3,8 @@ import java.text.DecimalFormat;
 
 public class Point {
 
-	//static // declaring the class fields
+	// declaring the class fields
+	private
 	double xCoord;
 	double yCoord;
 	
@@ -13,12 +14,12 @@ public class Point {
 		yCoord = y;
 	}
 	
-	private double getX(){
-		return xCoord;
+	public double getX(){
+		return this.xCoord;
 	}
 	
-	private double getY(){
-		return yCoord;
+	public double getY(){
+		return this.yCoord;
 	}
 	
 	// overriding the String toString() method to return the point coordinates
@@ -29,8 +30,6 @@ public class Point {
 	}
 	
 	public void translate(double dx, double dy){
-		//System.out.println("Original x = " + xCoord + " and y = " + yCoord);
-		//System.out.println("Increment x with " + dx + " and y with " + dy);
 		xCoord = xCoord + dx;
 		yCoord = yCoord + dy;
 		//print the new point coordinates with the method toString() we created above
@@ -45,6 +44,7 @@ public class Point {
 		return dist;
 	}
 	
+	// compare 2 points
 	public boolean equals(Object other){
 		Point p2 = (Point) other ; //make "other" a POINT object to compare it with the first one
 		if (this.getX() == p2.getX() && this.getY() == p2.getY()){
@@ -59,17 +59,6 @@ public class Point {
 		}
 	}
 	
+	
 
-	// ---------------------- MAIN METHOD -------------------------------
-	public static void main(String[] args) {
-		Point first = new Point(-34, 31);
-		//System.out.println(first.toString());
-		//first.translate(3, 5.4);
-		
-		Point second = new Point(-34, 31);
-		//System.out.println(second.toString());
-		//System.out.println("Distance between points = " + String.format("%.3f", first.distance(second)));
-		
-		System.out.println("Equal points check: " + first.equals(second));
-	}
 }
