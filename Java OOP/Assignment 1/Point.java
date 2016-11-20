@@ -4,9 +4,8 @@ import java.text.DecimalFormat;
 public class Point {
 
 	// declaring the class fields
-	private
-	double xCoord;
-	double yCoord;
+	private double xCoord;
+	private double yCoord;
 	
 	// define a constructor
 	public Point(double x, double y){

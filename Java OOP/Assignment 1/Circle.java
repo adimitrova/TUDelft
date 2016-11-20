@@ -3,8 +3,8 @@ import java.util.*;
 public class Circle {
 
 	// class fields
-	Point center;
-	double radius;
+	private Point center;
+	private double radius;
 	
 	//constructor
 	public Circle(Point pntCenter, double rad){
