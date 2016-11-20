@@ -36,8 +36,9 @@ public class Circle {
 	// compare 2 circles
 	public boolean equals(Object other){
 		Circle circ2 = (Circle) other ; //make "other" a POINT object to compare it with the first one
-		if (this.center.getX() == circ2.center.getX() && this.center.getY() == circ2.center.getY() 
-													  && this.getRadius() == circ2.getRadius()){
+		if (this.center.getX() == circ2.center.getX() 
+								&& this.center.getY() == circ2.center.getY() 
+								&& this.getRadius() == circ2.getRadius()){
 			return true;
 		}
 		else {
