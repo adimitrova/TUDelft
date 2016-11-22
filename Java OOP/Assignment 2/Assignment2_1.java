@@ -48,6 +48,8 @@ public class Assignment2_1 {
 				shiftedArrL1[origArr.length-1] = origArr[0];
 			}
 		}
+		System.out.print("LEFT SHIFT 1:	");
+		System.out.println(java.util.Arrays.toString(shiftedArrL1));
 		
 		// LEFT SHIFT 2nd VERSION
 		for (int i = origArr.length-1, j = i-1; i >= 0; i--, j--) {
@@ -63,6 +65,8 @@ public class Assignment2_1 {
 				shiftedArrL2[j] = origArr[i];
 			}
 		}
+		System.out.print("LEFT SHIFT 2:	");
+		System.out.println(java.util.Arrays.toString(shiftedArrL2));
 		
 		// RIGHT SHIFT
 		// AS PER THE ORIGINAL ASSIGNMENT
@@ -73,13 +77,7 @@ public class Assignment2_1 {
 						
 			shiftedArrR[j] = origArr[i];
 		}
-		
-		shiftedArrR[0] = origArr[origArr.length-1];		
-		System.out.print("LEFT SHIFT 1:	");
-		System.out.println(java.util.Arrays.toString(shiftedArrL1));
-		
-		System.out.print("LEFT SHIFT 2:	");
-		System.out.println(java.util.Arrays.toString(shiftedArrL2));
+		shiftedArrR[0] = origArr[origArr.length-1];	
 		
 		System.out.print("RIGHT SHIFT:	");
 		System.out.println(java.util.Arrays.toString(shiftedArrR));
