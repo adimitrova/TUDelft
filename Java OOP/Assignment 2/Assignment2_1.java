@@ -2,6 +2,11 @@ import javax.swing.text.AbstractDocument.LeafElement;
 
 public class Assignment2_1 {
 
+	/**
+	 * Prints the sequence that was provided to the method
+	 *
+	 * @param seq
+	 */
 	public static void println(int[] seq){
 		for(int i=0; i<seq.length; i++){
 			System.out.print(seq[i] + " ");
@@ -9,14 +14,24 @@ public class Assignment2_1 {
 		System.out.println();
 	}
 	
+	/**
+	 * Reverses the order of array values
+	 * 1 2 3 --> 3 2 1
+	 *
+	 * @param seq
+	 */
 	public static void swap(int[] seq){
-		// reverse order of array values
 		for (int i = seq.length-1; i >= 0; i--) {
 			System.out.print(seq[i] + " ");
 		}
 		System.out.println();
 	}
 	
+	/**
+	 * Makes a copy of the provided array
+	 *
+	 * @param seq
+	 */
 	public static int[] copy(int[] seq){
 		int arrNum = seq.length;
 		int[] copyArr = new int[arrNum];
@@ -27,6 +42,20 @@ public class Assignment2_1 {
 		return copyArr;
 	}
 	
+	
+	/**
+	 * Shifts the initial sequence provided to the right or to the left by 1 position
+	 * left shift                 
+	 * origArr [0] [1] [2] [3] j  
+	 * copyArr [1] [2] [3] [0] i  
+	 * 
+	 * 
+     * right shift
+     * origArr [0] [1] [2] [3] i
+     * copyArr [3] [0] [1] [2] j        
+	 * 
+	 * @param seq
+	 */
 	public static void rotate(int[] seq){
 		int[] origArr = seq;
 		int[] shiftedArrL1 = new int[seq.length];
@@ -38,10 +67,7 @@ public class Assignment2_1 {
 		
 		// LEFT SHIFT 1st VERSION
 		for (int i = 0, j = 1; i < origArr.length-1; i++, j++) {
-			// left shift
-			// origArr [0] [1] [2] [3] j
-			// copyArr [1] [2] [3] [0] i
-			
+		
 			shiftedArrL1[i] = origArr[j];
 				
 			if(j == origArr.length-1){
@@ -53,9 +79,11 @@ public class Assignment2_1 {
 		
 		// LEFT SHIFT 2nd VERSION
 		for (int i = origArr.length-1, j = i-1; i >= 0; i--, j--) {
-			// left shift
-			// origArr [0] [1] [2] [3] j
-			// copyArr [1] [2] [3] [0] i
+			/**			
+			 * left shift 
+			 * origArr [0] [1] [2] [3] j
+			 * copyArr [1] [2] [3] [0] i
+			 */
 			
 			shiftedArrL2[j] = origArr[i];
 			
@@ -71,16 +99,25 @@ public class Assignment2_1 {
 		// RIGHT SHIFT
 		// AS PER THE ORIGINAL ASSIGNMENT
 		for (int i = 0, j = i+1; j < origArr.length; i++, j++) {
-			// right shift
-			// origArr [0] [1] [2] [3] i
-			// copyArr [3] [0] [1] [2] j
-						
+			/**	
+			 * right shift 
+			 * origArr 	[0] [1] [2] [3] i 
+			 * copyArr 	[3] [0] [1] [2] j 
+			 */						
 			shiftedArrR[j] = origArr[i];
 		}
 		shiftedArrR[0] = origArr[origArr.length-1];	
 		
 		System.out.print("RIGHT SHIFT:	");
 		System.out.println(java.util.Arrays.toString(shiftedArrR));
+		
+		
+		/**
+		 * Repeats placing the last number in a sequence in the front of the sequence n times.
+		 *
+		 * @param seq
+		 * @param n
+		 */
 	}
 	
 	
@@ -91,7 +128,7 @@ public class Assignment2_1 {
 		
 		System.out.println("---------------");
 		
-		int[] sequence = {1,23,6,5,24,34,54,2};
+		int[] sequence = {14, 15, 16, 17, 18};
 		System.out.print("Reversed order: "); 
 		swap(sequence);
 		
