@@ -73,11 +73,6 @@ public class Assignment2_1{
 		System.out.println(java.util.Arrays.toString(shiftedArrL1));
 		
 		// LEFT SHIFT 2nd VERSION
-		/**			
-		 * left shift 
-		 * origArr [0] [1] [2] [3] j
-		 * copyArr [1] [2] [3] [0] i
-		 */
 		for (int i = origArr.length-1, j = i-1; i >= 0; i--, j--) {
 			shiftedArrL2[j] = origArr[i];
 			
@@ -91,11 +86,6 @@ public class Assignment2_1{
 		//System.out.println(java.util.Arrays.toString(shiftedArrL2));
 		
 		// RIGHT SHIFT
-		/**	
-		 * right shift 
-		 * origArr 	[0] [1] [2] [3] i 
-		 * copyArr 	[3] [0] [1] [2] j 
-		 */	
 		// AS PER THE ORIGINAL ASSIGNMENT
 		for (int i = 0, j = i+1; j < origArr.length; i++, j++) {					
 			shiftedArrR[j] = origArr[i];
@@ -128,12 +118,6 @@ public class Assignment2_1{
 		for (int i = 1; i <= times; i++) {
 			seq = rotate(seq);
 		}
-		
-		/**	
-
-		 */	
-		
-
 	}
 	
 	
