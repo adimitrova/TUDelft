@@ -48,11 +48,9 @@ public class Assignment2_1 {
 	 * left shift                 
 	 * origArr [0] [1] [2] [3] j  
 	 * copyArr [1] [2] [3] [0] i  
-	 * 
-	 * 
-     * right shift
-     * origArr [0] [1] [2] [3] i
-     * copyArr [3] [0] [1] [2] j        
+	 * right shift
+	 * origArr [0] [1] [2] [3] i
+	 * copyArr [3] [0] [1] [2] j
 	 * 
 	 * @param seq
 	 */
