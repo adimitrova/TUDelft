@@ -71,10 +71,10 @@ public class Assignment2_1{
 		}
 		System.out.print("LEFT SHIFT:	");
 		System.out.println(java.util.Arrays.toString(shiftedArrL1));
-		
+		 
 		// LEFT SHIFT 2nd VERSION
 		for (int i = origArr.length-1, j = i-1; i >= 0; i--, j--) {
-			shiftedArrL2[j] = origArr[i];
+			shiftedArrL2[j] = origArr[i]; 
 			
 			if(i == 1){
 				j = origArr.length-1;

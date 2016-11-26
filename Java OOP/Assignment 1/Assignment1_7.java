@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Assignment1_7 {
 
+	private static Scanner input;
+
 	public static void main(String[] args) {
 		System.out.println("Bigger num: " + Assignment1_7.max(5.2,4.2));
 		// CALLING A METHOD TO PRINT OUTPUT: 
@@ -11,7 +13,11 @@ public class Assignment1_7 {
 		System.out.println("Squared: " + Assignment1_7.squared(15));
 		
 		System.out.println("Enter x1, y1, x2 and y2 in this order: ");
-		Scanner input = new Scanner(System.in);
+		
+		// Scanner input = new Scanner(System.in);   --> RESOURCE LEAK: input is never closed error
+		// local variable is converted to field:
+		input = new Scanner(System.in);
+		
 		double x1 = input.nextDouble();
 		double y1 = input.nextDouble();
 		double x2 = input.nextDouble();
