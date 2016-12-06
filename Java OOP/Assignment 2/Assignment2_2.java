@@ -124,7 +124,9 @@ public class Assignment2_2 {
 			
 			/*
 			 * Sled kato mine celiq for i ne match-ne zna4i e prime
-			 * TODO: Fix & COMPLETE
+			 * 
+			 * TASK: FIXME
+			 * 
 			 */
 			for (int j = 0; j < primes.length; j++) {
 				if(i == 1 || i == 2 ){
@@ -159,6 +161,12 @@ public class Assignment2_2 {
 	//TODO: implement
 	public static int countPrimes(int[] seq){
 		// Post: Returns the number of primes in seq.
+		int counter = 0;
+		
+		for (int i = 0; i < seq.length; i++) {
+			
+		}
+		
 	}
 	
 	//TODO: implement
