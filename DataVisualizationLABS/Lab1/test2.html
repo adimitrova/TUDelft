@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script> <!-- Insert the D3 Library locally stored -->
+
+</head>
+<body>
+	<div id="chart"></div>
+
+	<script> 
+		var dataset = [ 250, 70, 50, 260, 110, 80, 250, 140, 230, 190,
+		140, 110, 220, 290, 110, 130, 120, 170, 180, 100,
+		240, 180, 250, 90, 30, 250, 90, 330];
+
+		var height = 300;
+		var width = 800;
+				
+		//var barWidth = 20;
+		//var barOffset = 4;   // space between the bars
+		
+		var yScale = d3.scale.linear()
+			.domain([0, d3.max(dataset)])
+			.range([0, height]);
+		
+		var xScale = d3.scale.ordinal()
+			.domain(d3.range(0, dataset.length))
+			.rangeBands([0, width])
+		
+		var colors = d3.scale.linear()
+			.domain([0, dataset.length])
+			.range(['#a3d900','#ff0000'])
+		
+		d3.select('#chart').append('svg')
+					.attr("width",width)
+					.attr("height",height)
+					.style("background",'#f4f4f4')
+					.selectAll("rect")
+						.data(dataset)
+						.enter()
+						.append('rect')
+							.style('fill',function(d, i){
+								return colors(i);
+							})
+							.attr('width', xScale.rangeBand())
+							.attr('height',function(d){		// set height of bars to whatever the data value is
+								return yScale(d);
+								})
+							.attr('x', function(d, i){		// set the x position of the bar 
+								return xScale(i);
+							})
+							.attr('y', function(d){
+								return height - yScale(d);
+							});
+	</script>
+</body>
+</html>

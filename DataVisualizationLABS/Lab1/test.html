@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://d3js.org/d3.v4.js"></script> <!-- Insert the D3 Library locally stored -->
+
+</head>
+<body>
+	<script> 
+		/** Putting methods one after another like below, is called methond CHAINING */
+		/* first step is creating the svg container, not the actual shape */
+		var canvas = d3.select("body")
+						.append("svg")
+						.attr("width", 500)		/* specifying width and height which are basically CSS attributes */
+						.attr("height", 500);	/* the normal css styling method in d3 is .style(), but we use .attr() for technical reasons */
+
+		/* IT ALWAYS STARTS DRAWING FROM TOP LEFT CORNER */
+		/** Now we create the shapes
+		* Note that we start with the previous variable canvas, not with d3 
+		* Circle is called "circle" and needs the following attributes:
+		@cx		horizontal position
+		@cy		vertical position
+		@r 		radius
+		@fill	color to fill the shape with
+		@ all the rest
+		*/	
+					
+		var circle = canvas.append("circle")
+					.attr("cx",250)
+					.attr("cy",250)
+					.attr("r",50)
+					.attr("fill","purple");
+
+		/** Rectangle is called "rect" and needs the following attributes:
+		@width		width
+		@heigth		heigth
+		-- Optional --
+		@fill	color to fill the shape with
+		@ all the rest
+		*/	
+		var rectangle = canvas.append("rect")
+					.attr("width", 100)
+					.attr("height", 50)
+					.attr("fill","pink");
+
+		/** Lines is called "line" and need the following attributes:
+		@x1			1st horizontal point
+		@y1			1st vertical point
+		@x2 		2nd horizontal point
+		@y2			2nd vertical point
+		@stroke		color make the line visible
+		--- optional ---
+		@stroke-width	makeing the line really visible
+		@ all the rest
+		*/				
+		var line = canvas.append("line")
+					.attr("x1", 0)
+					.attr("y1", 100)
+					.attr("x2", 400)
+					.attr("y2", 400)
+					.attr("stroke", "green")
+					.attr("stroke-width",10)
+				
+	</script>
+</body>
+</html>
