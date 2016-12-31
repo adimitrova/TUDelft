@@ -22,7 +22,7 @@ public class StringList {
 			for (int position = 0; position < elements.length; position++) {
 				if(elements[position] == null){
 					elements[position] = el;
-					amount++;
+					amount++; //increase amount
 				}
 			}
 		}
