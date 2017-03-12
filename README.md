@@ -8,6 +8,7 @@ This is a personal repository to upload my [TU Delft CS](http://www.tudelft.nl/e
 - IN4086-14 Data Visualization
 - 36669-151601	IN4400 Programming and data science for the 99%
 - 34989-151601	IN4252 Web Science & Engineering
+- CS4065 Multimedia Search & Recommendation
+- IN4325 Information Retrieval 
 - TI1206 Object-oriented programming
-
-
+- TI1316 Algorithms & Data Structures (soon to add)

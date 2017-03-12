@@ -1,0 +1,72 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, img {
+	margin:0px; 
+	padding:0px; 
+}
+
+
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+.allpage{
+	background-color: #ccff44;
+}
+
+header {
+	background-image: url("phototime_01.jpg");
+	background-repeat: no-repeat;
+	height: 745px;
+}
+
+
+
+/* ----------- NAVIGATION ----------- */
+
+nav{
+	display: block;
+	padding: 5%;
+}
+
+nav ul{
+	list-style: none;
+	font-size: 100%;
+}
+
+nav ul li{
+	display: inline;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Righteous', cursive;
+	text-transform: uppercase;
+	margin-left: 15%;
+}
+
+
+
+/* ----------- Main page ----------- */
+
+#headerContent h1{
+	color: #fff;
+	font-family: Calibri;
+	position: fixed; /* or absolute */
+	top: 30%
+}
+
+#headerContent h3{
+	color: #fff;
+	font-family: Calibri;
+	position: fixed; /* or absolute */
+	top: 35%;	
+}
+
+#headerContent h4{
+	color: #ffb973;
+	font-family: 'Righteous', cursive;
+	top: 35%;	
+}

@@ -40,7 +40,7 @@ public class StringList {
 		System.out.print("Enter new element: ");
 		Scanner inpElNew = new Scanner(System.in);
 		String newEl = inpElNew.next();
-		add(newEl);
+		//add(newEl);
 	}
 
 }

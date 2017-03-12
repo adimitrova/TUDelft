@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="10000"> 
+	<title>Web app</title>
+	<link rel="stylesheet" href="matchAppTEST.css">
+	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="allpage">
+		<div class="container">
+
+			<header> <!-- Header start -->
+				<nav> <!-- Navigation start -->
+
+					<ul>
+						<li><a rel="external" href="#">App</a></li>
+		                <li><a rel="external" href="#">Database</a></li>
+		                <li><a rel="external" href="index.html">Log Out</a></li>
+					</ul>
+				</nav> <!-- Navigation menu end -->
+			
+			
+			<div id="headerContent">  <!-- Header content start -->
+				<center>
+				<h1>Well done!</h1>
+				<h3>How would you describe the following company?</h3><br>
+				
+
+			<!--- Math problem --->
+			<div id="mathcaptcha">
+			
+			<center>
+			<!--- CHANGE TARGET OF THE FORM BACK TO "openLink" WHEN IT'S DONE --->
+			<form class="question" action="matchApp_showCompInfo.php" method="GET" target="openLink">
+				<button type="submit" name="mathprob" id="submit"> Let's VOTE </button><br><br>
+			<iframe src="emptyFrame.html" name="openLink" height="320" width="170"></iframe>
+			</form><br>
+			
+			<!-- <form class="formanswer" action="generateoptions.php" method="get" target="openlink2">
+				<button type="submit" name="options">2. generate options</button>
+				<iframe src="emptyframe.html" name="openlink2" height="0" width="0"></iframe> <br><br>
+			</form> -->
+			
+			<!--<form class="formanswer" method="get" action="showoptions.php" target="options">
+				<button type="submit" name="options">3. show</button><br><br>
+				<!-- <button type="submit" name="submitans" formaction="submitans.php">submit</button><br> -->
+				<!--<iframe src="emptyframe.html" name="options" height="150" width="200"></iframe><br><br>
+			</form> -->
+			
+			
+			<!-- Ctrl + K and Ctrl + Q
+			
+			<form class="formanswer" action="option2.php" method="get" target="option1">
+				<input type="radio" name="opt2"></input>
+			<iframe src="emptyframe.html" name="option2" height="25" width="100"></iframe>
+			</form>
+			
+			<form class="formanswer" action="option3.php" method="get" target="option1">
+				<input type="radio" name="opt3"></input>
+			<iframe src="emptyframe.html" name="option3" height="25" width="100"></iframe>
+			</form>
+			
+			<form class="formanswer" action="option4.php" method="get" target="option1">
+				<input type="radio" name="opt4"></input>
+			<iframe src="emptyframe.html" name="option4" height="25" width="100"></iframe>
+			</form> -->
+			
+			<!--- Math problem --->
+			</center>
+			</header> <!-- Header end -->
+
+			
+
+		</div>  <!-- container end -->
+	</div>  <!-- Main Div end -->
+</body>
+</html>

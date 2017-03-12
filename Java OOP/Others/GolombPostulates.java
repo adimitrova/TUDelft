@@ -3,11 +3,12 @@ import java.util.Scanner;
 /**
  * Golomb postulates:
  * 1. #1s > #0s
- * 2. r(1) >= r(2) >= r(3) > r(4) // should dicrease
+ * 2. r(1) >= r(2) >= r(3) > r(4) // should decrease
  * 3. c(1) = c(2) = c(3) = c(n) = const
  * if 1,2 & 3 are true => pseudorandom number
- * @author Ani
- *
+ * 
+ * @author Aneliya Dimitrova
+ * TODO: complete
  */
 
 public class GolombPostulates {

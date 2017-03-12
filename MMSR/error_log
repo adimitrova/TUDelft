@@ -1,0 +1,31 @@
+[11-Jun-2016 02:53:42 Europe/Sofia] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr2/checkForAddData.php on line 13
+[11-Jun-2016 02:53:42 Europe/Sofia] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/worldofi/public_html/mmsr2/checkForAddData.php:13) in /home/worldofi/public_html/mmsr2/checkForAddData.php on line 28
+[11-Jun-2016 03:04:53 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr2/submitVoteOptionsphp.php on line 16
+[11-Jun-2016 03:08:38 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr2/submitVoteOptionsphp.php on line 16
+[11-Jun-2016 03:13:07 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr2/submitVoteOptionsphp.php on line 16
+[11-Jun-2016 03:15:41 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr2/submitVoteOptionsphp.php on line 16
+[11-Jun-2016 03:48:39 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/captchaAnswer.php on line 11
+[17-Jun-2016 23:16:59 Europe/Sofia] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/worldofi/public_html/mmsr/config.php on line 7
+[17-Jun-2016 23:17:00 Europe/Sofia] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 8
+[17-Jun-2016 23:17:00 Europe/Sofia] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 12
+[17-Jun-2016 23:17:00 Europe/Sofia] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 16
+[17-Jun-2016 23:17:05 Europe/Sofia] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/worldofi/public_html/mmsr/config.php on line 7
+[17-Jun-2016 23:17:05 Europe/Sofia] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 8
+[17-Jun-2016 23:17:05 Europe/Sofia] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 12
+[17-Jun-2016 23:17:05 Europe/Sofia] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 16
+[17-Jun-2016 23:17:09 Europe/Sofia] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/worldofi/public_html/mmsr/config.php on line 7
+[17-Jun-2016 23:17:09 Europe/Sofia] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 8
+[17-Jun-2016 23:17:09 Europe/Sofia] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 12
+[17-Jun-2016 23:17:09 Europe/Sofia] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 16
+[17-Jun-2016 23:25:34 Europe/Sofia] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/worldofi/public_html/mmsr/config.php on line 7
+[17-Jun-2016 23:25:34 Europe/Sofia] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 8
+[17-Jun-2016 23:25:34 Europe/Sofia] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 12
+[17-Jun-2016 23:25:34 Europe/Sofia] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/worldofi/public_html/mmsr/config.php on line 16
+[18-Jun-2016 00:01:13 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 12
+[18-Jun-2016 00:01:13 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 22
+[18-Jun-2016 00:01:13 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 77
+[18-Jun-2016 00:01:13 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 84
+[18-Jun-2016 00:04:53 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 12
+[18-Jun-2016 00:04:53 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 22
+[18-Jun-2016 00:04:53 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 77
+[18-Jun-2016 00:04:53 Europe/Sofia] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/worldofi/public_html/mmsr/generateVoteOptionsphp.php on line 84
