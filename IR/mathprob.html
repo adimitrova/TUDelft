@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="10000"> 
+	<title>Web app</title>
+	<link rel="stylesheet" href="mathprob.css">
+	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="allpage">
+		<div class="container">
+
+			<header> <!-- Header start -->
+				<nav> <!-- Navigation start -->
+
+					<ul>
+						<li><a rel="external" href="#">App</a></li>
+		                <li><a rel="external" href="#">Database</a></li>
+		                <li><a rel="external" href="index.html">Log Out</a></li>
+					</ul>
+				</nav> <!-- Navigation menu end -->
+			
+			
+			<div id="headerContent">  <!-- Header content start -->
+				<center>
+				<h1>Good morning!</h1><br>
+				<h4>Let's wake you up</h4>
+
+				<div id="getStartedBtn"> <!-- button start -->
+					<p>Please type the solution of the following math problem: </p><br>
+				</div> <!-- button end -->
+				</center>
+			</div> <!-- Header content end -->
+			
+			<!--- Math problem --->
+			<div id="mathcaptcha">
+			
+			<center>
+			<!--- CHANGE TARGET OF THE FORM BACK TO "openLink" WHEN IT'S DONE --->
+			<form class="question" action="captchaQuestion.php" method="GET" target="openLink">
+				<button type="submit" name="mathprob">I am not a robot</button><br><br>
+			<iframe src="emptyFrame.html" name="openLink" height="50" width="100"></iframe>
+			</form><br><br>
+			
+			<form class="formanswer" action="captchaAnswer.php" method="GET" target="openLink2">
+				Answer: <input type="text" name="answer" /> <br><br>
+				<button type="submit" name="submitAnswer">Submit</button><br><br>
+				<iframe src="emptyFrame.html" name="openLink2" height="80" width="120"></iframe>
+			</form>
+			
+			
+			<!--- Math problem --->
+			</center>
+			</header> <!-- Header end -->
+
+			
+
+		</div>  <!-- container end -->
+	</div>  <!-- Main Div end -->
+</body>
+</html>

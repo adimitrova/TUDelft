@@ -1,0 +1,164 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, img {
+	margin:0px; 
+	padding:0px; 
+}
+
+
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+.allpage{
+	background-color: #ccff44;
+}
+
+header {
+	background-image: url("phototime_01.jpg");
+	background-repeat: no-repeat;
+	height: 745px;
+}
+
+
+
+/* ----------- NAVIGATION ----------- */
+
+nav{
+	display: block;
+	padding: 5%;
+}
+
+nav ul{
+	list-style: none;
+	font-size: 100%;
+}
+
+nav ul li{
+	display: inline;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Righteous', cursive;
+	text-transform: uppercase;
+	margin-left: 15%;
+}
+
+
+
+/* ----------- Main page ----------- */
+
+#headerContent h1{
+	color: #fff;
+	font-family: Calibri;
+	/*position: fixed; /* or absolute */
+	left: 42%;
+	top: 23%
+}
+
+#headerContent h3{
+	color: #fff;
+	font-family: Calibri;
+	/*position: fixed; /* or absolute */
+	left: 45%;
+	top: 30%;	
+}
+
+#getStartedBtn p{
+	color: #fff;
+	font-family: Calibri;
+	/*position: fixed; /* or absolute */
+	left: 36%;
+	top: 35%;	
+}
+
+#mathcaptcha{
+	color: #fff;
+	font-family: Calibri;
+	/*position: fixed; /* or absolute */
+	left: 41%;
+	top: 50%;	
+}
+
+#mathcaptcha p{
+	font-size: 2em;
+}
+
+
+
+
+
+#submit {
+    background-color: #ff9673;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius:10px;
+    color: #000;
+    font-family: 'Calibri';
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: poiner;
+    border:none;
+    padding: 0.5%;
+}
+
+
+
+#submit:hover {
+    border: none;
+    background: #000;
+    box-shadow: 0px 0px 1px #777;
+    color: #ff9673;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+nav {
+    display: block;
+    margin-bottom: 10px;
+}
+nav ul {
+    list-style: none;
+    font-size: 14px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    display: block;
+    float: left;
+    padding: 3px 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    background: #deff90;
+    color: #485e0f;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px 6px;
+    margin: 0;
+    text-decoration: none;
+}
+
+*/
