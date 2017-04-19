@@ -47,7 +47,7 @@ public class Circle {
 		return false;
 	}
 	
-	public double perimeter(){
+	public double periphery(){
 		// Circumference (periphery or perimeter) = 2*PI*r
 		double periphery = 2*Math.PI*radius;
 		return periphery;

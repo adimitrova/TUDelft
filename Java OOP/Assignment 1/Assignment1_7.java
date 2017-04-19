@@ -36,7 +36,8 @@ public class Assignment1_7 {
 	}
 	
 	//Returns the absolute value of x.
-	public static int abs(int x){
+	// abs_number = (x < 0) ? -x : x;
+	public static double abs(double x){
 		if(x<0){
 			x = x*(-1);
 			return x;
