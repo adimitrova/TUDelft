@@ -16,13 +16,13 @@ public class Circle {
 		}
 	}
 	
-	// get the center of curr obj
-	private Point getCenter(){
+	// get the center of current object
+	public Point getCenter(){
 		return this.center;
 	}
 	
 	// get the radius of curr obj
-	private double getRadius(){
+	public double getRadius(){
 		return this.radius;
 	}
 	
@@ -53,9 +53,10 @@ public class Circle {
 		return periphery;
 	}
 	
-	public double area(){
+	// surface or area
+	public double surface(){
 		// Surface (area) = 4*PI*r^2
-		double area = 4*Math.PI*Math.pow(radius, 2);
+		double area = 4*(Math.PI*Math.pow(radius, 2));
 		return area;
 	}
 	
