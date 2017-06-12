@@ -94,7 +94,7 @@ public class Assignment2_2 {
 	 */
 	
 	public static boolean isPrime(int element){
-		if(element>1){
+		if(element > 1){
 			int divisor = 2;
 			// loop runs until it returns a remainder equal to zero (meaning number is not prime), then exists and assigns the divisor value to the element
 			// this way it divides the element to everything up until that number
@@ -103,6 +103,8 @@ public class Assignment2_2 {
 				divisor++;
 			}
 			return divisor == element;
+		} else if(element < 0) {
+			throw new IllegalArgumentException("Negative numbers cannot be tested.");
 		}
 		return false;
 	}
