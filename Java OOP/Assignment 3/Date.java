@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Class representing the current Date
  * @author Anelia Dimitrova
@@ -10,10 +12,12 @@ public class Date {
 		Date today = new Date("13-jun-17");
 		Date tomorrow = new Date("13-jun-17");
 		System.out.println(today.equals(tomorrow));
+		System.out.println(today.toString());
 	}
 	
 	// fields
 	String date;
+	String combined; 
 	
 	/**
 	 * class constructor
@@ -28,7 +32,12 @@ public class Date {
 	 * returns a representation of the current date
 	 */
 	public String toString(){
-		return this.date;
+		String start = "Date[";
+		String fullDate = date;
+		String end = "]";
+		combined = start + fullDate + end;
+		
+		return this.combined;
 	}
 	
 	/**
