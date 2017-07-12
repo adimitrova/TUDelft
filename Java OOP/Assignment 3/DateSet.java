@@ -2,7 +2,8 @@
  * Class representing a list/set, containing multiple Dates
  * @author Anelia Dimitrova
  * @version 2
- * @date 12/07/17
+ * @date last (updated/modified) on: 12/07/17
+ * @date finished: 
  */
 
 import java.util.*;
@@ -22,6 +23,8 @@ public class DateSet {
 		//System.out.println(list1.contains(date1));
 		//System.out.println(list2.contains(date1));
 		
+		System.out.println(list1.contains(date2));
+		System.out.println(list1.contains(date1));
 		System.out.println(list2.toString());
 		System.out.println(list1.intersection(list2));
 		

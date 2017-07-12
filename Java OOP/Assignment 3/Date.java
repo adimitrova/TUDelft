@@ -1,16 +1,18 @@
 import java.util.Arrays;
 
 /**
- * Class representing the current Date
+ * Class representing a list/set, containing multiple Dates
  * @author Anelia Dimitrova
- * @version 1
- *
+ * @version 2
+ * @date last (updated/modified) on: 12/07/17
+ * @date finished: 14/06/17
  */
+
 public class Date {
 
 	public static void main(String[] args) {
-		Date today = new Date("13-jun-17");
-		Date tomorrow = new Date("13-jun-17");
+		Date today = new Date("14-jun-17");
+		Date tomorrow = new Date("14-jun-17");
 		System.out.println(today.equals(tomorrow));
 		System.out.println(today.toString());
 	}
@@ -49,6 +51,8 @@ public class Date {
 		if(other instanceof Date){
 			Date second = (Date) other;
 			if(this.toString() == second.toString()){
+				// TODO: doesn't think 2 equal dates are equal and doesn't change equal to true
+				// hence gives always false
 				equal = true;
 			}
 		}
