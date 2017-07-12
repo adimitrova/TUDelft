@@ -48,7 +48,7 @@ public class DateSet {
 	public void add(Date date){
 		if(!(listOfDates.contains(date))){
 			listOfDates.add(date);
-			listSize+=1;
+			listSize += 1;
 		}
 	}
 	
@@ -71,16 +71,20 @@ public class DateSet {
 	
 	public String toString() {
 		// TODO: fix
-		String start = "ListOfDates<";
+		String start = "ListOfDates <";
 		String end = ">";
-		String res = null;
-		int counter = 0;
+		String midResult = null;
 		
-		while(counter < listOfDates.size()) {
-			res = res + listOfDates.get(counter) + ",";
-		}
+		for (int counter = 0; counter < listOfDates.size(); counter++) {
+			midResult = midResult + listOfDates.get(counter).toString() + ", ";
+		} 
 		
-		return start + res + end;
+		/**
+		 * remove the trailing comma as well as the leading "null" value 
+		 * in front of the first Date object in the list 
+		 */
+		String datesFormatted = midResult.substring(4, midResult.lastIndexOf(","));
+		return start + datesFormatted + end;
 	}
 	
 	/**
