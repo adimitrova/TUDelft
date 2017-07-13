@@ -14,19 +14,28 @@ public class DateSet {
 	public static void main(String[] args) {
 		DateSet list1 = new DateSet();
 		DateSet list2 = new DateSet();
+		DateSet list3 = new DateSet();
 		Date date1 = new Date("17-05-17");
 		Date date2 = new Date("18-05-17");
-		
+		Date date3 = new Date("13-07-17");
+	
 		list1.add(date1);
+		list1.add(date3);
 		list2.add(date2);
+		list2.add(date3);		
+		list3.add(date2);
+		list3.add(date3);
 		
 		//System.out.println(list1.contains(date1));
 		//System.out.println(list2.contains(date1));
 		
-		System.out.println(list1.contains(date2));
-		System.out.println(list1.contains(date1));
-		System.out.println(list2.toString());
-		System.out.println(list1.intersection(list2));
+		System.out.println("List 1 contains " + date2 + "? " + list1.contains(date2));
+		System.out.println("List 1 contains " + date1 + "? " + list1.contains(date1));
+		System.out.println("List 1: " + list1.toString());
+		System.out.println("List 2: " + list2.toString());
+		System.out.println("Intersection: " + list1.intersection(list2));
+		System.out.println("List 1 & 3 the same: " + list1.equals(list3));
+		System.out.println(list1.printList());
 		
 	}
 	// ------------------- END METHOD -----------------
@@ -55,6 +64,10 @@ public class DateSet {
 		}
 	}
 	
+	/**
+	 * returns all the values in a list
+	 * @return
+	 */
 	public List<Date> printList(){
 		return this.listOfDates;
 	}
@@ -72,8 +85,10 @@ public class DateSet {
 		return false;
 	}
 	
+	/**
+	 * returns nice human-friendly representation of the List with the contained values
+	 */
 	public String toString() {
-		// TODO: fix
 		String start = "ListOfDates <";
 		String end = ">";
 		String midResult = null;
@@ -110,4 +125,21 @@ public class DateSet {
 		return combined;
 	}
 	
+	/**
+	 * returns a representation of the current List obj with Date objects in it
+	 */
+	@Override
+	public boolean equals(Object other) {
+		boolean equals = false;
+		if(other instanceof DateSet) {
+			DateSet second = (DateSet) other;
+			// if sizes of the two arrays are the same, then we compare all the elements within the arrays
+			// to compare all the elements, we use the List method containsAll()
+			if(this.listOfDates.size() == second.listOfDates.size() && this.listOfDates.containsAll(second.listOfDates)) {
+				equals = true;
+			}
+		}		
+		return equals;
+	}
+		
 }

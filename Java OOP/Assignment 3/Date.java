@@ -33,26 +33,21 @@ public class Date {
 	/**
 	 * returns a representation of the current date
 	 */
+	@Override
 	public String toString(){
-		String start = "Date[";
-		String fullDate = date;
-		String end = "]";
-		combined = start + fullDate + end;
-		
-		return this.combined;
+		return this.date;
 	}
 	
 	/**
 	 * Compares if two Date objects are the same
 	 * @param other (date object)
 	 */
+	@Override
 	public boolean equals(Object other){
 		boolean equal = false;
 		if(other instanceof Date){
 			Date second = (Date) other;
 			if(this.toString() == second.toString()){
-				// TODO: doesn't think 2 equal dates are equal and doesn't change equal to true
-				// hence gives always false
 				equal = true;
 			}
 		}
