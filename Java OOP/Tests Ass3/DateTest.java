@@ -1,18 +1,16 @@
+import static org.junit.Assert.*;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import org.junit.runner.notification.RunListener;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-@SuppressWarnings("RedundantStringConstructorCall")
-
 public class DateTest {
+
 	@Rule
     public ExpectedException expectedException = ExpectedException.none();
 	
@@ -22,4 +20,5 @@ public class DateTest {
 		Date date2 = new Date("13-Jun-2017");
 		assertTrue("date1 and date2 are the same", date1.equals(date2));
 	}
+
 }
