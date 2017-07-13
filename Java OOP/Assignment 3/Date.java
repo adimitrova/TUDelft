@@ -12,7 +12,7 @@ public class Date {
 
 	public static void main(String[] args) {
 		Date today = new Date("14-jun-17");
-		Date tomorrow = new Date("14-jun-17");
+		Date tomorrow = new Date("16-jun-17");
 		System.out.println(today.equals(tomorrow));
 		System.out.println(today.toString());
 	}
@@ -33,7 +33,6 @@ public class Date {
 	/**
 	 * returns a representation of the current date
 	 */
-	@Override
 	public String toString(){
 		return this.date;
 	}
@@ -42,7 +41,6 @@ public class Date {
 	 * Compares if two Date objects are the same
 	 * @param other (date object)
 	 */
-	@Override
 	public boolean equals(Object other){
 		boolean equal = false;
 		if(other instanceof Date){
