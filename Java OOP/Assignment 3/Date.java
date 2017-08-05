@@ -12,7 +12,7 @@ public class Date {
 
 	public static void main(String[] args) {
 		Date today = new Date("14-jun-17");
-		Date tomorrow = new Date("14-jun-17");
+		Date tomorrow = new Date("16-jun-17");
 		System.out.println(today.equals(tomorrow));
 		System.out.println(today.toString());
 	}
