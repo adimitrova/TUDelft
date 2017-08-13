@@ -11,14 +11,22 @@ import static org.junit.Assert.assertTrue;
 
 public class DateTest {
 
+	Date date1 = new Date("13-Jun-2017");
+	Date date2 = new Date("13-Jun-2017");
+	String exampleDateString = "13-Jun-2017";
+	
 	@Rule
     public ExpectedException expectedException = ExpectedException.none();
 	
 	@Test
 	public void equals_To_Same_True(){
-		Date date1 = new Date("13-Jun-2017");
-		Date date2 = new Date("13-Jun-2017");
 		assertTrue("date1 and date2 are the same", date1.equals(date2));
 	}
-
+	
+	@Test
+	public void constructorTest(){
+		// test if the constructor has set the object to its correct value
+		// test also the toString() method together with that
+		assertSame("Constructor sets the correct value", exampleDateString, date1.toString());
+	}
 }
