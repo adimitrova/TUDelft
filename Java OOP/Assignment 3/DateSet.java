@@ -9,39 +9,7 @@
 import java.util.*;
 
 public class DateSet {
-
-	// ------------------- MAIN METHOD -----------------
-	public static void main(String[] args) {
-		DateSet list1 = new DateSet();
-		DateSet list2 = new DateSet();
-		DateSet list3 = new DateSet();
-		Date date1 = new Date("17-05-17");
-		Date date2 = new Date("18-05-17");
-		Date date3 = new Date("30-11-17");
-		
-		list1.add(date1);
-		list1.add(date2);
-		list2.add(date1);
-		list2.add(date3);
-		list3.add(date1);
-		list3.add(date2);
-		
-		//System.out.println(list1.contains(date1));
-		//System.out.println(list2.contains(date1));
-		
-		System.out.println("List 1: " + list1.toString());
-		System.out.println("List 2: " + list2.toString());
-		System.out.println("List 3: " + list3.toString());
-		System.out.println("List 2 contains " + date1 + ": " + list2.contains(date1));
-		System.out.println("List 2 contains " + date2 + ": " + list2.contains(date2));
-		System.out.println("List 1 and List 3 combined: " + list1.intersection(list2));
-		System.out.println("List 1 = List 3: " + list1.equals(list3));
-		System.out.println("List 1 = List 2: " + list1.equals(list2));
-	}
-	// ------------------- END METHOD -----------------
-	
-	
-	// ------------------- MAIN CLASS CODE -----------------
+	// class (data) fields 
 	private List<Date> listOfDates;
 	private Date date;
 	private int listSize = 0;
@@ -50,7 +18,7 @@ public class DateSet {
 	 * constructor
 	 */
 	public DateSet(){
-		listOfDates = new ArrayList<Date>();
+		listOfDates = new ArrayList<Date>(listSize);
 	}
 	
 	/**
@@ -123,6 +91,19 @@ public class DateSet {
 		}
 
 		return combined;
+	}
+	
+	/**
+	 * Get all dates in this list
+	 * 
+	 * @param other
+	 * @return list of all dates from both objects
+	 */
+	public DateSet getDates(){
+		DateSet all = new DateSet();
+		all = (DateSet) this.listOfDates;
+		
+		return all;
 	}
 	
 	/**
