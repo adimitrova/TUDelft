@@ -10,9 +10,8 @@ public class DatePicker {
 		personList.addPerson(ani);
 		//personList.addPerson(ani);
 		
-		
+		System.out.println(personList.toString());
 	}
-	
 	
 	List<Person> people;
 		
@@ -53,5 +52,13 @@ public class DatePicker {
 			}
 		}
 		return listOfAllDates;
+	}
+	
+	public String toString(){
+		String res = "ListOfDates <";
+		for (int index = 0; index < people.size(); index++) {
+			res += people.get(index).getDates().toString();
+		}
+		return res = res + ">";
 	}
 }
