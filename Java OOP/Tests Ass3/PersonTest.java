@@ -3,22 +3,12 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PersonTest {
-	// TODO Auto-generated method stub
 	Person ani = new Person("Anelia");
 	Date aniBday = new Date("26.02.1990");
 	Date graduationDay = new Date("25.01.2018");
-//	ani.addDate(aniBday);
-//	//ani.addDate(graduationDay);
-//	
 	Person anelia = new Person("Anelia");
 	Date aneliaBday = new Date("26.02.1990");
-//	anelia.addDate(aneliaBday);
-//	
-//	System.out.println(ani.getName() + " " + anelia.getName());
-//	System.out.println(ani.getDates() + " " + anelia.getDates());
-//	System.out.println(ani.equals(anelia));
-//	System.out.println(ani);
-	
+
 	
 	@Test
 	public void test_equalObjects() {

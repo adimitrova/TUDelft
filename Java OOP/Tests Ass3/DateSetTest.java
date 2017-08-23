@@ -49,14 +49,3 @@ public class DateSetTest {
 		assertTrue("Assert two lists are identical", list1.equals(list2));
 	}
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -2,14 +2,21 @@ import java.util.*;
 
 public class DatePicker {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		DatePicker personList = new DatePicker();
 		Person ani = new Person("Anelia");
 		Date aniBday = new Date("26.02.1990");
 		ani.addDate(aniBday);
 		personList.addPerson(ani);
-		//personList.addPerson(ani);
+
+		Person pesho = new Person("Pesho");
+		Date peshoBday = new Date("29.05.1996");
+		Date peshoGraduation = new Date("23.05.2016");
+		pesho.addDate(peshoBday);
+		//pesho.addDate(peshoGraduation);
+		personList.addPerson(pesho);
 		
+		System.out.println(personList.getPerson(1));
+		System.out.println(personList.commonDates());
 		System.out.println(personList.toString());
 	}
 	
@@ -19,7 +26,7 @@ public class DatePicker {
 	 * constructor
 	 */
 	public DatePicker() {
-		people = new ArrayList<>();
+		people = new ArrayList<Person>();
 	}
 	
 	/**
@@ -35,6 +42,16 @@ public class DatePicker {
 	}
 	
 	/**
+	 * Returns person obj at given index 
+	 * 
+	 * @param indexIn
+	 * @return
+	 */
+	public Person getPerson(int indexIn){
+		return people.get(indexIn);
+	}
+	
+	/**
 	 * get the listOfPeople
 	 * for each PERSON in listOfPeople 
 	 * access its DateSet listOfDates and get EACH Date
@@ -43,22 +60,26 @@ public class DatePicker {
 	public DateSet commonDates() {
 		DateSet listOfAllDates = new DateSet();
 		
-		// TODO: finish (not sure how)
+		// TODO: fix
 		
 		if(people.size() >= 2) {
 			for (int personIndex = 0; personIndex < people.size(); personIndex++) {  	// loop over the list of people
-				DateSet tempSet = people.get(personIndex).getDates();
-				listOfAllDates = listOfAllDates.add(tempSet.getDates());
+				listOfAllDates = listOfAllDates.intersection(people.get(personIndex).getDates());
 			}
+		} else {
+			throw new IllegalArgumentException("Less than 2 objects in the list");
 		}
 		return listOfAllDates;
 	}
 	
+	/**
+	 * Returns friendly representation of all dates in the set
+	 */
 	public String toString(){
-		String res = "ListOfDates <";
-		for (int index = 0; index < people.size(); index++) {
-			res += people.get(index).getDates().toString();
-		}
-		return res = res + ">";
+		String res = "All People's Dates [";
+		DateSet toString = new DateSet();
+		toString = commonDates();
+		
+		return res = res + toString + "]";
 	}
 }

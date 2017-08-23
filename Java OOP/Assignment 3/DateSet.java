@@ -58,7 +58,7 @@ public class DateSet {
 	 */
 	public String toString() {
 		String start = "ListOfDates <";
-		String end = ">";
+		String end = "> ";
 		String midResult = null;
 		
 		for (int counter = 0; counter < listOfDates.size(); counter++) {

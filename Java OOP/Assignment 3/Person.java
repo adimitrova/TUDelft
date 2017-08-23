@@ -33,7 +33,6 @@ public class Person {
 	}
 	
 	public boolean equals(Person other) {
-		// TODO: why does it give FALSE for two equivalent Person objects?
 		boolean isEqual = false;
 		if(other instanceof Person) {
 			Person second = (Person) other;
