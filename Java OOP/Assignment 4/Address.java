@@ -1,66 +1,13 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Address {
 	Scanner input = new Scanner(System.in);
-	
-	public static void main(String[] args) {
-		Address adr1, adr2;		
-		Scanner inp = new Scanner(System.in);
-		
-		System.out.println("Street: ");
-		String addressin = inp.nextLine();
-		System.out.println("Number: ");
-		int numberin = inp.nextInt();
-		System.out.println("ZIPCode: ");
-		String zipin = inp.nextLine();
-		inp.nextLine();
-		System.out.println("City: ");
-		String cityin = inp.nextLine();		
-		
-		adr1 = new Address(addressin,numberin,zipin,cityin);
-		
-		
-		System.out.println("Street: ");
-		String address2in = inp.nextLine();
-		System.out.println("Number: ");
-		int number2in = inp.nextInt();
-		System.out.println("ZIPCode: ");
-		String zip2in = inp.nextLine();
-		inp.nextLine();
-		System.out.println("City: ");
-		String city2in = inp.nextLine();		
-		
-		adr2 = new Address(address2in,number2in,zip2in,city2in);
-		
-		System.out.println("Addresses are the same: " + adr1.equals(adr2));
-		
-	}
 		
 	private String street;
 	private int number;
 	private String zipCode;
 	private String city;
-	
-	// -------- Field getters ---------
-	// Street getter
-	public String  getStreet() {
-		return street;
-	}
-	
-	// number getter
-	public int  getNumber() {
-		return number;
-	}
-	
-	// ZIP code getter
-	public String  getZipCode() {
-		return zipCode;
-	}
-	
-	// City getter
-	public String  getCity() {
-		return city;
-	}
 	
 	// Class constructor
 	public Address(String streetIn, int numberIn, String zipCodeIn, String cityIn) {
@@ -70,12 +17,40 @@ public class Address {
 		city = cityIn;
 	}
 	
+	public Address() {
+		street = null;
+		number = 0;
+		zipCode = null;
+		city = null;
+	}
+	
+	// -------- Field getters ---------
+	// Street getter
+	public String getStreet() {
+		return street;
+	}
+	
+	// number getter
+	public int getNumber() {
+		return number;
+	}
+	
+	// ZIP code getter
+	public String getZipCode() {
+		return zipCode;
+	}
+	
+	// City getter
+	public String getCity() {
+		return city;
+	}
+	
 	/**
 	 * Method to read text and parse it into a new Address object
 	 * @param input
 	 * @return Address object
 	 */
-	public static Address read(Scanner input) {
+	public static Address read(Scanner input) throws IOException {		
 		String street = input.next();
 		int number = input.nextInt();
 		String zip = input.next();
@@ -90,14 +65,17 @@ public class Address {
 	 * Return friendly representation of the address
 	 */
 	public String toString() {
-		return "<Address: " + street + " " + number + ", " + zipCode + ", " + city + ">";
+		return "Address <" + street + " " + number + ", " + zipCode + ", " + city + ">";
 	}
 	
 	
 	/**
 	 * Return whether 2 Address objects are the same
+	 * 
+	 * NOTE: works when values are hard-coded, doesn't work when value are manually entered via Scanner and input.NextInt()
+	 * Maybe the empty line input.nextLine() after NextInt() causes it? I add it in order to consume the empty line after
+	 * adding integer.
 	 */
-	//TODO: fix why it doesn't work
 	public boolean equals(Object other) {
 		boolean equals = false;
 		if(other instanceof Address) {
