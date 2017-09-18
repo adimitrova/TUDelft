@@ -2,19 +2,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class House {
-	public static void main(String[] args) {
-		Address adr1 = new Address("SomeStreet",100,"ABC","Delft");
-		Address adr2 = new Address("SomeStreet",100,"ABC","Delft");
-		Address adr3 = new Address("AnotherStreet",16,"1003","Sofia");
-		
-		House house1 = new House(adr1,3,117000);
-		House house2 = new House(adr2,3,117000);
-		House house3 = new House(adr3,8,1000000);
-		
-		System.out.println(house3.toString());
-		System.out.println(house1.equals(house2));
-	}
-	
 	Scanner input = new Scanner(System.in);
 	
 	private Address address;
