@@ -11,14 +11,13 @@ public class HouseTest {
 	
 	House house1 = new House(adr1,3,117000);
 	House house2 = new House(adr2,3,117000);
-	House house3 = new House(adr3,8,1000000);
 	
 	@Test
 	public void test_toString() {
-		String expected = "House [Address <SomeStreet 100, ABC, Delft>, 3 room(s), €117000.0]";
+		String expected = "House [Address <SomeStreet 100, ABC, Delft>, 3 room(s), €117000]";
 		String actual = house1.toString();
 		assertEquals(expected, actual);
-		assertNotEquals("House [Address <1 2, 3, 4>, 3 room(s), €117000.0]", actual);
+		assertNotEquals("House [Address <1 2, 3, 4>, 3 room(s), €117000]", actual);
 	}
 
 	@Test

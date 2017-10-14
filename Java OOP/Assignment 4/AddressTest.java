@@ -1,11 +1,8 @@
-
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.util.Scanner;
-
 import org.junit.Test;
-
-import Address;
 
 public class AddressTest {
 	
@@ -25,5 +22,16 @@ public class AddressTest {
 		String actual = adr1.toString();
 		
 		assertEquals("Check if the toString() works as expected", expected, actual);
+	}
+	
+	@Test
+	public void test_read() throws IOException {
+		Scanner readThis = new Scanner("AddressTest");
+		Address actual = new Address("Molslaan", 16, "2932FV", "Delft");
+		Address expected = Address.read(readThis);
+		
+		//assertTrue(expected.equals(actual));
+		assertTrue(actual.equals(expected));
+		//assertEquals("Check if the read() method returns the right object", expected, actual);
 	}
 }
