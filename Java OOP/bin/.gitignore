@@ -1,6 +1,10 @@
+/Address.class
+/AddressTest.class
+/Assignment1ArithmeticTest.class
 /Assignment1CircleTest$1CircleMock.class
 /Assignment1CircleTest$1PointMock.class
 /Assignment1CircleTest$2PointMock.class
+/Assignment1CircleTest.class
 /Assignment1PointTest$1PointMock.class
 /Assignment1PointTest.class
 /Assignment1_1.class
@@ -21,7 +25,10 @@
 /DateSet.class
 /DateSetTest.class
 /DateTest.class
-/GolombPostulates.class
+/House.class
+/HouseCatalog.class
+/HouseTest.class
+/HousingApplication.class
 /ImageSizeConverter.class
 /IsCloseTo.class
 /Main.class

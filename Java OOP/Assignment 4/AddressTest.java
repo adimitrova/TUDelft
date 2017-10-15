@@ -26,8 +26,8 @@ public class AddressTest {
 	
 	@Test
 	public void test_read() throws IOException {
-		Scanner readThis = new Scanner("AddressTest");
-		Address actual = new Address("Molslaan", 16, "2932FV", "Delft");
+		String readThis = "DeHovenStraat 16 2932FV Delft";
+		Address actual = new Address("DeHovenStraat", 16, "2932FV", "Delft");
 		Address expected = Address.read(readThis);
 		
 		//assertTrue(expected.equals(actual));
