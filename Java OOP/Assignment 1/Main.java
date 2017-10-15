@@ -30,8 +30,8 @@ public class Main {
 		System.out.println("Second point: " + circ2.toString());
 		
 		System.out.println("Equal circles check: " + circ1.equals(circ2));
-		System.out.println("Circle 1 perimeter = " + String.format("%.3f",  circ1.perimeter()));
-		System.out.println("Circle 1 area = " + String.format("%.3f", circ1.area()));
+		System.out.println("Circle 1 perimeter = " + String.format("%.3f",  circ1.periphery()));
+		System.out.println("Circle 1 area = " + String.format("%.3f", circ1.surface()));
 		
 		System.out.print("Circle 2 Translated center: "); 
 		circ2.translate(3, 5.4);
