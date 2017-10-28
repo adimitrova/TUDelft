@@ -9,6 +9,9 @@ class Solution {
 	 * @return the shorter array
 	 */
 	public static int[] removeLastOccurence(int x, int[] array) {
+		int[] tempArr = array;
+		
+		
 		return result;
 	}
 	
