@@ -57,7 +57,7 @@ class EvenSums {
 		  if(input % 2 == 0) {
 			  sum += input;
 		  }
-		  sumEvenRec(input-1);
+		  sumEvenRec(--input);
 	  }
 	  return sum;
   }
