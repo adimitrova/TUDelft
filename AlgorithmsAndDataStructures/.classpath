@@ -2,7 +2,9 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="Assignment 1"/>
-	<classpathentry kind="src" path="Assignment 2"/>
+	<classpathentry kind="src" path="Assignment 3"/>
+	<classpathentry kind="src" path="Assignment 5"/>
+	<classpathentry kind="src" path="RandomDSandAlgos"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
