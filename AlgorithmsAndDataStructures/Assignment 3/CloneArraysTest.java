@@ -1,13 +1,13 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class UTest
+public class CloneArraysTest
 {
 	@Test
 	public void cloneEmpty() {
 	  
 	  float[][] empty = new float[0][0];
-	  float[][] clone = Solution.clone(empty);
+	  float[][] clone = CloneArrays.clone(empty);
 	  
 	  assertEquals(empty.length, clone.length);
 	}
@@ -16,7 +16,7 @@ public class UTest
 	public void cloneSingle() {
 	  
 	  float[][] empty = {{1.5f}};
-	  float[][] clone = Solution.clone(empty);
+	  float[][] clone = CloneArrays.clone(empty);
 	  
 	  assertEquals(empty.length, clone.length);
 	  assertEquals(empty[0].length, clone[0].length);
@@ -27,7 +27,7 @@ public class UTest
 	public void cloneLonger() {
 	  
 	  float[][] empty = {{1.5f, -10.3f, 0}, {-2.5f, 8, 1.3f}};
-	  float[][] clone = Solution.clone(empty);
+	  float[][] clone = CloneArrays.clone(empty);
 	  
 	  assertEquals(empty.length, clone.length);
 	  assertEquals(empty[0].length, clone[0].length);

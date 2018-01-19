@@ -1,11 +1,13 @@
-class Solution {
+class CloneArrays {
   
-  static float[][] clone(float[][] a) {
+  static float[][] clone(float[][] arr1) {
     
-    float[][] b;
+    float[][] arr1copy = null;
     
-    // clone a to b
+    for (int i = 0; i < arr1.length; i++) {
+    	arr1copy[i] = arr1[i];
+	}
     
-    return b;
+    return arr1copy;
   }
 }

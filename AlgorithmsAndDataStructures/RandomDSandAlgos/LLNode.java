@@ -7,7 +7,7 @@
 
 public class LLNode {
 	public static int firstNodeNextPointer = 2;	// head's pointer points to the second element
-	private int objCount = 0;	// object counter
+	public static int objCount = 0;	// object counter
 	private Object elValue;				// Node object value
 	private int NEXTpointer;			// Node pointer
 	private int OWNPointer;				// Node's own pointer
@@ -18,8 +18,8 @@ public class LLNode {
 		elValue = elIn;
 		objCount++;
 		OWNPointer = objCount;	// current Node's own pointer is equal to the object count
-		NEXTpointer = terminator;					// current Node's NEXTpointer is equal initially to terminator, 
-													//i.e. it's initially tail
+		// current Node's NEXTpointer is equal initially to terminator, i.e. it's initially tail
+		NEXTpointer = terminator;
 	}
 	
 	// set current node's NEXTPointer to the next element, i.e. if this is element 3, it's NEXTPointer = 4

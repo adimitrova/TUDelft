@@ -1,23 +1,27 @@
-class Solution {
- 	  public static class Node
-	  {
+/**
+ * Doubly Linked Lists implementation with skeleton code from the course
+ * @author ani
+ * @version 1 Dec 17
+ */
+class SolutionDLL {
+ 	  public static class Node {
 	    // Each node object has these three variables
 	    private Object element;
 	    private Node   next;
 	    private Node   previous;
 	    
 	    // Constructor: Creates a Node object with element = e, next = n and previous = p
-	    Node(Object e, Node n, Node p) 
+	    Node(Object elementIn, Node nextNodeIn, Node prevNodeIn) 
 	    {
-	      element = e;
-	      next    = n;
-	      previous = p;
+	      element = elementIn;
+	      next    = nextNodeIn;
+	      previous = prevNodeIn;
 	    }
 	  
 	    // This function gets Object e as input and sets e as the element of the Node 
-	    public void setElement(Object e) 
+	    public void setElement(Object elementIn) 
 	    {
-	      element = e;
+	      element = elementIn;
 	    }
 	    
 	    // This function returns the element variable of the Node
@@ -27,9 +31,9 @@ class Solution {
 	    }
 	    
 	    // This function gets Node n as input and sets the next variable of the current Node object as n.
-	    public void setNext(Node n) 
+	    public void setNext(Node nextNodeIn) 
 	    {
-	      next = n;
+	      next = nextNodeIn;
 	    }
 	    
 	    // This function returns the next Node
@@ -39,9 +43,9 @@ class Solution {
 	    }
 	    
 	    // This function gets Node n as input and sets the previous variable of the current Node object as p.
-	    public void setPrevious(Node p) 
+	    public void setPrevious(Node prevNodeIn) 
 	    {
-	      previous = p;
+	      previous = prevNodeIn;
 	    }
 	    
 	    // This function returns the previous Node
@@ -52,14 +56,13 @@ class Solution {
 	    
 	  }
 	  
-	  public static class DLList 
-	  {
+	  public static class DLList {
 	  
 	    // Each object in DLList has one variable head, which points to the starting Node of DLList.
 	    private Node head;
 	    private Node tail;
 	    
-	    // Implemens an empty constructor which initialises the head variable as null
+	    // Implements an empty constructor which initializes the head variable as null
 	    DLList()
 	    {
 	      head = null;
@@ -85,7 +88,12 @@ class Solution {
 	    // Adds node n to the head of the list.
 	    public void addFirst(Node n)
 	    {
-	  
+	    	SolutionDLL.Node tempNode = new SolutionDLL.Node(
+	    			n.getElement(), 
+	    			n.getNext(), 
+	    			n.getPrevious()); 
+	    	// do something
+	    	
 	    }
 	    
 	    //Removes and returns the first node in the list. If the list is empty, returns null.

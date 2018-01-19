@@ -12,3 +12,4 @@ This is a personal repository to upload my [TU Delft CS](http://www.tudelft.nl/e
 - IN4325 Information Retrieval 
 - TI1206 Object-oriented programming
 - TI1316 Algorithms & Data Structures (soon to add)
+- [IN4150 Distributed Algorithms '17-'18](https://github.com/adimitrova/DistributedAlgorithms)

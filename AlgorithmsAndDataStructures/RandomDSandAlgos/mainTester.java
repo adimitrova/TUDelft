@@ -14,12 +14,14 @@ public class mainTester {
 		LLNode thirdNode = new LLNode(value3);
 		thirdNode.setTail();
 		
+/*		System.out.println(firstNode.getNEXTPointerValue() + " " + secondNode.getNEXTPointerValue() + " " + thirdNode.getNEXTPointerValue());
+		
 		System.out.println("Second node is head: " + secondNode.isHead() + "\tSecond node is tail: " + secondNode.isTail());
 		System.out.println("First node is head: " + firstNode.isHead() + "\tFirst node is tail: " + firstNode.isTail());
 		System.out.println("Third node is head: " + thirdNode.isHead() + "\tThird node is tail: " + thirdNode.isTail());
 		System.out.println();
 		System.out.println(firstNode.toString());
-		System.out.println();
+		System.out.println();*/
 		LinkedList LL = new LinkedList();
 		
 		LL.addNode(firstNode);
